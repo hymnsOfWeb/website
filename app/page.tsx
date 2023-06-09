@@ -3,6 +3,8 @@ import { ConstructionLottie } from "./components/Construction-lottie";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 export default function Home() {
+  const number = "+919415507316";
+  const message = "Hi, I would like to work with you";
   return (
     <section id="home">
       <main>
@@ -21,7 +23,12 @@ export default function Home() {
         <ConstructionLottie className="cons-lottie" />
 
         <p className="work">Want to work with us?</p>
-        <Link href="tel: +919415507316" className="whatsapp">
+        <Link
+          href={`https://wa.me/${number}?text=${encodeURIComponent(message)}`}
+          className="whatsapp"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <BsWhatsapp />
           <span>Whatsapp</span>
         </Link>
