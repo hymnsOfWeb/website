@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ConstructionLottie } from "./Construction-lottie";
+import { ConstructionLottie } from "./components/Construction-lottie";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <section id="home">
       <main>
         <h2>
-          <span>Under Development</span>
+          <span>Website Under Development</span>
         </h2>
         <h1>
           <span>Hymns</span>
@@ -21,11 +21,11 @@ export default function Home() {
         <ConstructionLottie className="cons-lottie" />
 
         <p className="work">Want to work with us?</p>
-        <Link href="/" className="whatsapp">
+        <Link href="tel: +919415507316" className="whatsapp">
           <BsWhatsapp />
           <span>Whatsapp</span>
         </Link>
-        <Link href="/" className="insta">
+        <Link href="https://www.instagram.com/hymnsofweb/" className="insta" rel="noopener noreferrer" target="_blank">
           <BsInstagram />
           <span>Instagram</span>
         </Link>
