@@ -103,6 +103,7 @@ export const commonCardContent = css`
   opacity: 0;
   height: 100%;
   width: 90%;
+  transform: perspective(900px) rotateX(25deg) translateZ(0) translateY(-5%);
 `;
 
 export const shadow = css`
@@ -142,7 +143,7 @@ export const textContainer = css`
   z-index: 2;
   position: absolute;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  transform: perspective(900px) rotateX(25deg) translateZ(0) translateY(-5%);
+
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.75), 0 0 7px rgba(0, 0, 0, 0.75),
     0 0 5px var(--color-bg-secondary), 0 0 2px var(--color-bg-secondary);
   ${commonCardContent}
