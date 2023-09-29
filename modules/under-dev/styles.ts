@@ -1,5 +1,10 @@
-#home {
+import { css } from "@emotion/react";
+export const home = css`
   --bor-rad: 15px;
+  --font-header: "Press Start 2P", "cursive";
+  --font-color: rgb(211, 228, 252);
+  --border: rgb(82, 118, 173);
+  --bg-color: var(--color-bg-primary);
   height: 100vh;
   width: 100%;
   background-color: var(--bg-color);
@@ -20,11 +25,11 @@
       justify-content: center;
       align-items: center;
       color: var(--font-color);
-      font-family: var(--font-header);
       font-size: 2.25rem;
       border-radius: var(--bor-rad);
       text-align: center;
       span {
+        font-family: var(--font-header);
         animation: blink 3s infinite;
         @keyframes blink {
           0% {
@@ -43,7 +48,7 @@
     h1 {
       grid-column: 1;
       grid-row: 2 / span 3;
-      background-color: var(--font-color);
+      background-color: rgb(211, 228, 252);
       border-radius: var(--bor-rad);
       display: flex;
       flex-direction: column;
@@ -62,6 +67,7 @@
         }
       }
       span {
+        color: var(--color-bg-primary);
         width: fit-content;
         font-family: var(--font-header);
         margin: 5px 0;
@@ -191,4 +197,4 @@
       gap: 0.6rem;
     }
   }
-}
+`;

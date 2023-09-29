@@ -1,6 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/esm/tsconfig.json"
+  ],
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -11,18 +16,27 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+      "@public/*": ["./public/*"],
+      "@publicAssets/*": ["./public/assets/*"],
+      "@publicImages/*": ["./public/assets/images/*"],
+      "@assets/*": ["./assets/*"],
+      "@images/*": ["./assets/images/*"],
+      "@components/*": ["./components/*"],
+      "@modules/*": ["./modules/*"],
+      "@pages/*": ["./pages/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@common-data": ["./common/common-data"]
+    },
+    "noPropertyAccessFromIndexSignature": false,
+    "ignoreDeprecations": "5.0",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

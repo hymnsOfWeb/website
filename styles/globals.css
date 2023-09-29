@@ -1,0 +1,27 @@
+@import "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
+:root {
+  --color-bg-primary: rgb(15, 10, 20);
+  --color-bg-secondary: rgba(46, 72, 159, 1);
+
+  --color-text-primary: rgb(245, 235, 255);
+
+  --box-shadow-primary: rgba(133, 133, 133, 0.6);
+  --color-text-shadow: rgba(255, 255, 255, 0.5);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+}
+body {
+  overflow-x: hidden;
+  scroll-snap-align: unset;
+  scroll-snap-stop: unset;
+  background-color: var(--color-bg-primary);
+}
+
+* {
+  scroll-behavior: smooth;
+}
