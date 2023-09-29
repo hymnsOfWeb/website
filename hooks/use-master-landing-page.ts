@@ -43,11 +43,28 @@ export default function useMasterLandingPage() {
     [getLandingSpans]
   );
 
+  const aboutRibbonCallback = useCallback((scrollPos: number) => {
+    const ribbonElem = aboutRef.current?.querySelector(
+      ".text-ribbon-container"
+    );
+    const scrolledY = scrollPos;
+    const winHeight = window.innerHeight;
+    const docHeight = document.body.offsetHeight;
+    const scrollPercent = scrolledY / (docHeight - winHeight);
+    const percentMove = scrollPercent * 100;
+    if (ribbonElem) {
+      (
+        ribbonElem as HTMLDivElement
+      ).style.transform = `translate(-${percentMove}%, 0)`;
+    }
+  }, []);
+
   const scrollCallback = useCallback<EventListener>(() => {
     const scrollPos = window.scrollY;
     landingTopCallback(scrollPos);
     landingBottomCallback(scrollPos);
-  }, [landingTopCallback, landingBottomCallback]);
+    aboutRibbonCallback(scrollPos);
+  }, [landingTopCallback, landingBottomCallback, aboutRibbonCallback]);
 
   const wheelCallback = useCallback((e: WheelEvent) => {
     const bodyHeight = document.body.scrollHeight;

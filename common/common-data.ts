@@ -5,5 +5,5 @@ export const homeLandingTexts: [string, string] = [
 ];
 export const aboutTextRibbon = {
   text: "About",
-  count: 6,
+  count: 7,
 };
