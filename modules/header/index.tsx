@@ -12,7 +12,7 @@ import {
 } from "./styles";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const hamClickHandler = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);

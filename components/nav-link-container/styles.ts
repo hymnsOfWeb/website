@@ -6,7 +6,6 @@ export const navLinkContainerCss = css`
   width: 50vw;
   text-align: center;
   color: inherit;
-  font-family: var(--font-mono);
   font-weight: 900;
   letter-spacing: 0.5ch;
   display: flex;
@@ -41,6 +40,7 @@ export const navLinkContainerCss = css`
 
 export const charDynamicDelayCss = (delay: number) => css`
   transition: transform 0.5s ease-in-out ${delay}s;
+  font-family: var(--font-mono);
 `;
 
 export const linkCommonCss = css`

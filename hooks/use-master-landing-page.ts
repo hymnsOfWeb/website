@@ -4,6 +4,7 @@ export default function useMasterLandingPage() {
   const landingRefTop = useRef<HTMLDivElement>(null);
   const landingRefBottom = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const workRef = useRef<HTMLDivElement>(null);
 
   const getLandingSpans = useCallback((elem: HTMLDivElement) => {
     const spans: HTMLSpanElement[] = Array.from(
@@ -98,6 +99,9 @@ export default function useMasterLandingPage() {
     },
     aboutSection: {
       aboutRef,
+    },
+    workSection: {
+      workRef,
     },
   };
 }
