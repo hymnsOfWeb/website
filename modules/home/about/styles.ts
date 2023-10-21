@@ -42,8 +42,8 @@ export const ribbonSpan = css`
 `;
 
 export const aboutCardContainer = css`
-  width: 580px;
-  height: 720px;
+  aspect-ratio: 3.25 / 4;
+  width: 32.5vw;
   position: absolute;
   top: 50%;
   left: 50%;

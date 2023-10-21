@@ -1,5 +1,7 @@
 import { css } from "@emotion/react";
 
+export const mainTimeDelay = 1.25;
+
 export const headerWrapper = css`
   position: fixed;
   top: 0;
@@ -12,6 +14,7 @@ export const headerWrapper = css`
   align-items: center;
   position: fixed;
   z-index: 999;
+  --_main-time-delay: ${mainTimeDelay}s;
 `;
 
 export const logoContainer = css`
@@ -102,7 +105,7 @@ export const nav = css`
   top: 0;
   left: 0;
   --_ps-w: 30vw;
-  transition: transform 1.5s ease-in-out;
+  transition: transform var(--_main-time-delay) ease-in-out;
   transform: translateX(calc(-100% - var(--_ps-w)));
   &.active {
     transform: translateX(0%);
@@ -122,4 +125,12 @@ export const nav = css`
     background-color: var(--_col);
     box-shadow: 60px 0 30px rgba(0, 0, 0, 0.75);
   }
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 5rem;
+  color: var(--color-bg-primary);
 `;

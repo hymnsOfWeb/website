@@ -70,12 +70,12 @@ export default function useMasterLandingPage() {
     const bodyHeight = document.body.scrollHeight;
     const delta = e.deltaY;
     const currentScrollPos = Math.round(window.scrollY);
-    if (currentScrollPos === 0 && delta < 0) {
+    if (currentScrollPos < 3 && delta < 0) {
       window.scrollTo({ top: bodyHeight, behavior: "instant" });
       // window.scrollTo({ top: bodyHeight + delta, behavior: "smooth" });
       return;
     }
-    if (currentScrollPos === bodyHeight - window.innerHeight && delta > 0) {
+    if (currentScrollPos > bodyHeight - window.innerHeight - 3 && delta > 0) {
       window.scrollTo({ top: 0, behavior: "instant" });
       // window.scrollTo({ top: Math.abs(delta), behavior: "smooth" });
       return;
