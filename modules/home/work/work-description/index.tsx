@@ -1,4 +1,4 @@
-import { Fragment, useCallback } from "react";
+import { Fragment, forwardRef, useCallback, type Ref } from "react";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { workData } from "@/common/common-data";
@@ -11,12 +11,12 @@ import {
 } from "./style";
 import { WorkDataType } from "../types";
 
-export default function WorkDescription() {
+function WD(_: unknown, ref: Ref<HTMLDivElement>) {
   const workDataMapper = useCallback((elem: WorkDataType, index: number) => {
     return (
       <div key={index} css={workCardsCss}>
         <span className="work-title" css={workTitleCss}>
-          {elem.title}
+          {index + 1}. {elem.title}
         </span>
         <div className="links-container" css={linksContainerCss}>
           {elem.links.map((link: string, indx: number) => {
@@ -34,5 +34,17 @@ export default function WorkDescription() {
       </div>
     );
   }, []);
-  return <div css={descriptionContainer}>{workData.map(workDataMapper)}</div>;
+  return (
+    <div
+      css={descriptionContainer}
+      ref={ref}
+      className="work-description-container"
+    >
+      {workData.map(workDataMapper)}
+    </div>
+  );
 }
+
+const WorkDescription = forwardRef(WD);
+
+export default WorkDescription;

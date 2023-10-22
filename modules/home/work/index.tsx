@@ -1,16 +1,18 @@
-import { Ref, forwardRef } from "react";
+import { forwardRef, useRef } from "react";
+import type { Ref } from "react";
 import { workContainerCss } from "./style";
 import WorkCarousel from "./work-carousel";
 import WorkDescription from "./work-description";
 import WorkHeading from "./work-heading";
 
-function W(_: any, ref: Ref<HTMLDivElement>) {
+function W(_: unknown, ref: Ref<HTMLDivElement>) {
+  const descriptionRef = useRef<HTMLDivElement>(null);
   return (
-    <section id="work-container" ref={ref} css={workContainerCss}>
+    <div id="work-container" ref={ref} css={workContainerCss}>
       <WorkHeading />
       <WorkCarousel />
-      <WorkDescription />
-    </section>
+      <WorkDescription ref={descriptionRef} />
+    </div>
   );
 }
 

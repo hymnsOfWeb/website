@@ -9,4 +9,5 @@ export const exampleCss = css`
   top: 20vh;
   display: grid;
   place-items: center;
+  margin: 20vh 0;
 `;

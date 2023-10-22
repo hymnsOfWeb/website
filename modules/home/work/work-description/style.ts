@@ -9,7 +9,7 @@ export const descriptionContainer = css`
 export const workCardsCss = css`
   width: 600px;
   border: 1px solid black;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

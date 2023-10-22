@@ -9,6 +9,7 @@ export const workHeadingCss = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 20vh 0;
   h2 {
     font-size: 7rem;
     font-family: var(--font-mono);

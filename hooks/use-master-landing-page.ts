@@ -48,10 +48,9 @@ export default function useMasterLandingPage() {
     const ribbonElem = aboutRef.current?.querySelector(
       ".text-ribbon-container"
     );
-    const scrolledY = scrollPos;
     const winHeight = window.innerHeight;
     const docHeight = document.body.offsetHeight;
-    const scrollPercent = scrolledY / (docHeight - winHeight);
+    const scrollPercent = scrollPos / (docHeight - winHeight);
     const percentMove = scrollPercent * 100;
     if (ribbonElem) {
       (
@@ -60,12 +59,34 @@ export default function useMasterLandingPage() {
     }
   }, []);
 
+  const worksCallback = useCallback(() => {
+    const workElement = workRef.current;
+    const screenHeight = screen.height;
+    const { top = -1, bottom = -1 } =
+      workElement?.getBoundingClientRect() ?? {};
+    if (workElement && top <= screenHeight && bottom >= screenHeight) {
+      const workElemHeight = workElement.offsetHeight;
+      const scrollPercent =
+        ((-1 * (bottom - workElemHeight - screenHeight)) / workElemHeight) *
+        100;
+    }
+    const numberOfElem = workElement?.querySelector(
+      ".work-description-container"
+    )?.childElementCount;
+  }, []);
+
   const scrollCallback = useCallback<EventListener>(() => {
     const scrollPos = window.scrollY;
     landingTopCallback(scrollPos);
     landingBottomCallback(scrollPos);
     aboutRibbonCallback(scrollPos);
-  }, [landingTopCallback, landingBottomCallback, aboutRibbonCallback]);
+    worksCallback();
+  }, [
+    landingTopCallback,
+    landingBottomCallback,
+    aboutRibbonCallback,
+    worksCallback,
+  ]);
 
   const wheelCallback = useCallback((e: WheelEvent) => {
     const bodyHeight = document.body.scrollHeight;
