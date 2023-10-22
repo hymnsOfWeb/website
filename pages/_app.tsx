@@ -10,6 +10,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   fallback: ["sans-serif"],
+  preload: false,
 });
 
 const novaMono = NovaMono({
@@ -18,6 +19,7 @@ const novaMono = NovaMono({
   subsets: ["latin"],
   display: "swap",
   fallback: ["monospace"],
+  preload: false,
 });
 
 export default function App({ Component, pageProps }: AppProps) {

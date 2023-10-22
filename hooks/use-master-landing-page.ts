@@ -1,10 +1,13 @@
 import { useCallback, useEffect, useRef } from "react";
+import { workData } from "@/common/common-data";
 
 export default function useMasterLandingPage() {
   const landingRefTop = useRef<HTMLDivElement>(null);
   const landingRefBottom = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
+
+  const workPortionSize = useRef<number>(100 / workData.length);
 
   const getLandingSpans = useCallback((elem: HTMLDivElement) => {
     const spans: HTMLSpanElement[] = Array.from(
@@ -58,21 +61,51 @@ export default function useMasterLandingPage() {
       ).style.transform = `translate(-${percentMove}%, 0)`;
     }
   }, []);
-
   const worksCallback = useCallback(() => {
     const workElement = workRef.current;
-    const screenHeight = screen.height;
-    const { top = -1, bottom = -1 } =
+    const screenHeight = window?.innerHeight ?? 0;
+    const { top = Infinity, bottom = -1 } =
       workElement?.getBoundingClientRect() ?? {};
     if (workElement && top <= screenHeight && bottom >= screenHeight) {
       const workElemHeight = workElement.offsetHeight;
-      const scrollPercent =
+      const scrollPercentBig =
         ((-1 * (bottom - workElemHeight - screenHeight)) / workElemHeight) *
         100;
+      const scrollPercent = scrollPercentBig;
+      const imgWrappers: HTMLDivElement[] = Array.from(
+        workElement.querySelectorAll(".work-carousal-container")
+      );
+      for (let i = 1; i < imgWrappers.length; i++) {
+        const imgWrapper = imgWrappers[i];
+        const newI = i * workPortionSize.current;
+        const transform = i * scrollPercent - newI;
+        const tempPercent = (transform * 100) / newI;
+        if (imgWrapper) {
+          const tempI = 100 * i;
+          if (tempPercent <= tempI) {
+            imgWrapper.style.transform = `translateY(-${tempPercent}%)`;
+            imgWrapper.style.zIndex = (2 + i).toString();
+          } else {
+            imgWrapper.style.transform = `translateY(-${tempI}%)`;
+            imgWrapper.style.zIndex = (2 + i).toString();
+          }
+          const imgContainer: HTMLDivElement | null = imgWrapper.querySelector(
+            ".work-img-container"
+          );
+          const img = imgContainer?.querySelector("img");
+          if (img) {
+            img.style.transform = `translateY(-${100 * i - tempPercent}%)`;
+          }
+        }
+      }
+      if (imgWrappers?.[0]) {
+        if (scrollPercent > workPortionSize.current * 2) {
+          imgWrappers[0].style.opacity = "0";
+        } else {
+          imgWrappers[0].style.opacity = "1";
+        }
+      }
     }
-    const numberOfElem = workElement?.querySelector(
-      ".work-description-container"
-    )?.childElementCount;
   }, []);
 
   const scrollCallback = useCallback<EventListener>(() => {
