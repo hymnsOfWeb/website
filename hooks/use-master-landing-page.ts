@@ -82,19 +82,18 @@ export default function useMasterLandingPage() {
         const tempPercent = (transform * 100) / newI;
         if (imgWrapper) {
           const tempI = 100 * i;
+          imgWrapper.style.zIndex = (2 + i).toString();
           if (tempPercent <= tempI) {
             imgWrapper.style.transform = `translateY(-${tempPercent}%)`;
-            imgWrapper.style.zIndex = (2 + i).toString();
           } else {
             imgWrapper.style.transform = `translateY(-${tempI}%)`;
-            imgWrapper.style.zIndex = (2 + i).toString();
           }
           const imgContainer: HTMLDivElement | null = imgWrapper.querySelector(
             ".work-img-container"
           );
           const img = imgContainer?.querySelector("img");
           if (img) {
-            img.style.transform = `translateY(-${100 * i - tempPercent}%)`;
+            img.style.transform = `translateY(-${tempI - tempPercent}%)`;
           }
         }
       }
