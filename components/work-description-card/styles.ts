@@ -26,11 +26,16 @@ export const linksContainerCss = css`
   height: 60px;
   display: flex;
   align-items: center;
+  gap: 20px;
+  margin: 1vh 0;
   @media only screen and (900px <= width <= 1000px) {
     flex-direction: column;
     height: fit-content;
     align-items: flex-start;
   }
-  gap: 20px;
-  margin: 1vh 0;
+  @media only screen and (max-width: 400px) {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+  }
 `;

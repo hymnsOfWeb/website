@@ -43,7 +43,7 @@ export const ribbonSpan = css`
 
 export const aboutCardContainer = css`
   aspect-ratio: 3.25 / 4;
-  width: 32.5vw;
+  width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,7 +118,7 @@ export const cardButton = css`
   right: 5%;
   background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
-  padding: 1em 2em;
+  padding: 0.75em 1.5em;
   border: none;
   border-radius: 10px;
   transition: all 0.3s ease;
@@ -126,6 +126,7 @@ export const cardButton = css`
   text-decoration: none;
   font-size: 1rem;
   text-shadow: none;
+  transform: translateY(50px);
   &:hover {
     scale: 1.1;
   }

@@ -1,7 +1,12 @@
 import { WorkData, workData } from "@/common/common-data";
 import { ImageComp } from "@/components";
 import WorkDescriptionCard from "@/components/work-description-card";
-import { mwebCardCss, mwebWorkImgCss, workContainerCss } from "./styles";
+import {
+  mwebCardCss,
+  mwebWorkImgCss,
+  workContainerCss,
+  workDescCss,
+} from "./styles";
 import WorkHeading from "../work-heading";
 
 const MwebWorkCard = ({ data }: { data: WorkData }) => {
@@ -12,7 +17,7 @@ const MwebWorkCard = ({ data }: { data: WorkData }) => {
         alt={data.img.alt}
         containerCss={mwebWorkImgCss}
       />
-      <WorkDescriptionCard data={data} />
+      <WorkDescriptionCard data={data} css={workDescCss} />
     </div>
   );
 };
