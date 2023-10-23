@@ -1,4 +1,12 @@
-import { type Ref, forwardRef } from "react";
+import {
+  forwardRef,
+  Fragment,
+  useRef,
+  useCallback,
+  useEffect,
+  Ref,
+  RefObject,
+} from "react";
 import Link from "next/link";
 import { ImageComp } from "@/components";
 import { aboutTextRibbon } from "@common-data";
@@ -17,7 +25,7 @@ import {
 } from "./styles";
 
 const CommonCardContent = ({ disabled }: { disabled?: boolean }) => (
-  <>
+  <Fragment>
     <span>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
       asperiores eligendi nulla optio magni, deserunt, ex sunt minima quisquam
@@ -31,12 +39,45 @@ const CommonCardContent = ({ disabled }: { disabled?: boolean }) => (
         Know More
       </Link>
     )}
-  </>
+  </Fragment>
 );
 
 function A(_: unknown, ref: Ref<HTMLDivElement>) {
-  const { count, text } = aboutTextRibbon;
+  const aboutCardRef = useRef<HTMLDivElement>(null);
 
+  const observerCallback = useCallback<IntersectionObserverCallback>(
+    (entries) => {
+      if (entries[0]?.isIntersecting && window?.innerHeight > 500) {
+        aboutCardRef.current?.classList.add("hovered");
+      } else {
+        aboutCardRef.current?.classList.remove("hovered");
+      }
+    },
+    []
+  );
+
+  useEffect(() => {
+    const observerOption = {
+      threshold: 0.9,
+      root: null,
+    };
+    // const screenWidth = window.innerWidth;
+    const observer: IntersectionObserver = new IntersectionObserver(
+      observerCallback,
+      observerOption
+    );
+    const element = (ref as RefObject<HTMLDivElement>).current;
+    if (element) {
+      observer.observe(element);
+    }
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, [observerCallback, ref]);
+
+  const { count, text } = aboutTextRibbon;
   const ribbonSpans = Array(count)
     .fill(text)
     .map((text, index) => {
@@ -54,7 +95,11 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
           {ribbonSpans}
         </div>
       </div>
-      <div className="about-card-container" css={aboutCardContainer}>
+      <div
+        className="about-card-container hovered"
+        css={aboutCardContainer}
+        ref={aboutCardRef}
+      >
         <div className="about-card" css={aboutCard}>
           <ImageComp
             src="/assets/images/about-bg.png"

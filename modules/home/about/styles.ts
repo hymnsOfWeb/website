@@ -2,21 +2,39 @@ import { css } from "@emotion/react";
 
 export const aboutWrapper = css`
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   position: relative;
+  @media only screen and (max-height: 500px) {
+    height: 100vh;
+    margin-top: 150px;
+    padding: 0;
+    overflow: visible;
+  }
+  @media only screen and (width < 400px) {
+    height: 100vh;
+  }
 `;
 
 export const ribbonWrapper = css`
-  position: relative;
+  position: absolute;
   padding: 4vh 0;
-  rotate: -15deg;
-  width: 120%;
-  transform: translate(-10%, 27.5vh);
+  width: 120vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
   background-color: var(--color-text-primary);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
     0 0 20px -5px var(--box-shadow-primary),
     0 0 30px -10px rgba(185, 185, 185, 0.4), 0 0 60px rgba(255, 255, 255, 0.25);
+  @media only screen and (width < 900px) {
+    position: static;
+    transform: translate(0, 0) rotate(0);
+    padding: 0;
+    @media only screen and (max-height: 500px) {
+      transform: translateY(-200%);
+    }
+  }
 `;
 
 export const ribbonContainer = css`
@@ -24,11 +42,16 @@ export const ribbonContainer = css`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding-left: 125px;
+  @media only screen and (width < 900px) {
+    width: 2250px;
+  }
 `;
 
 export const ribbonSpan = css`
   font-size: 8rem;
+  flex: 1;
   user-select: none;
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -39,11 +62,78 @@ export const ribbonSpan = css`
   -moz-background-clip: text;
   background-clip: text;
   text-shadow: 4px 4px 3px var(--color-text-shadow);
+  @media only screen and (width < 900px) {
+    font-size: 5rem;
+    @media only screen and (max-height: 500px) {
+      font-size: 2.5rem;
+    }
+  }
+`;
+
+const cardHovered = css`
+  .about-card {
+    transform: perspective(900px) rotateX(30deg) translateZ(0) translateY(-10%);
+    box-shadow: 0px 50px 50px -25px rgba(125, 125, 125, 0.35);
+    width: 95%;
+    .about-bg {
+      filter: blur(2px) grayscale(1);
+    }
+    .text-shadow {
+      opacity: 0.85;
+      filter: blur(3.5px);
+      transform: scaleY(1.5) translateY(-5%);
+    }
+    @media only screen and (max-height: 500px) {
+      transform: none;
+      box-shadow: none;
+      .about-bg {
+        filter: none;
+      }
+    }
+  }
+  .about-text-container {
+    transform: perspective(900px) rotateX(-5deg) translateZ(0) translateY(-10%)
+      scale(1.1);
+    opacity: 1;
+  }
+  @media only screen and (width < 900px) {
+    .about-card {
+      .text-shadow {
+        width: 90%;
+        transform: scaleY(1) translateY(-5%);
+      }
+    }
+    .about-text-container {
+      width: 90%;
+      transform: perspective(900px) rotateX(-5deg) translateZ(0)
+        translateY(-10%) scale(0.95);
+      opacity: 1;
+      @media only screen and (height < 500px) {
+        width: 100%;
+        opacity: 1;
+        height: 100%;
+        transform: none;
+        right: 0;
+        span {
+          width: 40%;
+          display: block;
+          padding: 0;
+          height: 90%;
+          transform: translateX(57.5%);
+        }
+        a {
+          padding: 5px 15px;
+          bottom: 70px;
+        }
+      }
+    }
+  }
 `;
 
 export const aboutCardContainer = css`
   aspect-ratio: 3.25 / 4;
   width: 500px;
+  max-width: 90vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,24 +143,28 @@ export const aboutCardContainer = css`
   place-items: center;
   transition: all 0.5s ease;
   border-radius: 15px;
-  &:hover {
-    .about-card {
-      transform: perspective(900px) rotateX(30deg) translateZ(0)
-        translateY(-10%);
-      box-shadow: 0px 50px 50px -25px rgba(125, 125, 125, 0.35);
-      .about-bg {
-        filter: blur(2px) grayscale(1);
-      }
-      .text-shadow {
-        opacity: 0.85;
-        filter: blur(3.5px);
-        transform: scaleY(1.5) translateY(-5%);
-      }
+  font-size: 1.6rem;
+
+  @media only screen and (width > 900px) {
+    &:hover {
+      ${cardHovered};
     }
-    .about-text-container {
-      transform: perspective(900px) rotateX(-5deg) translateZ(0)
-        translateY(-10%) scale(1.1);
-      opacity: 1;
+  }
+  @media only screen and (width < 900px) {
+    max-height: 500px;
+    width: 90vw; //??
+    transform: translate(-50%, -38.5%);
+    font-size: 1rem;
+    &.hovered {
+      ${cardHovered}
+    }
+    @media only screen and (max-height: 500px) {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      top: 0;
+      left: 0;
     }
   }
 `;
@@ -81,35 +175,72 @@ export const aboutCard = css`
   display: grid;
   place-items: center;
   transition: all 0.5s ease;
+  @media only screen and (max-height: 500px) {
+    height: 95%;
+    width: 95%;
+    position: relative;
+  }
 `;
 
 export const aboutBgImg = css`
   height: 100%;
   width: 100%;
-  aspect-ratio: 1;
   position: absolute;
   transition: all 0.5s ease;
   border-radius: 15px;
   overflow: hidden;
+  @media only screen and (width < 900px) {
+    width: 95%;
+    height: 100%;
+    @media only screen and (max-height: 500px) {
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
 `;
 
 export const commonCardContent = css`
   display: grid;
   place-items: center;
   text-align: justify;
-  font-size: 1.6rem;
+  font-size: inherit;
   font-weight: 600;
   color: rgba(255, 255, 255, 1);
   opacity: 0;
   height: 100%;
   width: 90%;
   transform: perspective(900px) rotateX(25deg) translateZ(0) translateY(-5%);
+  @media only screen and (width < 900px) {
+    width: 100%;
+    @media only screen and (height < 500px) {
+      width: 100%;
+      opacity: 1;
+      height: 100%;
+      transform: none;
+      right: 0;
+      span {
+        width: 40%;
+        display: block;
+        padding: 0;
+        height: 90%;
+        transform: translateX(57.5%);
+      }
+      a {
+        padding: 5px 15px;
+        bottom: 22.5vh;
+      }
+    }
+  }
 `;
 
 export const shadow = css`
   z-index: 1;
   transition: all 0.5s ease;
   ${commonCardContent}
+  @media only screen and (max-height: 500px) {
+    display: none;
+  }
 `;
 
 export const cardButton = css`
@@ -130,6 +261,14 @@ export const cardButton = css`
   &:hover {
     scale: 1.1;
   }
+  @media only screen and (width < 900px) {
+    scale: 1;
+  }
+  @media only screen and (width < 300px) {
+    bottom: 12.5%;
+    right: -5%;
+    scale: 0.65;
+  }
 `;
 
 export const shadowButton = css`
@@ -137,14 +276,18 @@ export const shadowButton = css`
   bottom: 25%;
   opacity: 0.65;
   filter: blur(5px) saturate(0.75);
+  @media only screen and (max-height: 500px) {
+    display: none;
+  }
 `;
 
 export const textContainer = css`
-  left: 5%;
+  @media only screen and (width > 900px) {
+    left: 5%;
+  }
   z-index: 2;
   position: absolute;
   transition: opacity 0.5s ease, transform 0.5s ease;
-
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.75), 0 0 7px rgba(0, 0, 0, 0.75),
     0 0 5px var(--color-bg-secondary), 0 0 2px var(--color-bg-secondary);
   ${commonCardContent}
