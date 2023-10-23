@@ -1,19 +1,16 @@
-import { forwardRef, useRef } from "react";
+import { forwardRef } from "react";
 import type { Ref } from "react";
-import { workContainerCss } from "./style";
-import WorkCarousel from "./work-carousel";
-import WorkDescription from "./work-description";
-import WorkHeading from "./work-heading";
+import usePhone from "@/hooks/use-phone";
+import DwebWork from "./dweb-work";
+import MwebWork from "./mweb-work";
 
 function W(_: unknown, ref: Ref<HTMLDivElement>) {
-  const descriptionRef = useRef<HTMLDivElement>(null);
-  return (
-    <div id="work-container" ref={ref} css={workContainerCss}>
-      <WorkHeading />
-      <WorkCarousel />
-      <WorkDescription ref={descriptionRef} />
-    </div>
-  );
+  const isPhone = usePhone();
+  if (isPhone || isPhone === null) {
+    return <MwebWork />;
+  } else {
+    return <DwebWork ref={ref} />;
+  }
 }
 
 const Work = forwardRef(W);

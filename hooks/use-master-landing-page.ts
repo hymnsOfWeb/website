@@ -65,7 +65,7 @@ export default function useMasterLandingPage() {
     const workElement = workRef.current;
     const screenHeight = window?.innerHeight ?? 0;
     const { top = Infinity, bottom = -1 } =
-      workElement?.getBoundingClientRect() ?? {};
+      workElement?.getBoundingClientRect?.() ?? {};
     if (workElement && top <= screenHeight && bottom >= screenHeight) {
       const workElemHeight = workElement.offsetHeight;
       const scrollPercentBig =
@@ -112,7 +112,9 @@ export default function useMasterLandingPage() {
     landingTopCallback(scrollPos);
     landingBottomCallback(scrollPos);
     aboutRibbonCallback(scrollPos);
-    worksCallback();
+    if (window.innerWidth > 900) {
+      worksCallback();
+    }
   }, [
     landingTopCallback,
     landingBottomCallback,

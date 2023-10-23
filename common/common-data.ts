@@ -7,7 +7,10 @@ export const mainNavLinks = [
 ];
 export interface WorkData {
   title: string;
-  links: string[];
+  links: {
+    text: string;
+    url: string;
+  }[];
   img: {
     src: string;
     alt: string;
@@ -17,7 +20,10 @@ export interface WorkData {
 export const workData: WorkData[] = [
   {
     title: "Dopegood",
-    links: ["Awards", "Visit Live", "Learn More"],
+    links: [
+      { text: "Visit Live", url: "/" },
+      { text: "Learn More", url: "/" },
+    ],
     img: {
       src: "https://images4.alphacoders.com/133/thumbbig-1332018.webp",
       alt: "Dopegood",
@@ -29,7 +35,10 @@ export const workData: WorkData[] = [
   },
   {
     title: "Dopegood",
-    links: ["Awards", "Visit Live", "Learn More"],
+    links: [
+      { text: "Visit Live", url: "/" },
+      { text: "Learn More", url: "/" },
+    ],
     img: {
       src: "https://images7.alphacoders.com/132/thumbbig-1325984.webp",
       alt: "Dopegood",
@@ -41,7 +50,10 @@ export const workData: WorkData[] = [
   },
   {
     title: "Dopegood",
-    links: ["Awards", "Visit Live", "Learn More"],
+    links: [
+      { text: "Visit Live", url: "/" },
+      { text: "Learn More", url: "/" },
+    ],
     img: {
       src: "https://images2.alphacoders.com/132/thumbbig-1320348.webp",
       alt: "Dopegood",
@@ -53,7 +65,10 @@ export const workData: WorkData[] = [
   },
   {
     title: "Dopegood",
-    links: ["Awards", "Visit Live", "Learn More"],
+    links: [
+      { text: "Visit Live", url: "/" },
+      { text: "Learn More", url: "/" },
+    ],
     img: {
       src: "https://images8.alphacoders.com/132/thumbbig-1329400.webp",
       alt: "Dopegood",
@@ -65,7 +80,10 @@ export const workData: WorkData[] = [
   },
   {
     title: "Dopegood",
-    links: ["Awards", "Visit Live", "Learn More"],
+    links: [
+      { text: "Visit Live", url: "/" },
+      { text: "Learn More", url: "/" },
+    ],
     img: {
       src: "https://images6.alphacoders.com/132/thumbbig-1328670.webp",
       alt: "Dopegood",

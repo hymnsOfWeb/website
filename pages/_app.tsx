@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import { Poppins, Nova_Mono as NovaMono } from "next/font/google";
 import "../styles/globals.css";
 import Head from "next/head";
+import { AppContexProvider } from "@/context";
 import Header from "@/modules/header";
 
 const poppins = Poppins({
@@ -24,7 +25,7 @@ const novaMono = NovaMono({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <AppContexProvider>
       <Head>
         <style id="fonts" global={"true" as unknown as boolean}>
           {`
@@ -37,6 +38,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <Component {...pageProps} />
-    </>
+    </AppContexProvider>
   );
 }

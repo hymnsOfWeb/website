@@ -1,39 +1,18 @@
-import { Fragment, forwardRef, useCallback, type Ref } from "react";
-import Link from "next/link";
-import { BsArrowUpRight } from "react-icons/bs";
-import { workData } from "@/common/common-data";
-import {
-  descriptionContainer,
-  linksContainerCss,
-  workCardsCss,
-  workLinkCss,
-  workTitleCss,
-} from "./style";
-import { WorkDataType } from "../types";
+import { forwardRef, type Ref } from "react";
+import { WorkData, workData } from "@/common/common-data";
+import WorkDescriptionCard from "@/components/work-description-card";
+import { descriptionContainer, workCardsCss } from "./styles";
 
 function WD(_: unknown, ref: Ref<HTMLDivElement>) {
-  const workDataMapper = useCallback((elem: WorkDataType, index: number) => {
+  const workDataMapper = (elem: WorkData, index: number) => {
     return (
-      <div key={index} css={workCardsCss}>
-        <span className="work-title" css={workTitleCss}>
-          {index + 1}. {elem.title}
-        </span>
-        <div className="links-container" css={linksContainerCss}>
-          {elem.links.map((link: string, indx: number) => {
-            return (
-              <Fragment key={indx}>
-                <Link href="/" css={workLinkCss}>
-                  {link}
-                  <BsArrowUpRight />
-                </Link>
-              </Fragment>
-            );
-          })}
-        </div>
-        <p>{elem.description}</p>
-      </div>
+      <WorkDescriptionCard
+        css={workCardsCss}
+        data={elem}
+        key={"work-card-" + index}
+      />
     );
-  }, []);
+  };
   return (
     <div
       css={descriptionContainer}
