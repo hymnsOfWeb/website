@@ -1,16 +1,20 @@
 import { css } from "@emotion/react";
 
 export const carousalWrapperCss = css`
-  width: 400px;
-  height: 600px;
-  border-radius: 25px;
+  --_cf: 7.5;
+  width: calc(4vw * var(--_cf));
+  height: 100vh;
   position: sticky;
-  top: 20vh;
-  margin: 20vh 0;
+  top: 0;
+`;
+
+export const carousalMidContainer = css`
+  background-color: red;
+  height: 70vh;
+  width: 100%;
+  border-radius: 25px;
   overflow: hidden;
-  /* * {
-    transition: all 0.1s ease;
-  } */
+  transform: translateY(25%);
   & > div {
     height: 100%;
     width: 100%;

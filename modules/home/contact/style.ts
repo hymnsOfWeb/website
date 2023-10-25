@@ -8,11 +8,14 @@ export const contactCss = css`
 `;
 
 export const contactSquareCss = css`
-  width: 500px;
+  height: 500px;
+  max-width: 90vw;
+  max-height: 90vw;
   aspect-ratio: 1;
   position: relative;
-  @media only screen and (max-width: 700px) {
-    width: 80%;
+  @media only screen and (height < 600px) and (width < 900px) {
+    height: 80vh;
+    width: unset;
   }
 `;
 
@@ -42,7 +45,7 @@ export const contactCircleCss = css`
       color: var(--color-bg-primary);
     }
     .shadow {
-      transform: translate(-50%, -50%) scale(1000);
+      transform: translate(-50%, -50%) scale(1500);
     }
   }
 `;

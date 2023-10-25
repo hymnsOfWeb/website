@@ -2,13 +2,15 @@ import { css } from "@emotion/react";
 
 export const workHeadingCss = css`
   position: sticky;
-  top: 20vh;
-  height: 600px;
   display: flex;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: fit-content;
+  /* transform: translate(0, -50%); */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20vh 0;
   h2 {
     font-size: 5rem;
     font-family: var(--font-mono);

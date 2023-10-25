@@ -6,6 +6,7 @@ export const landingWrapper = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   * {
     user-select: none;
     cursor: default;

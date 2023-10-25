@@ -11,6 +11,7 @@ export const navLinkContainerCss = css`
   display: flex;
   overflow: hidden;
   height: 2.5ch;
+  z-index: 999;
   * {
     color: inherit;
   }
@@ -35,6 +36,16 @@ export const navLinkContainerCss = css`
     .char-child:nth-of-type(2) {
       transform: translateY(-100%) rotateX(0deg);
     }
+  }
+  @media only screen and (600px<= width <= 1000px) {
+    background-color: red;
+    width: 80vw;
+    height: 2ch;
+  }
+  @media only screen and (width < 600px) {
+    background-color: #002fff;
+    width: 80vw;
+    letter-spacing: 0.1ch;
   }
 `;
 
@@ -65,4 +76,6 @@ export const navLinkInactiveCss = css`
 export const charContainer = css`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;

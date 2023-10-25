@@ -5,6 +5,7 @@ export const workContainerCss = css`
   gap: 50px;
   padding: 0 5vw;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const mwebCardCss = css`

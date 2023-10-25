@@ -2,14 +2,12 @@ import { css } from "@emotion/react";
 
 export const aboutWrapper = css`
   width: 100%;
-  height: 80vh;
-  overflow: hidden;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
   @media only screen and (max-height: 500px) {
-    height: 100vh;
-    margin-top: 150px;
+    height: 150vh;
     padding: 0;
-    overflow: visible;
   }
   @media only screen and (width < 400px) {
     height: 100vh;
@@ -18,8 +16,9 @@ export const aboutWrapper = css`
 
 export const ribbonWrapper = css`
   position: absolute;
-  padding: 4vh 0;
+  /* padding: 4vh 0; */
   width: 120vw;
+  /* height: 20vh; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-10deg);
@@ -31,26 +30,23 @@ export const ribbonWrapper = css`
     position: static;
     transform: translate(0, 0) rotate(0);
     padding: 0;
-    @media only screen and (max-height: 500px) {
-      transform: translateY(-200%);
-    }
   }
 `;
 
 export const ribbonContainer = css`
-  width: 3000px;
+  width: 300vw;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 125px;
+  justify-content: space-between;
+  /* padding-left: 125px; */
   @media only screen and (width < 900px) {
-    width: 2250px;
+    width: 400vw;
   }
 `;
 
 export const ribbonSpan = css`
-  font-size: 8rem;
+  font-size: 8vw;
   flex: 1;
   user-select: none;
   font-family: var(--font-mono);
@@ -63,17 +59,35 @@ export const ribbonSpan = css`
   background-clip: text;
   text-shadow: 4px 4px 3px var(--color-text-shadow);
   @media only screen and (width < 900px) {
-    font-size: 5rem;
+    font-size: 12.5vw;
     @media only screen and (max-height: 500px) {
       font-size: 2.5rem;
     }
   }
 `;
 
+const commonSpan = css`
+  width: 100%;
+  opacity: 1;
+  height: 60%;
+  transform: none;
+  right: 0;
+  span {
+    width: 40%;
+    display: block;
+    padding: 0;
+    height: 100%;
+    transform: translateX(57.5%);
+  }
+  a {
+    right: 7%;
+  }
+`;
+
 const cardHovered = css`
   .about-card {
     transform: perspective(900px) rotateX(30deg) translateZ(0) translateY(-10%);
-    box-shadow: 0px 50px 50px -25px rgba(125, 125, 125, 0.35);
+    box-shadow: 0px 50px 50px -50px rgba(125, 125, 125, 0.35);
     width: 95%;
     .about-bg {
       filter: blur(2px) grayscale(1);
@@ -109,18 +123,7 @@ const cardHovered = css`
         translateY(-10%) scale(0.95);
       opacity: 1;
       @media only screen and (height < 500px) {
-        width: 100%;
-        opacity: 1;
-        height: 100%;
-        transform: none;
-        right: 0;
-        span {
-          width: 40%;
-          display: block;
-          padding: 0;
-          height: 90%;
-          transform: translateX(57.5%);
-        }
+        ${commonSpan}
         a {
           padding: 5px 15px;
           bottom: 70px;
@@ -132,7 +135,7 @@ const cardHovered = css`
 
 export const aboutCardContainer = css`
   aspect-ratio: 3.25 / 4;
-  width: 500px;
+  height: 70vh;
   max-width: 90vw;
   position: absolute;
   top: 50%;
@@ -176,8 +179,8 @@ export const aboutCard = css`
   place-items: center;
   transition: all 0.5s ease;
   @media only screen and (max-height: 500px) {
-    height: 95%;
-    width: 95%;
+    height: 60%;
+    width: 80%;
     position: relative;
   }
 `;
@@ -214,21 +217,10 @@ export const commonCardContent = css`
   @media only screen and (width < 900px) {
     width: 100%;
     @media only screen and (height < 500px) {
-      width: 100%;
-      opacity: 1;
-      height: 100%;
-      transform: none;
-      right: 0;
-      span {
-        width: 40%;
-        display: block;
-        padding: 0;
-        height: 90%;
-        transform: translateX(57.5%);
-      }
+      ${commonSpan}
       a {
         padding: 5px 15px;
-        bottom: 22.5vh;
+        bottom: 20vh;
       }
     }
   }
