@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
+import { contactBubbleData } from "@common-data";
+import { ContactBubble } from "@components";
+import { BubbleDataProps } from "@components/contact-bubble/types";
 import {
-  bubbleWrapperCss,
   contactCircleCss,
   contactCss,
   contactSquareCss,
   shadowCss,
 } from "./style";
-import { BsFillTelephoneFill } from "react-icons/bs";
 
 export default function HomeContact() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -90,7 +91,15 @@ export default function HomeContact() {
     mouseEnterCallback,
     contactLeaveCallback,
   ]);
-
+  const bubbleMapper = (data: BubbleDataProps, index: number) => {
+    return (
+      <ContactBubble
+        {...data}
+        key={"contact-bubble-" + index}
+        className="contact-bubble-name"
+      />
+    );
+  };
   return (
     <div css={contactCss}>
       <div css={contactSquareCss} ref={containerRef}>
@@ -104,14 +113,7 @@ export default function HomeContact() {
           <span className="contact-text">Contact Us</span>
         </Link>
       </div>
-      <a
-        href="tel:+919415507316"
-        target="_blank"
-        rel="noopener noreferrer"
-        css={bubbleWrapperCss}
-      >
-        <BsFillTelephoneFill />
-      </a>
+      {contactBubbleData.map(bubbleMapper)}
     </div>
   );
 }
