@@ -1,27 +1,29 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const contactCss = css`
-  min-height: 100vh;
+  height: 110vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const contactSquareCss = css`
-  height: 500px;
-  max-width: 90vw;
+  height: 100%;
+  width: 100%;
   max-height: 90vw;
-  aspect-ratio: 1;
   position: relative;
-  @media only screen and (height < 600px) and (width < 900px) {
+  ${mediaQuery.mobileLandscape} {
     height: 80vh;
     width: unset;
   }
 `;
 
 export const contactCircleCss = css`
-  height: 90%;
-  width: 90%;
+  --_s: 50%;
+  height: var(--_s);
+  aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -37,7 +39,8 @@ export const contactCircleCss = css`
   .contact-text {
     font-family: var(--font-mono);
     transition: all 0.3s ease 0.1s;
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 500;
     z-index: 1;
   }
   &:hover {

@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const buttonCss = css`
   text-decoration: none;
@@ -28,12 +29,12 @@ export const linksContainerCss = css`
   align-items: center;
   gap: 20px;
   margin: 1vh 0;
-  @media only screen and (900px <= width <= 1000px) {
+  ${mediaQuery.tablet} {
     flex-direction: column;
     height: fit-content;
     align-items: flex-start;
   }
-  @media only screen and (max-width: 400px) {
+  ${mediaQuery.mobile} {
     flex-direction: column;
     height: fit-content;
     align-items: flex-start;

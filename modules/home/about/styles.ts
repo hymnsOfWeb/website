@@ -1,11 +1,12 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const aboutWrapper = css`
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
-  @media only screen and (max-height: 500px) {
+  ${mediaQuery.mobileLandscape} {
     height: 150vh;
     padding: 0;
   }
@@ -26,7 +27,7 @@ export const ribbonWrapper = css`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
     0 0 20px -5px var(--box-shadow-primary),
     0 0 30px -10px rgba(185, 185, 185, 0.4), 0 0 60px rgba(255, 255, 255, 0.25);
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobile} {
     position: static;
     transform: translate(0, 0) rotate(0);
     padding: 0;
@@ -40,7 +41,7 @@ export const ribbonContainer = css`
   align-items: center;
   justify-content: space-between;
   /* padding-left: 125px; */
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobile} {
     width: 400vw;
   }
 `;
@@ -58,11 +59,11 @@ export const ribbonSpan = css`
   -moz-background-clip: text;
   background-clip: text;
   text-shadow: 4px 4px 3px var(--color-text-shadow);
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobilePortrait} {
     font-size: 12.5vw;
-    @media only screen and (max-height: 500px) {
-      font-size: 2.5rem;
-    }
+  }
+  ${mediaQuery.mobileLandscape} {
+    font-size: 2.5rem;
   }
 `;
 
@@ -97,7 +98,7 @@ const cardHovered = css`
       filter: blur(3.5px);
       transform: scaleY(1.5) translateY(-5%);
     }
-    @media only screen and (max-height: 500px) {
+    ${mediaQuery.mobileLandscape} {
       transform: none;
       box-shadow: none;
       .about-bg {
@@ -110,7 +111,7 @@ const cardHovered = css`
       scale(1.1);
     opacity: 1;
   }
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobilePortrait} {
     .about-card {
       .text-shadow {
         width: 90%;
@@ -122,13 +123,13 @@ const cardHovered = css`
       transform: perspective(900px) rotateX(-5deg) translateZ(0)
         translateY(-10%) scale(0.95);
       opacity: 1;
-      @media only screen and (height < 500px) {
-        ${commonSpan}
-        a {
-          padding: 5px 15px;
-          bottom: 70px;
-        }
-      }
+    }
+  }
+  ${mediaQuery.mobileLandscape} {
+    ${commonSpan}
+    a {
+      padding: 5px 15px;
+      bottom: 70px;
     }
   }
 `;
@@ -148,12 +149,12 @@ export const aboutCardContainer = css`
   border-radius: 15px;
   font-size: 1.6rem;
 
-  @media only screen and (width > 900px) {
+  ${mediaQuery.desktop} {
     &:hover {
       ${cardHovered};
     }
   }
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobilePortrait} {
     max-height: 500px;
     width: 90vw; //??
     transform: translate(-50%, -38.5%);
@@ -161,14 +162,14 @@ export const aboutCardContainer = css`
     &.hovered {
       ${cardHovered}
     }
-    @media only screen and (max-height: 500px) {
-      max-width: 100%;
-      width: 100%;
-      height: 100%;
-      transform: none;
-      top: 0;
-      left: 0;
-    }
+  }
+  ${mediaQuery.mobileLandscape} {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    top: 0;
+    left: 0;
   }
 `;
 
@@ -178,7 +179,7 @@ export const aboutCard = css`
   display: grid;
   place-items: center;
   transition: all 0.5s ease;
-  @media only screen and (max-height: 500px) {
+  ${mediaQuery.mobileLandscape} {
     height: 60%;
     width: 80%;
     position: relative;
@@ -192,14 +193,14 @@ export const aboutBgImg = css`
   transition: all 0.5s ease;
   border-radius: 15px;
   overflow: hidden;
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobilePortrait} {
     width: 95%;
     height: 100%;
-    @media only screen and (max-height: 500px) {
-      left: 0;
-      width: 50%;
-      height: 100%;
-    }
+  }
+  ${mediaQuery.mobileLandscape} {
+    left: 0;
+    width: 50%;
+    height: 100%;
   }
 `;
 
@@ -214,14 +215,15 @@ export const commonCardContent = css`
   height: 100%;
   width: 90%;
   transform: perspective(900px) rotateX(25deg) translateZ(0) translateY(-5%);
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobilePortrait} {
     width: 100%;
-    @media only screen and (height < 500px) {
-      ${commonSpan}
-      a {
-        padding: 5px 15px;
-        bottom: 20vh;
-      }
+  }
+  ${mediaQuery.mobileLandscape} {
+    ${commonSpan}
+    width: 100%;
+    a {
+      padding: 5px 15px;
+      bottom: 20vh;
     }
   }
 `;
@@ -230,7 +232,7 @@ export const shadow = css`
   z-index: 1;
   transition: all 0.5s ease;
   ${commonCardContent}
-  @media only screen and (max-height: 500px) {
+  ${mediaQuery.mobileLandscape} {
     display: none;
   }
 `;
@@ -253,7 +255,7 @@ export const cardButton = css`
   &:hover {
     scale: 1.1;
   }
-  @media only screen and (width < 900px) {
+  ${mediaQuery.mobile} {
     scale: 1;
   }
   @media only screen and (width < 300px) {
@@ -268,13 +270,13 @@ export const shadowButton = css`
   bottom: 25%;
   opacity: 0.65;
   filter: blur(5px) saturate(0.75);
-  @media only screen and (max-height: 500px) {
+  ${mediaQuery.mobileLandscape} {
     display: none;
   }
 `;
 
 export const textContainer = css`
-  @media only screen and (width > 900px) {
+  ${mediaQuery.desktop} {
     left: 5%;
   }
   z-index: 2;

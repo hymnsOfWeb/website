@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const navLinkContainerCss = css`
   text-decoration: none;
@@ -37,13 +38,12 @@ export const navLinkContainerCss = css`
       transform: translateY(-100%) rotateX(0deg);
     }
   }
-  @media only screen and (600px<= width <= 1000px) {
+  ${mediaQuery.tablet} {
     background-color: red;
     width: 80vw;
     height: 2ch;
   }
-  @media only screen and (width < 600px) {
-    background-color: #002fff;
+  ${mediaQuery.mobile} {
     width: 80vw;
     letter-spacing: 0.1ch;
   }

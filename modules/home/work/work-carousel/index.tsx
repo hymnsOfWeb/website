@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { ImageComp } from "@/components";
 import { workData, type WorkData } from "@common-data";
+import { ImageComp } from "@components";
 import { carousalMidContainer, carousalWrapperCss } from "./style";
 
 export default function WorkCarousel() {

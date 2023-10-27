@@ -29,7 +29,7 @@ export default function HomeContact() {
 
   const mouseLeaveCallback = useCallback(() => {
     if (linkRef.current) {
-      linkRef.current.style.transition = "transform 0.3s ease";
+      linkRef.current.style.transition = "transform 3s ease";
       linkRef.current.style.transform = "translate(-50%, -50%)";
     }
   }, []);

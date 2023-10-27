@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
-import { WorkData } from "@/common/common-data";
+import { WorkData } from "@common-data";
 import { linksContainerCss, buttonCss, workTitleCss } from "./styles";
 
 const WorkDescriptionCard = ({

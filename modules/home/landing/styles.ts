@@ -54,7 +54,7 @@ const commonChar = css`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 0.95em;
+  width: 0.75em;
   height: var(--_unit-height);
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
@@ -65,6 +65,8 @@ export const upperChar = css`
 `;
 export const lowerChar = css`
   ${commonChar}
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-text-primary);
 `;
 
 const commonSpanWrapper = css``;

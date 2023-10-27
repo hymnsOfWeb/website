@@ -1,8 +1,7 @@
 import { useCallback, useState } from "react";
 import Link from "next/link";
-import { ImageComp } from "@/components";
-import NavLinkContainer from "@/components/nav-link-container";
 import { mainNavLinks } from "@common-data";
+import { ImageComp, NavLinkContainer } from "@components";
 import {
   hamBtn,
   headerWrapper,

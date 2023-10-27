@@ -1,6 +1,6 @@
 import { MouseEventHandler, useCallback } from "react";
 import Link from "next/link";
-import { mainTimeDelay } from "@/modules/header/styles";
+import { mainTimeDelay } from "@modules/header/styles";
 import {
   navLinkContainerCss,
   navLinkDynamicCss,

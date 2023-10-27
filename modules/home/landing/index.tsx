@@ -1,5 +1,5 @@
 import { type Ref, forwardRef, useCallback, useMemo } from "react";
-import getid from "@/common/getid";
+import getid from "@common/getid";
 import { homeLandingTexts } from "@common-data";
 import {
   charContainer,

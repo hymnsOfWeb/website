@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const workContainerCss = css`
   display: flex;
@@ -10,7 +11,7 @@ export const workContainerCss = css`
 
 export const mwebCardCss = css`
   margin: 20px 0;
-  @media only screen and (600px <= width <= 900px) {
+  ${mediaQuery.squeezedScreen} {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +19,7 @@ export const mwebCardCss = css`
 `;
 
 export const workDescCss = css`
-  @media only screen and (600px <= width <= 900px) {
+  ${mediaQuery.squeezedScreen} {
     width: 57.5%;
   }
 `;
@@ -30,7 +31,7 @@ export const mwebWorkImgCss = css`
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 20px;
-  @media only screen and (600px <= width <= 900px) {
+  ${mediaQuery.squeezedScreen} {
     width: 37.5%;
     height: 300px;
     margin: 0;

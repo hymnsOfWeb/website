@@ -1,6 +1,5 @@
-import { WorkData, workData } from "@/common/common-data";
-import { ImageComp } from "@/components";
-import WorkDescriptionCard from "@/components/work-description-card";
+import { WorkData, workData } from "@common-data";
+import { ImageComp, WorkDescriptionCard } from "@components";
 import {
   mwebCardCss,
   mwebWorkImgCss,

@@ -8,8 +8,8 @@ import {
   RefObject,
 } from "react";
 import Link from "next/link";
-import { ImageComp } from "@/components";
 import { aboutTextRibbon } from "@common-data";
+import { ImageComp } from "@components";
 import {
   aboutBgImg,
   aboutCard,

@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import type { Ref } from "react";
-import usePhone from "@/hooks/use-phone";
+import usePhone from "@hooks/use-phone";
 import DwebWork from "./dweb-work";
 import MwebWork from "./mweb-work";
 

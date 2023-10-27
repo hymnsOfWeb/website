@@ -1,6 +1,6 @@
 import { forwardRef, type Ref } from "react";
-import { WorkData, workData } from "@/common/common-data";
-import WorkDescriptionCard from "@/components/work-description-card";
+import { WorkData, workData } from "@common-data";
+import { WorkDescriptionCard } from "@components";
 import { descriptionContainer, workCardsCss } from "./styles";
 
 function WD(_: unknown, ref: Ref<HTMLDivElement>) {
