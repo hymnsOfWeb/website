@@ -54,7 +54,7 @@ const commonChar = css`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 0.75em;
+  width: 0.8em;
   height: var(--_unit-height);
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;

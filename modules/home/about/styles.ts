@@ -13,6 +13,9 @@ export const aboutWrapper = css`
   @media only screen and (width < 400px) {
     height: 100vh;
   }
+  * {
+    user-select: none;
+  }
 `;
 
 export const ribbonWrapper = css`
@@ -24,6 +27,8 @@ export const ribbonWrapper = css`
   left: 50%;
   transform: translate(-50%, -50%) rotate(-10deg);
   background-color: var(--color-text-primary);
+  filter: brightness(85%);
+  opacity: 0.95;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
     0 0 20px -5px var(--box-shadow-primary),
     0 0 30px -10px rgba(185, 185, 185, 0.4), 0 0 60px rgba(255, 255, 255, 0.25);

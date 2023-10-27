@@ -9,5 +9,5 @@ export const workCardsCss = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.5vh;
+  gap: 2vh;
 `;

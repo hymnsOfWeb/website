@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
+  bubbleWrapperCss,
   contactCircleCss,
   contactCss,
   contactSquareCss,
   shadowCss,
 } from "./style";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 export default function HomeContact() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -102,6 +104,14 @@ export default function HomeContact() {
           <span className="contact-text">Contact Us</span>
         </Link>
       </div>
+      <a
+        href="tel:+919415507316"
+        target="_blank"
+        rel="noopener noreferrer"
+        css={bubbleWrapperCss}
+      >
+        <BsFillTelephoneFill />
+      </a>
     </div>
   );
 }

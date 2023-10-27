@@ -7,6 +7,7 @@ export const contactCss = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 export const contactSquareCss = css`
@@ -62,4 +63,23 @@ export const shadowCss = css`
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.5s ease;
+`;
+
+export const bubbleWrapperCss = css`
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  border: 2px solid var(--color-text-primary);
+  border-radius: 50%;
+  font-size: 3rem;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    height: 1em;
+    width: 1em;
+    margin: auto;
+  }
 `;

@@ -2,7 +2,12 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { WorkData } from "@common-data";
-import { linksContainerCss, buttonCss, workTitleCss } from "./styles";
+import {
+  linksContainerCss,
+  buttonCss,
+  workTitleCss,
+  workDescriptionCss,
+} from "./styles";
 
 const WorkDescriptionCard = ({
   className,
@@ -29,7 +34,7 @@ const WorkDescriptionCard = ({
       <div className="links-container" css={linksContainerCss}>
         {data.links.map(mapper)}
       </div>
-      <p>{data.description}</p>
+      <p css={workDescriptionCss}>{data.description}</p>
     </div>
   );
 };

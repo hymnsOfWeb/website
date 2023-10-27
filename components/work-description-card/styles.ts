@@ -14,7 +14,7 @@ export const buttonCss = css`
 `;
 
 export const workTitleCss = css`
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 600;
 `;
 
@@ -28,7 +28,6 @@ export const linksContainerCss = css`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 1vh 0;
   ${mediaQuery.tablet} {
     flex-direction: column;
     height: fit-content;
@@ -39,4 +38,10 @@ export const linksContainerCss = css`
     height: fit-content;
     align-items: flex-start;
   }
+`;
+
+export const workDescriptionCss = css`
+  font-size: 1.2rem;
+  line-height: 2em;
+  text-align: justify;
 `;

@@ -34,7 +34,8 @@
       "@hooks/*": ["./hooks/*"],
       "@common-data": ["./common/common-data"],
       "@common-styles": ["./common/common-styles"],
-      "@common/*": ["./common/*"]
+      "@common/*": ["./common/*"],
+      "@/*": ["./*"]
     },
     "noPropertyAccessFromIndexSignature": false,
     "ignoreDeprecations": "5.0",

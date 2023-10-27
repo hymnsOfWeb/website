@@ -11,6 +11,7 @@ export const workHeadingCss = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0.9;
   ${mediaQuery.mobile} {
     position: static;
     height: fit-content;
@@ -29,7 +30,7 @@ const commonMobile = css`
 
 export const workMainHeadingCss = css`
   color: transparent;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-family: var(--font-mono);
   -webkit-text-stroke: 1px var(--color-text-primary);
   ${commonMobile}
@@ -37,8 +38,8 @@ export const workMainHeadingCss = css`
 
 export const workMainSubHeadingCss = css`
   text-align: center;
-  width: 15em;
-  font-size: 1.25em;
+  width: 35ch;
+  font-size: 1em;
   display: block;
   ${commonMobile}
 `;
