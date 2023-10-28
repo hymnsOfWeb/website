@@ -7,4 +7,5 @@ export const mediaQuery = {
   tablet: "@media only screen and (900px < width <= 1000px)",
   desktop: "@media only screen and (width > 1000px)",
   squeezedScreen: "@media only screen and (600px <= width <= 900px)",
+  smallLaptop: "@media only screen and (900px <= width <= 1200px)",
 };

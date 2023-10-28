@@ -1,10 +1,10 @@
-import { BubbleDataProps } from "@components/contact-bubble/types";
 import {
   BsEnvelope,
-  BsFillTelephoneFill,
   BsInstagram,
+  BsTelephone,
   BsWhatsapp,
 } from "react-icons/bs";
+import { BubbleDataProps } from "@components/contact-bubble/types";
 
 //nav
 export const mainNavLinks = [
@@ -115,25 +115,25 @@ export const aboutTextRibbon = {
 
 export const phoneNumber = "+919415507316";
 export const mail = "hymnsofweb@gmail.com";
-export const instaId = "hymnsofweb";
+export const instaId = "@hymnsofweb";
 
 export const contactBubbleData: BubbleDataProps[] = [
   {
     href: `tel:${phoneNumber}`,
     styles: {
-      top: 30,
-      left: 20,
+      top: 27,
+      left: 15,
       scale: 2,
     },
-    icon: BsFillTelephoneFill,
+    icon: BsTelephone,
     text: phoneNumber,
   },
   {
     href: `mailto:${mail}`,
     styles: {
-      top: 20,
-      left: 72.5,
-      scale: 3,
+      top: 80,
+      left: 70,
+      scale: 2.5,
     },
     icon: BsEnvelope,
     text: mail,
@@ -141,8 +141,8 @@ export const contactBubbleData: BubbleDataProps[] = [
   {
     href: `https://www.instagram.com/${instaId}`,
     styles: {
-      top: 70,
-      left: 80,
+      top: 20,
+      left: 72.5,
       scale: 2,
     },
     icon: BsInstagram,
@@ -151,8 +151,8 @@ export const contactBubbleData: BubbleDataProps[] = [
   {
     href: `https://wa.me/${phoneNumber}`,
     styles: {
-      top: 65,
-      left: 12,
+      top: 75,
+      left: 17.5,
       scale: 2,
     },
     icon: BsWhatsapp,
