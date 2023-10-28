@@ -34,8 +34,8 @@ export default function DwebHomeContact() {
       const { left, top, height, width } = container.getBoundingClientRect();
       const xPos = e.clientX - left;
       const yPos = e.clientY - top;
-      const xPercentage = 100 - (48 + (xPos * 100) / width / 25);
-      const yPercentage = 100 - (48 + (yPos * 100) / height / 25);
+      const xPercentage = 100 - (45 + (xPos * 100) / width / 10);
+      const yPercentage = 100 - (45 + (yPos * 100) / height / 10);
       if (linkRef.current) {
         linkRef.current.style.transition = "none";
         linkRef.current.style.transform = `translate(-${xPercentage}%, -${yPercentage}%)`;

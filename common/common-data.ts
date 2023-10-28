@@ -114,8 +114,8 @@ export const aboutTextRibbon = {
 };
 
 export const phoneNumber = "+919415507316";
-export const mail = "hymnsofweb@gmail.com";
-export const instaId = "@hymnsofweb";
+export const mail = "sing@hymnsofweb.com";
+export const instaId = "hymnsofweb";
 
 export const contactBubbleData: BubbleDataProps[] = [
   {
@@ -146,7 +146,7 @@ export const contactBubbleData: BubbleDataProps[] = [
       scale: 2,
     },
     icon: BsInstagram,
-    text: instaId,
+    text: "@" + instaId,
   },
   {
     href: `https://wa.me/${phoneNumber}`,

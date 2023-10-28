@@ -11,11 +11,17 @@ export const buttonCss = css`
   display: flex;
   align-items: center;
   gap: 10px;
+  ${mediaQuery.mobile} {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
 `;
 
 export const workTitleCss = css`
   font-size: 4rem;
   font-weight: 600;
+  ${mediaQuery.mobile} {
+    font-size: 3rem;
+  }
 `;
 
 export const linksContainerCss = css`
@@ -34,7 +40,7 @@ export const linksContainerCss = css`
     align-items: flex-start;
   }
   ${mediaQuery.mobile} {
-    flex-direction: column;
+    margin: 1rem 0;
     height: fit-content;
     align-items: flex-start;
   }

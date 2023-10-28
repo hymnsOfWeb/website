@@ -8,6 +8,12 @@ export const contactCss = css`
   justify-content: center;
   align-items: center;
   position: relative;
+  ${mediaQuery.mobilePortrait} {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 10vh;
+  }
 `;
 
 export const contactSquareCss = css`
@@ -18,6 +24,9 @@ export const contactSquareCss = css`
   ${mediaQuery.mobileLandscape} {
     height: 80vh;
     width: unset;
+  }
+  ${mediaQuery.mobilePortrait} {
+    height: 50vh;
   }
 `;
 
@@ -37,20 +46,36 @@ export const contactCircleCss = css`
   justify-content: center;
   text-decoration: none;
   left: 50%;
-  .contact-text {
-    font-family: var(--font-mono);
-    transition: all 0.3s ease 0.1s;
-    font-size: 4rem;
-    font-weight: 500;
-    z-index: 1;
+  ${mediaQuery.desktop} {
+    &:hover {
+      .contact-text {
+        color: var(--color-bg-primary);
+      }
+      .shadow {
+        transform: translate(-50%, -50%) scale(1500);
+      }
+    }
   }
-  &:hover {
-    .contact-text {
-      color: var(--color-bg-primary);
+  ${mediaQuery.mobilePortrait} {
+    --_s: 85%;
+    transition: all 0.3s ease;
+    &.in-view {
+      background-color: var(--color-text-primary);
+      .contact-text {
+        color: var(--color-bg-primary);
+      }
     }
-    .shadow {
-      transform: translate(-50%, -50%) scale(1500);
-    }
+  }
+`;
+
+export const contactTextCss = css`
+  font-family: var(--font-mono);
+  transition: all 0.3s ease 0.1s;
+  font-size: 4rem;
+  font-weight: 500;
+  z-index: 1;
+  ${mediaQuery.mobilePortrait} {
+    font-size: 7.5vw;
   }
 `;
 
@@ -63,4 +88,12 @@ export const shadowCss = css`
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.5s ease;
+`;
+
+export const iconsContainerStyle = css`
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;

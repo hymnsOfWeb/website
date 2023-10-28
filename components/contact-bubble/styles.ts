@@ -1,4 +1,5 @@
 import { css, keyframes } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const bubbleLinkCss = css`
   position: relative;
@@ -72,33 +73,52 @@ export const bubbleWrapperCss = css`
   ${nthTypeGenerator()}
   &:nth-of-type(2),&:nth-of-type(4) {
     animation-name: ${bubbleFloat};
+    ${mediaQuery.mobilePortrait} {
+      offset-path: none;
+    }
   }
   &:nth-of-type(3),
   &:nth-of-type(5) {
     animation-name: ${bubbleFloatReverse};
+    ${mediaQuery.mobilePortrait} {
+      offset-path: none;
+    }
   }
   &:hover {
     animation-play-state: paused;
+  }
+  ${mediaQuery.mobilePortrait} {
+    position: static;
+    animation: none;
+    transform: none;
+    width: 12.5vw;
+    height: 12.5vw;
   }
 `;
 
 export const bubbleWrapperPosition = (top: number, left: number) => css`
   top: ${top}vh;
   left: ${left}vw;
+  ${mediaQuery.mobilePortrait} {
+    top: 0;
+    left: 0;
+  }
 `;
 
 export const bubbleWrapperScale = (scale: number) => css`
-  &:hover {
-    scale: ${scale};
-    background-color: var(--color-text-primary);
-    .bubble-text {
-      color: var(--color-bg-primary);
-      transform: scale(calc(1 / ${scale}));
-      opacity: 1;
-    }
-    .bubble-icon {
-      filter: blur(10px);
-      opacity: 0;
+  ${mediaQuery.desktop} {
+    &:hover {
+      scale: ${scale};
+      background-color: var(--color-text-primary);
+      .bubble-text {
+        color: var(--color-bg-primary);
+        transform: scale(calc(1 / ${scale}));
+        opacity: 1;
+      }
+      .bubble-icon {
+        filter: blur(10px);
+        opacity: 0;
+      }
     }
   }
 `;
@@ -111,6 +131,9 @@ export const bubbleText = css`
   position: absolute;
   color: var(--color-text-primary);
   transition: color 0.2s ease 0.4s, transform 0.4s ease;
+  ${mediaQuery.mobilePortrait} {
+    display: none;
+  }
 `;
 
 export const bubbleSvgCss = css`
@@ -119,4 +142,9 @@ export const bubbleSvgCss = css`
   opacity: 1;
   position: absolute;
   transition: filter 0.3s ease, opacity 0.2s ease 0.2s;
+  ${mediaQuery.mobilePortrait} {
+    position: static;
+    height: 50%;
+    width: 50%;
+  }
 `;
