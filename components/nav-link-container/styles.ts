@@ -39,7 +39,6 @@ export const navLinkContainerCss = css`
     }
   }
   ${mediaQuery.tablet} {
-    background-color: red;
     width: 80vw;
     height: 2ch;
   }
@@ -52,6 +51,10 @@ export const navLinkContainerCss = css`
 export const charDynamicDelayCss = (delay: number) => css`
   transition: transform 0.5s ease-in-out ${delay}s;
   font-family: var(--font-mono);
+  &:nth-of-type(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-bg-primary);
+  }
 `;
 
 export const linkCommonCss = css`

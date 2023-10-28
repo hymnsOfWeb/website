@@ -61,6 +61,7 @@ export default function useMasterLandingPage() {
       ).style.transform = `translate(-${percentMove}%, 0)`;
     }
   }, []);
+
   const worksCallback = useCallback(() => {
     const workElement = workRef.current;
     const screenHeight = window?.innerHeight ?? 0;
@@ -107,6 +108,21 @@ export default function useMasterLandingPage() {
     }
   }, []);
 
+  const worksReverseWheelCallback = useCallback(() => {
+    const works = workRef.current;
+    const imgContainers: HTMLDivElement[] = Array.from(
+      works?.querySelectorAll(".work-carousal-container") ?? []
+    );
+    for (let i = 1; i < imgContainers.length; i++) {
+      const imgContainer = imgContainers[i] as HTMLDivElement;
+      imgContainer.style.transform = `translateY(-${i}00%)`;
+      const image = imgContainer?.querySelector("img");
+      if (image) {
+        image.style.transform = `translateY(0%)`;
+      }
+    }
+  }, []);
+
   const scrollCallback = useCallback<EventListener>(() => {
     const scrollPos = window.scrollY;
     landingTopCallback(scrollPos);
@@ -122,21 +138,25 @@ export default function useMasterLandingPage() {
     worksCallback,
   ]);
 
-  const wheelCallback = useCallback((e: WheelEvent) => {
-    const bodyHeight = document.body.scrollHeight;
-    const delta = e.deltaY;
-    const currentScrollPos = Math.round(window.scrollY);
-    if (currentScrollPos < 3 && delta < 0) {
-      window.scrollTo({ top: bodyHeight, behavior: "instant" });
-      // window.scrollTo({ top: bodyHeight + delta, behavior: "smooth" });
-      return;
-    }
-    if (currentScrollPos > bodyHeight - window.innerHeight - 3 && delta > 0) {
-      window.scrollTo({ top: 0, behavior: "instant" });
-      // window.scrollTo({ top: Math.abs(delta), behavior: "smooth" });
-      return;
-    }
-  }, []);
+  const wheelCallback = useCallback(
+    (e: WheelEvent) => {
+      const bodyHeight = document.body.scrollHeight;
+      const delta = e.deltaY;
+      const currentScrollPos = Math.round(window.scrollY);
+      if (currentScrollPos < 3 && delta < 0) {
+        window.scrollTo({ top: bodyHeight, behavior: "instant" });
+        worksReverseWheelCallback();
+        // window.scrollTo({ top: bodyHeight + delta, behavior: "smooth" });
+        return;
+      }
+      if (currentScrollPos > bodyHeight - window.innerHeight - 3 && delta > 0) {
+        window.scrollTo({ top: 0, behavior: "instant" });
+        // window.scrollTo({ top: Math.abs(delta), behavior: "smooth" });
+        return;
+      }
+    },
+    [worksReverseWheelCallback]
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", scrollCallback);

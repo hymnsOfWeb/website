@@ -1,5 +1,5 @@
 :root {
-  --color-bg-primary: rgb(15, 10, 20);
+  --color-bg-primary: hsl(270, 33%, 11%);
   --color-bg-secondary: rgba(46, 72, 159, 1);
 
   --color-text-primary: rgb(245, 235, 255);

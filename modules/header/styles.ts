@@ -100,7 +100,7 @@ export const nav = css`
   position: absolute;
   height: 100vh;
   width: 100vw;
-  --_col: darkgrey;
+  --_col: hsl(227, 16%, 50%);
   background-color: var(--_col);
   top: 0;
   left: 0;
@@ -127,7 +127,6 @@ export const nav = css`
   }
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   gap: 3rem;

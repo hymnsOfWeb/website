@@ -9,7 +9,6 @@ export const carousalWrapperCss = css`
 `;
 
 export const carousalMidContainer = css`
-  background-color: red;
   height: 70vh;
   width: 100%;
   border-radius: 25px;
