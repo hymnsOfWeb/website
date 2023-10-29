@@ -120,6 +120,7 @@ export const instaId = "hymnsofweb";
 export const contactBubbleData: BubbleDataProps[] = [
   {
     href: `tel:${phoneNumber}`,
+    title: "Phone",
     styles: {
       top: 27,
       left: 15,
@@ -130,6 +131,8 @@ export const contactBubbleData: BubbleDataProps[] = [
   },
   {
     href: `mailto:${mail}`,
+    title: "Mail",
+
     styles: {
       top: 80,
       left: 70,
@@ -140,6 +143,8 @@ export const contactBubbleData: BubbleDataProps[] = [
   },
   {
     href: `https://www.instagram.com/${instaId}`,
+    title: "Instagram",
+
     styles: {
       top: 20,
       left: 72.5,
@@ -150,6 +155,8 @@ export const contactBubbleData: BubbleDataProps[] = [
   },
   {
     href: `https://wa.me/${phoneNumber}`,
+    title: "WhatsApp",
+
     styles: {
       top: 75,
       left: 17.5,

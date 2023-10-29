@@ -76,11 +76,17 @@ export const bubbleWrapperCss = css`
     ${mediaQuery.mobilePortrait} {
       offset-path: none;
     }
+    ${mediaQuery.mobileLandscape} {
+      offset-path: none;
+    }
   }
   &:nth-of-type(3),
   &:nth-of-type(5) {
     animation-name: ${bubbleFloatReverse};
     ${mediaQuery.mobilePortrait} {
+      offset-path: none;
+    }
+    ${mediaQuery.mobileLandscape} {
       offset-path: none;
     }
   }
@@ -94,12 +100,22 @@ export const bubbleWrapperCss = css`
     width: 12.5vw;
     height: 12.5vw;
   }
+  ${mediaQuery.mobileLandscape} {
+    position: static;
+    animation: none;
+    width: 10vw;
+    height: 10vw;
+  }
 `;
 
 export const bubbleWrapperPosition = (top: number, left: number) => css`
   top: ${top}vh;
   left: ${left}vw;
   ${mediaQuery.mobilePortrait} {
+    top: 0;
+    left: 0;
+  }
+  ${mediaQuery.mobileLandscape} {
     top: 0;
     left: 0;
   }
@@ -134,6 +150,9 @@ export const bubbleText = css`
   ${mediaQuery.mobilePortrait} {
     display: none;
   }
+  ${mediaQuery.mobileLandscape} {
+    display: none;
+  }
 `;
 
 export const bubbleSvgCss = css`
@@ -143,6 +162,11 @@ export const bubbleSvgCss = css`
   position: absolute;
   transition: filter 0.3s ease, opacity 0.2s ease 0.2s;
   ${mediaQuery.mobilePortrait} {
+    position: static;
+    height: 50%;
+    width: 50%;
+  }
+  ${mediaQuery.mobileLandscape} {
     position: static;
     height: 50%;
     width: 50%;

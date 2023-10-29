@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const mainTimeDelay = 1.25;
 
@@ -31,10 +32,33 @@ export const logoWrapper = css`
   border: 2px solid var(--color-text-primary);
   padding: 2vh;
   filter: invert(0);
-  transition: filter 0.3s ease-in-out 1s;
-  &.active {
-    transition: filter 0.3s ease-in-out 0.2s;
+  position: relative;
+  transition: filter 0.3s ease-in-out;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: var(--color-text-primary);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    height: 110%;
+    width: 110%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
     filter: invert(1);
+    transition: transform 0.3s ease-in-out;
+  }
+  &.active {
+    filter: invert(1);
+    transition: filter 0.3s ease-in-out 0.2s;
+  }
+  &:hover {
+    filter: invert(1);
+    border: 2px solid #0a1400;
+    &::before {
+      filter: invert(1);
+      opacity: 1;
+    }
   }
 `;
 
@@ -97,39 +121,46 @@ export const hamBtn = css`
 `;
 
 export const nav = css`
+  --_col: var(--color-bg-tertiary);
+  --nav-width: 160vw;
+  ${mediaQuery.mobile} {
+    --nav-width: 220vw;
+  }
   position: absolute;
   height: 100vh;
-  width: 100vw;
-  --_col: hsl(227, 16%, 50%);
+  width: var(--nav-width);
   background-color: var(--_col);
   top: 0;
-  left: 0;
-  --_ps-w: 30vw;
-  transition: transform var(--_main-time-delay) ease-in-out;
-  transform: translateX(calc(-100% - var(--_ps-w)));
+  left: calc((100vw - var(--nav-width)) / 2);
+  transition: transform var(--_main-time-delay) ease-in-out, clip-path 0.3s ease;
+  transform: translateX(-100%);
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  box-shadow: 20px 0 15px 10px rgba(0, 0, 0, 1);
   &.active {
-    transform: translateX(0%);
-    &::before {
-      transform: skewX(10deg);
-    }
-  }
-  &::before {
-    transition: transform 0.25s ease-in-out;
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: var(--_ps-w);
-    top: 0;
-    right: calc(-1 * var(--_ps-w) / 2);
-    transform: skewX(-10deg);
-    background-color: var(--_col);
-    box-shadow: 60px 0 30px rgba(0, 0, 0, 0.75);
+    transform: translateX(0);
+    left: calc((100vw - var(--nav-width)) / 2);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
   }
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  font-size: 5rem;
   color: var(--color-bg-primary);
+  font-size: 5rem;
+  ${mediaQuery.squeezedScreen} {
+    font-size: 3.5rem;
+  }
+  ${mediaQuery.mobile} {
+    font-size: 2.5rem;
+  }
+  ${mediaQuery.mobileLandscape} {
+    --nav-width: 140vw;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 2.2rem;
+    padding: 2em 5em;
+    place-items: center;
+  }
 `;

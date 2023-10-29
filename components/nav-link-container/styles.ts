@@ -42,9 +42,16 @@ export const navLinkContainerCss = css`
     width: 80vw;
     height: 2ch;
   }
+  ${mediaQuery.squeezedScreen} {
+    width: 70vw;
+    letter-spacing: 0.2ch;
+  }
   ${mediaQuery.mobile} {
-    width: 80vw;
-    letter-spacing: 0.1ch;
+    width: 90vw;
+  }
+  ${mediaQuery.mobileLandscape} {
+    width: fit-content;
+    height: 10vw;
   }
 `;
 

@@ -14,6 +14,12 @@ export const contactCss = css`
     height: fit-content;
     margin-top: 10vh;
   }
+  ${mediaQuery.mobileLandscape} {
+    height: 80vh;
+    position: static;
+    display: flex;
+    margin-top: 20vh;
+  }
 `;
 
 export const contactSquareCss = css`
@@ -21,10 +27,6 @@ export const contactSquareCss = css`
   width: 100%;
   max-height: 90vw;
   position: relative;
-  ${mediaQuery.mobileLandscape} {
-    height: 80vh;
-    width: unset;
-  }
   ${mediaQuery.mobilePortrait} {
     height: 50vh;
   }
@@ -66,6 +68,16 @@ export const contactCircleCss = css`
       }
     }
   }
+  ${mediaQuery.mobileLandscape} {
+    --_s: 70vh;
+    transition: all 0.3s ease;
+    &.in-view {
+      background-color: var(--color-text-primary);
+      .contact-text {
+        color: var(--color-bg-primary);
+      }
+    }
+  }
 `;
 
 export const contactTextCss = css`
@@ -76,6 +88,9 @@ export const contactTextCss = css`
   z-index: 1;
   ${mediaQuery.mobilePortrait} {
     font-size: 7.5vw;
+  }
+  ${mediaQuery.mobileLandscape} {
+    font-size: 2rem;
   }
 `;
 
@@ -96,4 +111,10 @@ export const iconsContainerStyle = css`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  ${mediaQuery.mobileLandscape} {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
 `;

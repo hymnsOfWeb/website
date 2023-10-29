@@ -20,9 +20,7 @@ export const aboutWrapper = css`
 
 export const ribbonWrapper = css`
   position: absolute;
-  /* padding: 4vh 0; */
   width: 120vw;
-  /* height: 20vh; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-10deg);
@@ -45,7 +43,6 @@ export const ribbonContainer = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-left: 125px; */
   ${mediaQuery.mobile} {
     width: 400vw;
   }
@@ -226,6 +223,7 @@ export const commonCardContent = css`
   ${mediaQuery.mobileLandscape} {
     ${commonSpan}
     width: 100%;
+    font-size: 1rem;
     a {
       padding: 5px 15px;
       bottom: 20vh;

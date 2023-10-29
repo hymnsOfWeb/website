@@ -10,6 +10,7 @@ import { BubbleDataProps } from "@components/contact-bubble/types";
 
 export default function ContactBubble({
   href,
+  title,
   className = "",
   styles: { top, left, scale },
   icon,
@@ -24,6 +25,8 @@ export default function ContactBubble({
         bubbleWrapperPosition(top, left),
         bubbleWrapperScale(scale),
       ]}
+      title={title}
+      aria-label={title}
     >
       <a
         href={href}
