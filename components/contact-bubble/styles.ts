@@ -60,8 +60,10 @@ export const bubbleWrapperCss = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background-color: var(--color-bg-primary);
-  transition: background-color 0.3s ease 0.2s, scale 0.4s ease;
+  transition: background-color 0.3s ease 0.2s, scale 0.4s ease,
+    opacity 0.3s ease;
   text-decoration: none;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -146,7 +148,9 @@ export const bubbleText = css`
   width: fit-content;
   position: absolute;
   color: var(--color-text-primary);
-  transition: color 0.2s ease 0.4s, transform 0.4s ease;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: color 0.2s ease 0.4s, transform 0.4s ease, opacity 0.3s ease;
   ${mediaQuery.mobilePortrait} {
     display: none;
   }

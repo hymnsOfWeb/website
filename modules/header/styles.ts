@@ -8,14 +8,20 @@ export const headerWrapper = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 15vh;
-  padding: 2.5vh 5vw;
+  height: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 999;
   --_main-time-delay: ${mainTimeDelay}s;
+`;
+
+export const navActiveScrollbarCss = css`
+  ::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
 `;
 
 export const logoContainer = css`
@@ -25,14 +31,16 @@ export const logoContainer = css`
 
 export const logoWrapper = css`
   z-index: 999;
-  height: 100%;
+  height: 70px;
   aspect-ratio: 1;
+  left: 5vw;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--color-text-primary);
-  padding: 2vh;
+  padding: 15px;
   filter: invert(0);
-  position: relative;
+  position: absolute;
+  top: 5vh;
   transition: filter 0.3s ease-in-out;
   &::before {
     position: absolute;
@@ -64,13 +72,16 @@ export const logoWrapper = css`
 
 export const hamBtn = css`
   z-index: 999;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 6px;
+  top: 5vh;
+  right: 5vw;
   aspect-ratio: 1;
-  height: 30px;
+  height: 70px;
+  padding: 0 20px;
   cursor: pointer;
   --_h: 2px;
   --_t: 0.15s;
@@ -78,6 +89,9 @@ export const hamBtn = css`
   --_c: var(--color-text-primary);
   background-color: transparent;
   border: none;
+  &:focus {
+    outline: none;
+  }
   &::before {
     content: "";
     height: var(--_h);

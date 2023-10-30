@@ -136,7 +136,7 @@ export const contactBubbleData: BubbleDataProps[] = [
     styles: {
       top: 80,
       left: 70,
-      scale: 2.5,
+      scale: 2.7,
     },
     icon: BsEnvelope,
     text: mail,

@@ -8,6 +8,10 @@ export const contactCss = css`
   justify-content: center;
   align-items: center;
   position: relative;
+  &:has(.bubble-wrapper:hover) .bubble-wrapper:not(:hover) {
+    opacity: 0.2;
+    animation-play-state: paused;
+  }
 `;
 
 export const contactSquareCss = css`
