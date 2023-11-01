@@ -15,9 +15,7 @@ const appContextInit: AppContextType = {
 export const AppContext = createContext<AppContextType>(appContextInit);
 
 export default function AppContexProvider(props: PropsWithChildren) {
-  const [isPhone, setIsPhone] = useState<AppContextType["isPhone"][0]>(
-    null as unknown as false
-  );
+  const [isPhone, setIsPhone] = useState<AppContextType["isPhone"][0]>(true);
   const { children } = props;
   const value: AppContextType = {
     isPhone: [isPhone, setIsPhone],

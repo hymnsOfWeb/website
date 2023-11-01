@@ -104,6 +104,10 @@ export const workData: WorkData[] = [
 ];
 
 // home page
+export const homePageMeta = {
+  title: "Hymns of Web | Home Page",
+  description: "Hymns of Web | web design and development studio",
+};
 export const homeLandingTexts: [string, string] = [
   "Digital design &",
   "Branding studio",

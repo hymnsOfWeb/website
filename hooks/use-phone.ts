@@ -1,12 +1,9 @@
 import { useCallback, useContext, useEffect } from "react";
 import { AppContext } from "@/context";
 
-export default function usePhone(setValue?: boolean) {
+export default function usePhone() {
   const { isPhone: isPhoneFromContext } = useContext(AppContext);
   const [isPhone, setIsPhone] = isPhoneFromContext;
-  if (setValue) {
-    setIsPhone(setValue);
-  }
   const phoneCallback = useCallback(() => {
     const screenWidth = window?.innerWidth;
     if (screenWidth < 900) {
@@ -16,10 +13,8 @@ export default function usePhone(setValue?: boolean) {
     }
   }, [setIsPhone]);
   useEffect(() => {
-    if (isPhone === null) {
-      phoneCallback();
-    }
-  }, [phoneCallback, isPhone]);
+    phoneCallback();
+  }, [phoneCallback]);
   useEffect(() => {
     window?.addEventListener("resize", phoneCallback);
     return () => window?.removeEventListener("resize", phoneCallback);

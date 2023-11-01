@@ -26,12 +26,13 @@ export default function ContactBubble({
         bubbleWrapperScale(scale),
       ]}
       title={title}
-      aria-label={title}
     >
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={title}
+        title={title}
         css={bubbleLinkCss}
       >
         <Icon className="bubble-icon" css={bubbleSvgCss} />

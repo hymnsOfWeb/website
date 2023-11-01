@@ -66,7 +66,7 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
       observerCallback,
       observerOption
     );
-    const element = (ref as RefObject<HTMLDivElement>).current;
+    const element = (ref as RefObject<HTMLDivElement>)?.current;
     if (element) {
       observer.observe(element);
     }
@@ -82,7 +82,7 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
     .fill(text)
     .map((text, index) => {
       return (
-        <span key={index} css={ribbonSpan}>
+        <span key={index} css={ribbonSpan} aria-disabled>
           {text}
         </span>
       );
@@ -91,7 +91,11 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
   return (
     <div ref={ref} css={aboutWrapper}>
       <div className="text-ribbon-wrapper" css={ribbonWrapper}>
-        <div className="text-ribbon-container" css={ribbonContainer}>
+        <div
+          className="text-ribbon-container"
+          css={ribbonContainer}
+          title="about"
+        >
           {ribbonSpans}
         </div>
       </div>

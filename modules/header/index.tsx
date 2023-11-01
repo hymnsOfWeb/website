@@ -49,6 +49,7 @@ export default function Header() {
           src="/assets/images/logo.png"
           alt="Hymns of web | Logo"
           containerCss={logoContainer}
+          priority
         />
       </Link>
       <nav className={isMenuOpen ? "active" : undefined} css={nav}>

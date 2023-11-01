@@ -14,10 +14,6 @@ import {
 export default function MwebHomeContact() {
   const circleRef = useRef<HTMLAnchorElement>(null);
   const egRef = useRef<HTMLDivElement>(null);
-  const observerOptions = useRef<IntersectionObserverInit>({
-    threshold: 0.98,
-    root: document,
-  });
   const observerCallback = useCallback<IntersectionObserverCallback>(
     (entries) => {
       const circle = circleRef.current;
@@ -31,9 +27,13 @@ export default function MwebHomeContact() {
   );
   useEffect(() => {
     const container = egRef.current;
+    const observerOptions = {
+      threshold: 0.98,
+      root: document,
+    };
     const observer: IntersectionObserver = new IntersectionObserver(
       observerCallback,
-      observerOptions.current
+      observerOptions
     );
     if (container) {
       observer.observe(container);
