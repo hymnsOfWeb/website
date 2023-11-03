@@ -2,7 +2,7 @@ import Head from "next/head";
 import { homePageMeta } from "@common-data";
 import useMasterLandingPage from "@hooks/use-master-landing-page";
 import usePhone from "@hooks/use-phone";
-import HomeAbout from "@modules/home/about";
+import { HomeDwebAbout, HomeMwebAbout } from "@modules/home/about";
 import { HomeDwebContact, HomeMwebContact } from "@modules/home/contact";
 import HomeLanding from "@modules/home/landing";
 import { mainHomeWrapper } from "@modules/home/styles";
@@ -26,7 +26,7 @@ function HomeDweb() {
     <section id="home" aria-label="home" css={mainHomeWrapper}>
       <HomeHead />
       <HomeLanding ref={landingRefTop} />
-      <HomeAbout ref={aboutRef} />
+      <HomeDwebAbout ref={aboutRef} />
       <HomeDwebWork ref={workRef} />
       <HomeDwebContact />
       <HomeLanding ref={landingRefBottom} atBottom />
@@ -39,7 +39,7 @@ function HomeMweb() {
     <section id="home" aria-label="home" css={mainHomeWrapper}>
       <HomeHead />
       <HomeLanding />
-      <HomeAbout />
+      <HomeMwebAbout />
       <HomeMwebWork />
       <HomeMwebContact />
     </section>

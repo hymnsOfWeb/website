@@ -159,9 +159,8 @@ export const nav = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
   color: var(--color-bg-primary);
-  font-size: 5rem;
+  font-size: 4rem;
   ${mediaQuery.squeezedScreen} {
     font-size: 3.5rem;
   }

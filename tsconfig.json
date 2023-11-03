@@ -6,7 +6,11 @@
   ],
   "compilerOptions": {
     "target": "ES5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,28 +24,72 @@
     "jsxImportSource": "@emotion/react",
     "incremental": true,
     "paths": {
-      "@public/*": ["./public/*"],
-      "@publicAssets/*": ["./public/assets/*"],
-      "@publicImages/*": ["./public/assets/images/*"],
-      "@assets/*": ["./assets/*"],
-      "@images/*": ["./assets/images/*"],
-      "@components": ["./components"],
-      "@components/*": ["./components/*"],
-      "@modules": ["./modules"],
-      "@modules/*": ["./modules/*"],
-      "@pages/*": ["./pages/*"],
-      "@hooks": ["./hooks"],
-      "@hooks/*": ["./hooks/*"],
-      "@common-data": ["./common/common-data"],
-      "@common-styles": ["./common/common-styles"],
-      "@common/*": ["./common/*"],
-      "@/*": ["./*"]
+      "@public/*": [
+        "./public/*"
+      ],
+      "@publicAssets/*": [
+        "./public/assets/*"
+      ],
+      "@publicImages/*": [
+        "./public/assets/images/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@images/*": [
+        "./assets/images/*"
+      ],
+      "@components": [
+        "./components"
+      ],
+      "@components/*": [
+        "./components/*"
+      ],
+      "@modules": [
+        "./modules"
+      ],
+      "@modules/*": [
+        "./modules/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@hooks": [
+        "./hooks"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@common-data": [
+        "./common/common-data"
+      ],
+      "@common-styles": [
+        "./common/common-styles"
+      ],
+      "@common/*": [
+        "./common/*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
     "noPropertyAccessFromIndexSignature": false,
     "ignoreDeprecations": "5.0",
     "isolatedModules": true,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -112,9 +112,19 @@ export const homeLandingTexts: [string, string] = [
   "Digital design &",
   "Branding studio",
 ];
-export const aboutTextRibbon = {
+export const homeAboutTextRibbon = {
   text: "About",
   count: 7,
+};
+export const homeAboutCard = {
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, \
+consequatur commodi! Quo consectetur illo debitis quia repellendus quisquam, odit aperiam!",
+  href: "/about",
+  buttonText: "Learn More",
+  img: {
+    src: "/assets/images/about-bg.png",
+    alt: "About",
+  },
 };
 
 export const phoneNumber = "+919415507316";
