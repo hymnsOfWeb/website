@@ -28,7 +28,7 @@ export default function DwebHomeContact() {
     );
   };
   return (
-    <div css={contactCss}>
+    <div css={contactCss} className="home-child">
       <div css={contactSquareCss} ref={containerRef}>
         <Link
           href="/"

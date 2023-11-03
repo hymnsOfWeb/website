@@ -85,7 +85,12 @@ export default function useMasterDwebContact({
     }
     return () => {
       if (container) {
-        container.removeEventListener("mouseover", mouseMoveCallback);
+        container.removeEventListener("mousemove", mouseMoveCallback);
+        container.removeEventListener("mouseleave", mouseLeaveCallback);
+      }
+      if (contactLink) {
+        contactLink.removeEventListener("mouseenter", mouseEnterCallback);
+        contactLink.removeEventListener("mouseleave", contactLeaveCallback);
       }
     };
   }, [

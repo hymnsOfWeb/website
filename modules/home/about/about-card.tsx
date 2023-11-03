@@ -43,8 +43,8 @@ const HomeAboutCard = ({
             <p onClick={clickHandler} css={cardText}>
               {homeAboutCard.text}
             </p>
-            <Link href={homeAboutCard.href} passHref>
-              <a css={cardButton}>{homeAboutCard.buttonText}</a>
+            <Link css={cardButton} href={homeAboutCard.href} passHref>
+              {homeAboutCard.buttonText}
             </Link>
           </div>
         </div>

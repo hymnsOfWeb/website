@@ -59,7 +59,11 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
   );
 
   const topJsx = (
-    <main css={landingWrapper} ref={atBottom ? undefined : ref}>
+    <main
+      css={landingWrapper}
+      ref={atBottom ? undefined : ref}
+      className="home-child"
+    >
       <h1
         css={landingHeading}
         title={homeLandingTexts.join(" ")}
@@ -71,7 +75,11 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
     </main>
   );
   const bottomJsx = (
-    <div css={landingWrapper} ref={atBottom ? ref : undefined}>
+    <div
+      css={landingWrapper}
+      ref={atBottom ? ref : undefined}
+      className="home-child-last"
+    >
       <span
         css={landingHeading}
         title={homeLandingTexts.join(" ")}

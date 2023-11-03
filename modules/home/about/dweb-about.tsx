@@ -65,7 +65,7 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
     });
 
   return (
-    <div ref={ref} css={aboutWrapper}>
+    <div ref={ref} css={aboutWrapper} className="home-child">
       <div className="text-ribbon-wrapper" css={ribbonWrapper}>
         <div
           className="text-ribbon-container"
