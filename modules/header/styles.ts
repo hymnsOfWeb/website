@@ -53,12 +53,14 @@ export const logoWrapper = css`
     filter: invert(1);
     transition: filter 0.3s ease-in-out 0.2s;
   }
-  &:hover {
-    filter: invert(1);
-    border: 2px solid #0a1400;
-    &::before {
+  ${mediaQuery.desktop} {
+    &:hover {
       filter: invert(1);
-      opacity: 1;
+      border: 2px solid #0a1400;
+      &::before {
+        filter: invert(1);
+        opacity: 1;
+      }
     }
   }
 `;

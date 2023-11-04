@@ -33,6 +33,9 @@ const HomeMwebLanding = () => {
       } else {
         window.removeEventListener("scroll", scrollCallback);
       }
+      for (const span of allSpans.current) {
+        span.style.transform = "translateX(0px)";
+      }
     },
     [scrollCallback]
   );
@@ -43,6 +46,7 @@ const HomeMwebLanding = () => {
     ) as HTMLSpanElement[];
     allSpans.current = spanArr;
     arrLength.current = spanArr.length;
+
     height.current = landingRef.current?.getBoundingClientRect().height ?? 0.1;
     arrayHalfNum.current = Math.floor(arrLength.current / 2);
     const obvOpts: IntersectionObserverInit = {

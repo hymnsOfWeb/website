@@ -23,10 +23,9 @@ export default function HomeMwebAbout() {
 
   useEffect(() => {
     const observerOption: IntersectionObserverInit = {
-      threshold: 0.99,
+      threshold: 0.85,
       root: document,
     };
-    // const screenWidth = window.innerWidth;
     const observer: IntersectionObserver = new IntersectionObserver(
       observerCallback,
       observerOption
@@ -47,7 +46,7 @@ export default function HomeMwebAbout() {
   return (
     <div ref={wrapperRef} css={aboutWrapper}>
       <div css={mWebRibbonWrapper}>
-        <span>{text}</span>
+        <span aria-disabled>{text}</span>
       </div>
       <HomeAboutCard frontRef={cardFrontRef} backRef={cardBackRef} />
     </div>

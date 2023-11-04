@@ -9,6 +9,8 @@ export default function ImageComp(props: ImageContainerProps) {
     containerCss,
     containerRef,
     containerOnClick,
+    height,
+    width,
     ...allOtherProps
   } = props;
   const contCss = [imgContainerWrapper];
@@ -26,7 +28,13 @@ export default function ImageComp(props: ImageContainerProps) {
       ref={containerRef}
       onClick={containerOnClick}
     >
-      <Image {...allOtherProps} fill sizes="100%" />
+      <Image
+        {...allOtherProps}
+        height={height}
+        width={width}
+        fill={!(height || width)}
+        sizes="100%"
+      />
     </div>
   );
 }

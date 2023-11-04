@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import Link from "next/link";
 import { mainNavLinks } from "@common-data";
 import { ImageComp, NavLinkContainer } from "@components";
+import useHeader from "@hooks/use-header";
 import {
   hamBtn,
   headerWrapper,
@@ -12,6 +13,7 @@ import {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { ref } = useHeader();
   const hamClickHandler = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
@@ -34,7 +36,7 @@ export default function Header() {
     [isMenuOpen, linkClickHandler]
   );
   return (
-    <header css={headerWrapper}>
+    <header css={headerWrapper} ref={ref}>
       <Link
         href="/"
         className={isMenuOpen ? "logo-wrapper active" : "logo-wrapper"}
@@ -47,6 +49,8 @@ export default function Header() {
           alt="Hymns of web | Logo"
           containerCss={logoContainer}
           priority
+          height={70}
+          width={70}
         />
       </Link>
       <nav className={isMenuOpen ? "active" : undefined} css={nav}>
