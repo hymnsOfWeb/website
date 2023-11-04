@@ -124,7 +124,7 @@ export const homeAboutCard = {
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, \
 consequatur commodi! Quo consectetur illo debitis quia repellendus quisquam, odit aperiam!",
   href: "/about",
-  buttonText: "Learn More",
+  buttonText: "About Us",
   img: {
     src: "/assets/images/about-bg.png",
     alt: "About",

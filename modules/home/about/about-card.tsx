@@ -43,12 +43,7 @@ const HomeAboutCard = ({
             <p onClick={clickHandler} css={cardText}>
               {homeAboutCard.text}
             </p>
-            <Link
-              css={cardButton}
-              href={homeAboutCard.href}
-              aria-label="About Us"
-              title="About Us"
-            >
+            <Link css={cardButton} href={homeAboutCard.href}>
               {homeAboutCard.buttonText}
             </Link>
           </div>
