@@ -25,6 +25,7 @@ export interface WorkData {
   };
   description: string;
 }
+
 export const workData: WorkData[] = [
   {
     title: "Dopegood",
@@ -108,14 +109,17 @@ export const homePageMeta = {
   title: "Hymns of Web | Home Page",
   description: "Hymns of Web | web design and development studio",
 };
+
 export const homeLandingTexts: [string, string] = [
   "Digital design &",
   "Branding studio",
 ];
+
 export const homeAboutTextRibbon = {
   text: "About",
   count: 7,
 };
+
 export const homeAboutCard = {
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, \
 consequatur commodi! Quo consectetur illo debitis quia repellendus quisquam, odit aperiam!",

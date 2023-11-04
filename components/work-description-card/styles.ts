@@ -50,4 +50,7 @@ export const workDescriptionCss = css`
   font-size: 1.2rem;
   line-height: 2em;
   text-align: justify;
+  ${mediaQuery.mobileLandscape} {
+    font-size: 1rem;
+  }
 `;

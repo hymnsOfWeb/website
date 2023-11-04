@@ -12,6 +12,9 @@ export const aboutWrapper = css`
   ${mediaQuery.mobile} {
     height: 80vh;
   }
+  ${mediaQuery.mobileLandscape} {
+    height: 140vh;
+  }
 `;
 
 export const ribbonWrapper = css`
@@ -87,13 +90,17 @@ export const commonBoxStyle = css`
   transition: all 0.5s ease-in-out;
   border-radius: 10px;
   overflow: hidden;
+  ${mediaQuery.mobileLandscape} {
+    width: 45%;
+    position: static;
+  }
 `;
 
 export const cardWrapper = css`
   height: 60vh;
   aspect-ratio: 3 / 3.5;
   ${mediaQuery.mobile} {
-    height: unset;
+    height: 52.5vh;
     width: 80vw;
   }
   display: flex;
@@ -103,12 +110,24 @@ export const cardWrapper = css`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  ${mediaQuery.mobileLandscape} {
+    width: 100%;
+    height: 100vh;
+    position: static;
+    transform: none;
+  }
 `;
 
 export const cardContainer = css`
   transition: all 0.3s ease;
   height: 100%;
   width: 100%;
+  ${mediaQuery.mobileLandscape} {
+    width: 90%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+  }
 `;
 
 export const flipBox = css`
@@ -118,6 +137,13 @@ export const flipBox = css`
   width: 100%;
   height: 100%;
   cursor: pointer;
+  ${mediaQuery.mobileLandscape} {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    perspective: none;
+  }
 `;
 
 export const cardFront = css`
@@ -137,9 +163,14 @@ export const cardBack = css`
   flex-direction: column;
   justify-content: space-between;
   padding: 10%;
-
   &.active {
     transform: none;
+  }
+  ${mediaQuery.mobileLandscape} {
+    transform: none;
+    z-index: 2;
+    padding: 5px;
+    background: none;
   }
 `;
 
@@ -157,9 +188,15 @@ export const cardButton = css`
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  ${mediaQuery.mobile} {
+    width: 120px;
+  }
 `;
 
 export const cardText = css`
   text-align: justify;
   height: 100%;
+  @media only screen and (width < 300px) {
+    font-size: 0.9rem;
+  }
 `;

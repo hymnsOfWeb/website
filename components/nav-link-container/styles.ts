@@ -52,6 +52,7 @@ export const navLinkContainerCss = css`
   ${mediaQuery.mobileLandscape} {
     width: fit-content;
     height: 10vw;
+    transform: translateY(50%);
   }
 `;
 

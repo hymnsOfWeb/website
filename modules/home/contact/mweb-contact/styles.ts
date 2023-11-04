@@ -18,7 +18,7 @@ export const contactCss = css`
     height: 80vh;
     position: static;
     display: flex;
-    margin-top: 20vh;
+    margin: 20vh 0 10vh 0;
   }
 `;
 
