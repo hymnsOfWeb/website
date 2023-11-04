@@ -12,7 +12,7 @@ export const contactCss = css`
     display: flex;
     flex-direction: column;
     height: fit-content;
-    margin-top: 10vh;
+    margin: 10vh 0;
   }
   ${mediaQuery.mobileLandscape} {
     height: 80vh;

@@ -17,13 +17,6 @@ export const headerWrapper = css`
   --_main-time-delay: ${mainTimeDelay}s;
 `;
 
-export const navActiveScrollbarCss = css`
-  ::-webkit-scrollbar {
-    width: 0;
-    display: none;
-  }
-`;
-
 export const logoContainer = css`
   aspect-ratio: 1;
   height: 100%;

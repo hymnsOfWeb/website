@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 import Link from "next/link";
-import { Global } from "@emotion/react";
 import { mainNavLinks } from "@common-data";
 import { ImageComp, NavLinkContainer } from "@components";
 import {
@@ -9,7 +8,6 @@ import {
   logoContainer,
   logoWrapper,
   nav,
-  navActiveScrollbarCss,
 } from "./styles";
 
 export default function Header() {
@@ -37,7 +35,6 @@ export default function Header() {
   );
   return (
     <header css={headerWrapper}>
-      {isMenuOpen && <Global styles={navActiveScrollbarCss} />}
       <Link
         href="/"
         className={isMenuOpen ? "logo-wrapper active" : "logo-wrapper"}

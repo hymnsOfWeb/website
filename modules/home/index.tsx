@@ -4,7 +4,8 @@ import useMasterLandingPage from "@hooks/use-master-landing-page";
 import usePhone from "@hooks/use-phone";
 import { HomeDwebAbout, HomeMwebAbout } from "@modules/home/about";
 import { HomeDwebContact, HomeMwebContact } from "@modules/home/contact";
-import HomeLanding from "@modules/home/landing";
+import HomeDwebLanding from "@modules/home/landing/dweb-landing";
+import HomeMwebLanding from "@modules/home/landing/mweb-landing";
 import MiniNav from "@modules/home/mini-nav";
 import { mainHomeWrapper } from "@modules/home/styles";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
@@ -27,11 +28,11 @@ function HomeDweb() {
   return (
     <section id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
       <HomeHead />
-      <HomeLanding ref={landingRefTop} />
+      <HomeDwebLanding ref={landingRefTop} />
       <HomeDwebAbout ref={aboutRef} />
       <HomeDwebWork ref={workRef} />
       <HomeDwebContact />
-      <HomeLanding ref={landingRefBottom} atBottom />
+      <HomeDwebLanding ref={landingRefBottom} atBottom />
       <MiniNav ref={miniNavRef} />
     </section>
   );
@@ -41,7 +42,7 @@ function HomeMweb() {
   return (
     <section id="home" aria-label="home" css={mainHomeWrapper}>
       <HomeHead />
-      <HomeLanding />
+      <HomeMwebLanding />
       <HomeMwebAbout />
       <HomeMwebWork />
       <HomeMwebContact />
