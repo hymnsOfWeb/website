@@ -34,7 +34,9 @@ export const logoWrapper = css`
   filter: invert(0);
   position: absolute;
   top: 5vh;
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out,
+    backdrop-filter 0s ease var(--_main-time-delay);
+  backdrop-filter: blur(30px);
   &::before {
     position: absolute;
     content: "";
@@ -51,7 +53,8 @@ export const logoWrapper = css`
   }
   &.active {
     filter: invert(1);
-    transition: filter 0.3s ease-in-out 0.2s;
+    transition: filter 0.3s ease-in-out 0.2s, backdrop-filter 0s ease 0s;
+    backdrop-filter: none;
   }
   ${mediaQuery.desktop} {
     &:hover {
@@ -67,6 +70,8 @@ export const logoWrapper = css`
 
 export const hamBtn = css`
   z-index: 999;
+  border-radius: 50%;
+  backdrop-filter: blur(30px);
   position: absolute;
   display: flex;
   flex-direction: column;

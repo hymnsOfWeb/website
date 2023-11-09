@@ -89,9 +89,11 @@ export const contactCardCss = css`
   }
 `;
 
+const secondaryCol = "hsl(227, 16%, 60%)";
+
 export const contactIconCss = css`
   font-size: clamp(2rem, 3vw, 5rem);
-  fill: var(--color-bg-tertiary);
+  fill: ${secondaryCol};
   margin-bottom: 30px;
   ${mediaQuery.mobile} {
     font-size: clamp(0rem, 12.5vw, 2.5rem);
@@ -101,6 +103,7 @@ export const contactIconCss = css`
 export const contactCardTitleCss = css`
   font-size: clamp(0.8rem, 1vw, 1.4rem);
   font-family: var(--font-primary);
+  color: ${secondaryCol};
   font-weight: 500;
   ${mediaQuery.mobile} {
     font-size: 3vw;

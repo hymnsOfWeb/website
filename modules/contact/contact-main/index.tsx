@@ -20,9 +20,9 @@ export default function ContactMain() {
           return (
             <Link href={href} key={index} css={contactCardCss}>
               <Icon css={contactIconCss} />
-              <h3 css={contactCardTitleCss} className="text">
+              <h2 css={contactCardTitleCss} className="text">
                 {title}
-              </h3>
+              </h2>
               <p css={contactParaCss} className="text">
                 {text}
               </p>

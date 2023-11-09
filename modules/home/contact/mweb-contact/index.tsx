@@ -57,7 +57,7 @@ export default function MwebHomeContact() {
     <div css={contactCss} ref={egRef}>
       <div css={contactSquareCss}>
         <Link
-          href="/"
+          href="/contact"
           className="contact-cta"
           css={contactCircleCss}
           ref={circleRef}
