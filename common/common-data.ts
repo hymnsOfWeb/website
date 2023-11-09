@@ -136,6 +136,16 @@ export const homePageMeta = {
   description: "Hymns of Web | web design and development studio",
 };
 
+export const aboutPageMeta = {
+  title: "Hymns of Web | About Page",
+  description: "Hymns of Web | web design and development studio",
+};
+
+export const contactPageMeta = {
+  title: "Hymns of Web | Contact Page",
+  description: "Hymns of Web | web design and development studio",
+};
+
 export const homeLandingTexts: [string, string] = [
   "Digital design &",
   "Branding studio",
@@ -208,5 +218,32 @@ export const contactBubbleData: BubbleDataProps[] = [
     },
     icon: BsWhatsapp,
     text: phoneNumber,
+  },
+];
+
+export const contactPageData = [
+  {
+    icon: BsInstagram,
+    title: "DM Us",
+    href: `https://www.instagram.com/${instaId}`,
+    text: "@" + instaId,
+  },
+  {
+    icon: BsTelephone,
+    title: "Call Us",
+    href: `tel:${phoneNumber}`,
+    text: phoneNumber,
+  },
+  {
+    icon: BsWhatsapp,
+    title: "Message Us",
+    href: `https://wa.me/${phoneNumber}`,
+    text: phoneNumber,
+  },
+  {
+    icon: BsEnvelope,
+    title: "Mail Us",
+    href: `mailto:${mail}`,
+    text: mail,
   },
 ];
