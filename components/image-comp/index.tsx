@@ -11,14 +11,19 @@ export default function ImageComp(props: ImageContainerProps) {
     containerOnClick,
     height,
     width,
+    imgSize = {
+      height: "100%",
+      width: "100%",
+    },
     ...allOtherProps
   } = props;
-  const contCss = [imgContainerWrapper];
+  const contCss = [imgContainerWrapper(imgSize)];
   if (typeof (containerCss as [])?.length === "number") {
     contCss.push(...((containerCss ?? []) as []));
   } else {
     contCss.push(containerCss as never);
   }
+
   return (
     <div
       className={
@@ -34,6 +39,7 @@ export default function ImageComp(props: ImageContainerProps) {
         width={width}
         fill={!(height || width)}
         sizes="100%"
+        className="img"
       />
     </div>
   );

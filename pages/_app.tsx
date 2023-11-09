@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import { Poppins, Nova_Mono as NovaMono } from "next/font/google";
 import { Global } from "@emotion/react";
 import { AppContexProvider } from "@/context";
 import Header from "@/modules/header";
 import { globalCss, globalFontVarsCss } from "@/styles/globals";
+import { consoleMessage } from "@common-data";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -24,6 +26,12 @@ const novaMono = NovaMono({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    // eslint-disable-next-line no-console
+    console.log(consoleMessage);
+    // eslint-disable-next-line no-console
+    return () => console.clear();
+  }, []);
   return (
     <AppContexProvider>
       <Global

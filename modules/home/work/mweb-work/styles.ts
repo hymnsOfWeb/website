@@ -31,6 +31,9 @@ export const mwebWorkImgCss = css`
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 20px;
+  img {
+    height: 120% !important;
+  }
   ${mediaQuery.squeezedScreen} {
     width: 37.5%;
     height: 300px;
