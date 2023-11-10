@@ -68,7 +68,7 @@ export default function MwebWork() {
   };
 
   return (
-    <div id="work-container" css={workContainerCss} ref={workRef}>
+    <div id="work" css={workContainerCss} ref={workRef}>
       <WorkHeading />
       {workData.map(mapper)}
     </div>

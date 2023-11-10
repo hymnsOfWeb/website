@@ -34,36 +34,18 @@ export const logoWrapper = css`
   filter: invert(0);
   position: absolute;
   top: 5vh;
-  transition: filter 0.3s ease-in-out,
-    backdrop-filter 0s ease var(--_main-time-delay);
+  transition: filter 0.3s ease-in-out 0.6s, backdrop-filter 0.5s ease 0.6s,
+    scale 0.3s ease-in-out;
   backdrop-filter: blur(30px);
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: var(--color-text-primary);
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    height: 110%;
-    width: 110%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    filter: invert(1);
-    transition: transform 0.3s ease-in-out;
-  }
   &.active {
+    transition: filter 0.3s ease-in-out 0.2s, backdrop-filter 1s ease 0s,
+      scale 0.3s ease-in-out;
     filter: invert(1);
-    transition: filter 0.3s ease-in-out 0.2s, backdrop-filter 0s ease 0s;
     backdrop-filter: none;
   }
   ${mediaQuery.desktop} {
     &:hover {
-      filter: invert(1);
-      border: 2px solid #0a1400;
-      &::before {
-        filter: invert(1);
-        opacity: 1;
-      }
+      scale: 1.2;
     }
   }
 `;
@@ -119,7 +101,7 @@ export const hamBtn = css`
   &.active::before {
     transition: margin-bottom var(--_t) var(--_e),
       transform var(--_t) var(--_e) var(--_t),
-      background-color var(--_t) var(--_e) 1s;
+      background-color var(--_t) var(--_e) 0.75s;
     margin-bottom: -4px;
     transform: rotate(45deg);
     background-color: var(--color-bg-primary);
@@ -127,7 +109,7 @@ export const hamBtn = css`
   &.active::after {
     transition: margin-top var(--_t) var(--_e),
       transform var(--_t) var(--_e) var(--_t),
-      background-color var(--_t) var(--_e) 1s;
+      background-color var(--_t) var(--_e) 0.75s;
     margin-top: -3px;
     transform: rotate(-45deg);
     background-color: var(--color-bg-primary);

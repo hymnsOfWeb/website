@@ -7,7 +7,7 @@ import WorkHeading from "../work-heading";
 function DW(_: unknown, ref: Ref<HTMLDivElement>) {
   const descriptionRef = useRef<HTMLDivElement>(null);
   return (
-    <div id="work-container" ref={ref} css={workContainerCss}>
+    <div id="work" ref={ref} css={workContainerCss}>
       <WorkHeading />
       <WorkCarousel />
       <WorkDescription ref={descriptionRef} />

@@ -10,7 +10,7 @@ import { BubbleDataProps } from "@components/contact-bubble/types";
 export const mainNavLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Work", href: "/work" },
+  { name: "Work", href: "/#work" },
   { name: "Contact", href: "/contact" },
 ];
 export interface WorkData {
