@@ -7,7 +7,9 @@ export const contactContainerCss = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  ${mediaQuery.desktop} {
+    justify-content: center;
+  }
 `;
 
 export const contactHeadingCss = css`
@@ -89,11 +91,9 @@ export const contactCardCss = css`
   }
 `;
 
-const secondaryCol = "hsl(227, 16%, 60%)";
-
 export const contactIconCss = css`
   font-size: clamp(2rem, 3vw, 5rem);
-  fill: ${secondaryCol};
+  fill: var(--color-text-secondary);
   margin-bottom: 30px;
   ${mediaQuery.mobile} {
     font-size: clamp(0rem, 12.5vw, 2.5rem);
@@ -103,7 +103,7 @@ export const contactIconCss = css`
 export const contactCardTitleCss = css`
   font-size: clamp(0.8rem, 1vw, 1.4rem);
   font-family: var(--font-primary);
-  color: ${secondaryCol};
+  color: var(--color-text-secondary);
   font-weight: 500;
   ${mediaQuery.mobile} {
     font-size: 3vw;

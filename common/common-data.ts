@@ -247,3 +247,94 @@ export const contactPageData = [
     text: mail,
   },
 ];
+
+export const aboutPageHeading =
+  "We believe in an architecture that dialogs with its surrounding\
+  while challenging its status quo, radical in its conceptual\
+  ideals and ecological in its principle.";
+
+export const aboutDescription =
+  "Studio Beltrame has a long tradition in alpine architecture,\
+  founded by Claudio in 1978 in the mountains of Tarvisio.\
+  When you grow up in such a small and beautiful location,\
+  surrounded by large forests and idyllic lakes, passion for\
+  nature, plants and ecological material comes natural.\
+  Our aim is to bring this passion into our design and at every\
+  scale. The challenges that our industry is facing and causing\
+  are stronger now than in 1978 and therefore, since Luca joined\
+  in 2013, we are even more convinced about the urgency of a diverse\
+  way of making architecture. A way that pursues regenerative principles,\
+  challenges construction in unconventional ways and designs flexible spaces\
+  for ever changing futures.";
+
+export const aboutServices = [
+  {
+    title: "Websites",
+    description:
+      "We believe in an architecture that dialogs with its surrounding\
+  while challenging its status quo, radical in its conceptual\
+  ideals and ecological in its principle.",
+  },
+  {
+    title: "Web Apps",
+    description:
+      "We believe in an architecture that dialogs with its surrounding\
+  while challenging its status quo, radical in its conceptual\
+  ideals and ecological in its principle.",
+  },
+  {
+    title: "Desktop Apps",
+    description:
+      "We believe in an architecture that dialogs with its surrounding\
+  while challenging its status quo, radical in its conceptual\
+  ideals and ecological in its principle.",
+  },
+  {
+    title: "Mobile Apps",
+    description:
+      "We believe in an architecture that dialogs with its surrounding\
+  while challenging its status quo, radical in its conceptual\
+  ideals and ecological in its principle.",
+  },
+];
+
+export const teamData = [
+  {
+    name: "Gobind Singh",
+    about: "Demon Lord",
+    imgSrc: "/assets/images/gobind.webp",
+    portfolioLink: "https://youtu.be/dQw4w9WgXcQ?t=43",
+  },
+  {
+    name: "Sai Rohit",
+    about: ".childNodes[0] Enjoyer",
+    imgSrc: "/assets/images/sai.webp",
+    portfolioLink:
+      "https://www.linkedin.com/in/sai-rohit-sanniboyina-7a93aa224/",
+  },
+
+  {
+    name: "Aishwarya Tewari",
+    about: "Developer",
+    imgSrc: "/assets/images/aishwarya.webp",
+    portfolioLink: "https://aishwarya.hymnsofweb.com/",
+  },
+  {
+    name: "Abhas Chatterjee",
+    about: "Developer",
+    imgSrc: "/assets/images/abhas.webp",
+    portfolioLink: "https://abhas.hymnsofweb.com/",
+  },
+  {
+    name: "Satyam Sinha",
+    about: "Designer",
+    imgSrc: "/assets/images/satyam.webp",
+    portfolioLink: "https://www.linkedin.com/in/satyam-sinha-922117133/",
+  },
+  {
+    name: "Pranav Manchanda",
+    about: "Designer",
+    imgSrc: "/assets/images/pranav.webp",
+    portfolioLink: "https://www.linkedin.com/in/pranavmanchanda/",
+  },
+];
