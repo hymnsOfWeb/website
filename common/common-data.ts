@@ -157,8 +157,11 @@ export const homeAboutTextRibbon = {
 };
 
 export const homeAboutCard = {
-  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, \
-consequatur commodi! Quo consectetur illo debitis quia repellendus quisquam, odit aperiam!",
+  text: "Meet Hymns of Web - the tech wizards who turn caffeine into code!\
+  We're not your average agency; we're the cool cats crafting websites,\
+  mobile apps, and desktop wonders. Forget the tech jargon; we speak emoji.\
+  Join us on this digital rollercoaster - where pixels party and apps have\
+  an attitude. Let's make your online presence as sassy as our coding team!",
   href: "/about",
   buttonText: "About Us",
   img: {
@@ -254,18 +257,16 @@ export const aboutPageHeading =
   ideals and ecological in its principle.";
 
 export const aboutDescription =
-  "Studio Beltrame has a long tradition in alpine architecture,\
-  founded by Claudio in 1978 in the mountains of Tarvisio.\
-  When you grow up in such a small and beautiful location,\
-  surrounded by large forests and idyllic lakes, passion for\
-  nature, plants and ecological material comes natural.\
-  Our aim is to bring this passion into our design and at every\
-  scale. The challenges that our industry is facing and causing\
-  are stronger now than in 1978 and therefore, since Luca joined\
-  in 2013, we are even more convinced about the urgency of a diverse\
-  way of making architecture. A way that pursues regenerative principles,\
-  challenges construction in unconventional ways and designs flexible spaces\
-  for ever changing futures.";
+  "Hymns of Web orchestrates digital excellence, harmonizing the symphony\
+  of cutting-edge technologies with seamless efficiency. As a premier web\
+  development and design agency, we compose compelling websites, dynamic\
+  web apps, intuitive mobile apps, and powerful desktop applications. Our\
+  virtuoso team blends innovation and precision, transforming visions into\
+  captivating digital experiences. We navigate the ever-evolving landscape\
+  of technology, creating digital solutions that resonate. At Hymns of Web,\
+  we compose experiences that resonate, connecting your brand with audiences\
+  in ways that are memorable and meaningful. Join us in the crescendo of digital\
+  evolution, where every note is a step towards unparalleled success.";
 
 export const aboutServices = [
   {

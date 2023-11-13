@@ -40,6 +40,17 @@ export const globalCss = css`
     background: transparent;
   }
 
+  :has(#home) {
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 1rem;
+      width: 0;
+    }
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;

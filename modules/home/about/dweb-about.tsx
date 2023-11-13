@@ -34,7 +34,7 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
 
   useEffect(() => {
     const observerOption: IntersectionObserverInit = {
-      threshold: 0.9,
+      threshold: 0.6,
       root: document,
     };
     // const screenWidth = window.innerWidth;

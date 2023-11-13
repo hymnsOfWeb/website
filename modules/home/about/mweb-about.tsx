@@ -23,7 +23,7 @@ export default function HomeMwebAbout() {
 
   useEffect(() => {
     const observerOption: IntersectionObserverInit = {
-      threshold: 0.85,
+      threshold: 0.6,
       root: document,
     };
     const observer: IntersectionObserver = new IntersectionObserver(

@@ -43,6 +43,7 @@ export default function Header() {
         css={logoWrapper}
         title="Hymns of web | Home Page"
         aria-label="Hymns of web | Home Page"
+        onClick={linkClickHandler}
       >
         <ImageComp
           src="/assets/images/logo.png"

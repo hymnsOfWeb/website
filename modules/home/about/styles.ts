@@ -6,11 +6,14 @@ export const aboutWrapper = css`
   height: 100vh;
   position: relative;
   overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
   * {
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
   ${mediaQuery.mobile} {
-    height: 80vh;
+    height: 100vh;
   }
   ${mediaQuery.mobileLandscape} {
     height: 140vh;
@@ -92,7 +95,6 @@ export const commonBoxStyle = css`
   overflow: hidden;
   ${mediaQuery.mobileLandscape} {
     width: 45%;
-    position: static;
   }
 `;
 
@@ -100,7 +102,7 @@ export const cardWrapper = css`
   height: 60vh;
   aspect-ratio: 3 / 3.5;
   ${mediaQuery.mobile} {
-    height: 52.5vh;
+    height: 65%;
     width: 80vw;
   }
   display: flex;
@@ -163,14 +165,25 @@ export const cardBack = css`
   flex-direction: column;
   justify-content: space-between;
   padding: 10%;
+  ${mediaQuery.desktop} {
+    line-height: 2.25em;
+  }
   &.active {
     transform: none;
+  }
+  ${mediaQuery.mobilePortrait} {
+    font-size: clamp(0rem, 4vw, 1.5rem);
   }
   ${mediaQuery.mobileLandscape} {
     transform: none;
     z-index: 2;
-    padding: 5px;
+    padding: 0px;
     background: none;
+    right: 0;
+    font-size: 0.8rem;
+  }
+  ${mediaQuery.tablet} {
+    font-size: 1.5rem;
   }
 `;
 
@@ -190,13 +203,16 @@ export const cardButton = css`
   font-size: 0.9rem;
   ${mediaQuery.mobile} {
     width: 120px;
+    height: 40px;
+  }
+  ${mediaQuery.tablet} {
+    font-size: 2.5vw;
+    width: 150px;
+    height: 50px;
   }
 `;
 
 export const cardText = css`
   text-align: justify;
   height: 100%;
-  @media only screen and (width < 300px) {
-    font-size: 0.9rem;
-  }
 `;
