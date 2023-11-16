@@ -13,10 +13,11 @@ import {
 
 interface HomeLandingProps {
   atBottom?: boolean;
+  className?: string;
 }
 
 function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
-  const { atBottom = false } = props;
+  const { atBottom = false, className } = props;
   const firstSplit = homeLandingTexts[0].split("");
   const secondSplit = homeLandingTexts[1].split("");
   const ids = useMemo<string[]>(() => {
@@ -62,7 +63,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
     <main
       css={landingWrapper}
       ref={atBottom ? undefined : ref}
-      className="home-child"
+      className={`home-child ${className ?? ""}`}
     >
       <h1
         css={landingHeading}
@@ -78,7 +79,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
     <div
       css={landingWrapper}
       ref={atBottom ? ref : undefined}
-      className="home-child-last"
+      className={`home-child-last ${className ?? ""}`}
     >
       <span
         css={landingHeading}

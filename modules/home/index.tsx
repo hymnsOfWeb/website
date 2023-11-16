@@ -4,8 +4,7 @@ import useMasterLandingPage from "@hooks/use-master-landing-page";
 import usePhone from "@hooks/use-phone";
 import { HomeDwebAbout, HomeMwebAbout } from "@modules/home/about";
 import { HomeDwebContact, HomeMwebContact } from "@modules/home/contact";
-import HomeDwebLanding from "@modules/home/landing/dweb-landing";
-import HomeMwebLanding from "@modules/home/landing/mweb-landing";
+import { HomeDwebLanding, HomeMwebLanding } from "@modules/home/landing";
 import MiniNav from "@modules/home/mini-nav";
 import { mainHomeWrapper } from "@modules/home/styles";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
@@ -32,7 +31,8 @@ function HomeDweb() {
       <HomeDwebAbout ref={aboutRef} />
       <HomeDwebWork ref={workRef} />
       <HomeDwebContact />
-      <HomeDwebLanding ref={landingRefBottom} atBottom />
+      <HomeDwebLanding ref={landingRefBottom} atBottom className="infi-clone" />
+      <HomeDwebAbout className="infi-clone" />
       <MiniNav ref={miniNavRef} />
     </section>
   );

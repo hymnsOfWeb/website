@@ -7,6 +7,7 @@ import {
   RefObject,
 } from "react";
 import { homeAboutTextRibbon } from "@common-data";
+import { DwebAboutProps } from "@modules/home/about/types";
 import HomeAboutCard from "./about-card";
 import {
   aboutWrapper,
@@ -15,7 +16,8 @@ import {
   ribbonWrapper,
 } from "./styles";
 
-function A(_: unknown, ref: Ref<HTMLDivElement>) {
+function A(props: DwebAboutProps, ref: Ref<HTMLDivElement>) {
+  const { className } = props;
   const cardFrontRef = useRef<HTMLDivElement>(null);
   const cardBackRef = useRef<HTMLDivElement>(null);
 
@@ -65,7 +67,11 @@ function A(_: unknown, ref: Ref<HTMLDivElement>) {
     });
 
   return (
-    <div ref={ref} css={aboutWrapper} className="home-child">
+    <div
+      ref={ref}
+      css={aboutWrapper}
+      className={`home-child ${className ?? ""}`}
+    >
       <div className="text-ribbon-wrapper" css={ribbonWrapper}>
         <div
           className="text-ribbon-container"
