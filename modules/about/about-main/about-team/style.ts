@@ -12,7 +12,7 @@ export const teamCardsContainerCss = css`
   gap: 4vw;
   ${mediaQuery.mobile} {
     --card-cols: 1;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
   ${mediaQuery.squeezedScreen} {
     --card-cols: 2;
@@ -30,6 +30,12 @@ export const teamCardCss = css`
   align-items: center;
   padding: 2em;
   border-radius: 25px;
+  ${mediaQuery.desktop} {
+    transition: border-color 0.3s ease;
+    &:hover {
+      border-color: var(--color-bg-tertiary);
+    }
+  }
   ${mediaQuery.mobile} {
     border-radius: 15px;
     padding: 15px;
@@ -43,7 +49,8 @@ export const teamCardCss = css`
 export const teamHeadingCss = css`
   font-size: 2rem;
   margin: 10vh 0 5vh 0;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.15em;
+  color: var(--color-text-highlight);
   ${mediaQuery.mobile} {
     font-size: 1.25rem;
   }
@@ -80,6 +87,7 @@ export const aboutBriefCss = css`
   text-align: center;
   color: var(--color-text-secondary);
   font-size: clamp(1rem, 1rem, 4rem);
+  font-weight: 200;
   ${mediaQuery.mobile} {
     font-size: 1rem;
   }

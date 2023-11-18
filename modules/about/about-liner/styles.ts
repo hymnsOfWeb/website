@@ -5,12 +5,11 @@ export const aboutLinerCss = css`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 0 1.2em;
   margin-top: calc(10vh + 70px);
   font-size: 2rem;
+  color: var(--color-text-highlight);
   ${mediaQuery.desktop} {
     font-size: 2.5vw;
-    padding: 0 1em;
     padding-top: var(--padding-top);
     width: 50%;
     height: 100vh;

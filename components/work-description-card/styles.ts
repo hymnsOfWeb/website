@@ -1,26 +1,55 @@
 import { css } from "@emotion/react";
 import { mediaQuery } from "@common-styles";
 
-export const buttonCss = css`
+export const btnsContainerCss = css`
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+`;
+
+const commonBtnsCss = css`
   text-decoration: none;
-  background-color: var(--color-text-primary);
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5em 1em;
   border-radius: 100px;
   display: flex;
   align-items: center;
+  margin-right: 10px;
+`;
+
+export const ctaContainerCss = css`
+  display: flex;
+`;
+
+export const secBtnsContainerCss = css`
+  display: flex;
+`;
+
+export const secBtnsCss = css`
+  ${commonBtnsCss}
+  border: 2px solid var(--color-text-primary);
+  color: var(--color-text-primary);
+`;
+
+export const buttonCss = css`
+  ${commonBtnsCss}
+  background-color: var(--color-text-primary);
   gap: 10px;
+  color: var(--color-bg-primary);
+  svg {
+    fill: var(--color-bg-primary);
+  }
   ${mediaQuery.mobile} {
     font-size: clamp(0.8rem, 4vw, 1rem);
   }
 `;
 
 export const workTitleCss = css`
-  font-size: 4rem;
+  font-size: clamp(0rem, 5vw, 3rem);
   font-weight: 600;
   ${mediaQuery.mobile} {
-    font-size: 3rem;
+    font-size: clamp(0rem, 10vw, 3rem);
   }
 `;
 

@@ -20,6 +20,7 @@ export const globalCss = css`
 
     --color-text-primary: rgb(245, 235, 255);
     --color-text-secondary: hsl(227, 16%, 60%);
+    --color-text-highlight: rgb(27, 187, 139);
 
     --box-shadow-primary: rgba(133, 133, 133, 0.6);
     --color-text-shadow: rgba(255, 255, 255, 0.5);

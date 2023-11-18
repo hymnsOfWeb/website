@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { Poppins, Nova_Mono as NovaMono } from "next/font/google";
+import { Nova_Mono as NovaMono, DM_Sans as DmSans } from "next/font/google";
 import { Global } from "@emotion/react";
 import { AppContexProvider } from "@/context";
 import Header from "@/modules/header";
 import { globalCss, globalFontVarsCss } from "@/styles/globals";
 import { consoleMessage } from "@common-data";
 
-const poppins = Poppins({
+const primary = DmSans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -16,7 +16,7 @@ const poppins = Poppins({
   preload: false,
 });
 
-const novaMono = NovaMono({
+const mono = NovaMono({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -38,8 +38,8 @@ export default function App({ Component, pageProps }: AppProps) {
         styles={[
           globalCss,
           globalFontVarsCss({
-            primary: poppins.style.fontFamily,
-            mono: novaMono.style.fontFamily,
+            primary: primary.style.fontFamily,
+            mono: mono.style.fontFamily,
           }),
         ]}
       />

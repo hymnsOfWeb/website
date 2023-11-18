@@ -19,6 +19,7 @@ export interface WorkData {
     text: string;
     url: string;
   }[];
+  secondaryBtn?: string[];
   img: {
     src: string;
     alt: string;
@@ -28,79 +29,64 @@ export interface WorkData {
 
 export const workData: WorkData[] = [
   {
-    title: "Dopegood",
-    links: [
-      { text: "Visit Live", url: "/" },
-      { text: "Learn More", url: "/" },
-    ],
+    title: "The Bunch Ai",
+    links: [{ text: "Visit Live", url: "https://www.thebunch.ai/" }],
     img: {
-      src: "https://images4.alphacoders.com/133/thumbbig-1332018.webp",
+      src: "/assets/images/work/bunchai.webp",
       alt: "Dopegood",
     },
     description:
-      "Maintained 100% job success rate on Upwork, delivering exceptional\
-        designs and solutions for 40+ projects. Developed highly effective brand\
-        identities and strategies for startups and small businesses based on market research and client feedback.",
+      "TheBunch.ai aims to bring like-minded people together for exceptional\
+      social experiences, forming friendships and creating memories. Our events\
+      are through invite only. Once you register for an event, The Bunch.ai team\
+      carefully evaluates and accordingly invited will be sent to attend the event.\
+      This is to ensure that the members are of the mindset ensuring that everyone\
+      blends in well and can network easily.",
   },
   {
-    title: "Dopegood",
-    links: [
-      { text: "Visit Live", url: "/" },
-      { text: "Learn More", url: "/" },
-    ],
+    title: "Avita HR Solutions",
+    links: [{ text: "Visit Live", url: "/" }],
     img: {
-      src: "https://images7.alphacoders.com/132/thumbbig-1325984.webp",
+      src: "/assets/images/work/avitahr.webp",
       alt: "Dopegood",
     },
     description:
-      "Maintained 100% job success rate on Upwork, delivering exceptional\
-        designs and solutions for 40+ projects. Developed highly effective brand\
-        identities and strategies for startups and small businesses based on market research and client feedback.",
+      "AVITA HR Solutions is designed to meet the governing need for professional\
+      approach in Human Resource Development, Recruitment and Training activities\
+      in the corporate world. AVITA HR Solutions is backed by professionals having\
+      rich industry experience in India and overseas countries. Our database consists\
+      of highly qualified and experienced professionals.",
   },
   {
-    title: "Dopegood",
-    links: [
-      { text: "Visit Live", url: "/" },
-      { text: "Learn More", url: "/" },
-    ],
+    title: "QuantumShift",
+    links: [{ text: "Visit Live", url: "/" }],
     img: {
-      src: "https://images2.alphacoders.com/132/thumbbig-1320348.webp",
+      src: "/assets/images/work/quantumshift.webp",
       alt: "Dopegood",
     },
     description:
-      "Maintained 100% job success rate on Upwork, delivering exceptional\
-        designs and solutions for 40+ projects. Developed highly effective brand\
-        identities and strategies for startups and small businesses based on market research and client feedback.",
+      "Quantumshift is a deep-tech startup that specializes in transforming quantum\
+      solutions. Our team of experts is devoted to delivering the most cutting-edge\
+      and effective solutions for industries and government organizations that want\
+      to leverage the potential of quantum mechanics. We envision that tomorrow's technology\
+      begins with attempts of today. At Quantumshift, we guarantee to provide our clients\
+      with the highest quality of service and support",
   },
   {
-    title: "Dopegood",
-    links: [
-      { text: "Visit Live", url: "/" },
-      { text: "Learn More", url: "/" },
-    ],
+    title: "VintageInkkk",
+    links: [{ text: "Visit Live", url: "/" }],
+
+    secondaryBtn: ["Template", "For Sale"],
     img: {
-      src: "https://images8.alphacoders.com/132/thumbbig-1329400.webp",
+      src: "/assets/images/work/vintageinkkk.webp",
       alt: "Dopegood",
     },
     description:
-      "Maintained 100% job success rate on Upwork, delivering exceptional\
-        designs and solutions for 40+ projects. Developed highly effective brand\
-        identities and strategies for startups and small businesses based on market research and client feedback.",
-  },
-  {
-    title: "Dopegood",
-    links: [
-      { text: "Visit Live", url: "/" },
-      { text: "Learn More", url: "/" },
-    ],
-    img: {
-      src: "https://images6.alphacoders.com/132/thumbbig-1328670.webp",
-      alt: "Dopegood",
-    },
-    description:
-      "Maintained 100% job success rate on Upwork, delivering exceptional\
-        designs and solutions for 40+ projects. Developed highly effective brand\
-        identities and strategies for startups and small businesses based on market research and client feedback.",
+      "Unveil tranquility online with our aesthetic and elegant website template. Elevate your\
+      digital presence effortlessly, offering visitors a serene and calming experience.\
+      Immerse them in seamless navigation and visually soothing design, creating a harmonious\
+      blend of aesthetics. Make a lasting impression with a site that exudes elegance while\
+      providing a tranquil online haven for users to explore and engage with ease.",
   },
 ];
 
@@ -226,16 +212,23 @@ export const contactBubbleData: BubbleDataProps[] = [
 
 export const contactPageData = [
   {
+    icon: BsTelephone,
+    title: "Call Us",
+    href: `tel:${phoneNumber}`,
+    text: phoneNumber,
+  },
+  {
     icon: BsInstagram,
     title: "DM Us",
     href: `https://www.instagram.com/${instaId}`,
     text: "@" + instaId,
   },
+
   {
-    icon: BsTelephone,
-    title: "Call Us",
-    href: `tel:${phoneNumber}`,
-    text: phoneNumber,
+    icon: BsEnvelope,
+    title: "Mail Us",
+    href: `mailto:${mail}`,
+    text: mail,
   },
   {
     icon: BsWhatsapp,
@@ -243,18 +236,10 @@ export const contactPageData = [
     href: `https://wa.me/${phoneNumber}`,
     text: phoneNumber,
   },
-  {
-    icon: BsEnvelope,
-    title: "Mail Us",
-    href: `mailto:${mail}`,
-    text: mail,
-  },
 ];
 
 export const aboutPageHeading =
-  "We believe in an architecture that dialogs with its surrounding\
-  while challenging its status quo, radical in its conceptual\
-  ideals and ecological in its principle.";
+  "Our websites might not be comedians, but they sure know how to perform.";
 
 export const aboutDescription =
   "Hymns of Web orchestrates digital excellence, harmonizing the symphony\
@@ -272,30 +257,26 @@ export const aboutServices = [
   {
     title: "Websites",
     description:
-      "We believe in an architecture that dialogs with its surrounding\
-  while challenging its status quo, radical in its conceptual\
-  ideals and ecological in its principle.",
+      "Craft an impactful online presence with our dynamic and responsive\
+      website designs, developed with absolute care and precision.",
   },
   {
     title: "Web Apps",
     description:
-      "We believe in an architecture that dialogs with its surrounding\
-  while challenging its status quo, radical in its conceptual\
-  ideals and ecological in its principle.",
+      "Unleash innovation with our cutting-edge web application solutions,\
+      customized to meet your unique business requirements and technological aspirations.",
   },
   {
     title: "Desktop Apps",
     description:
-      "We believe in an architecture that dialogs with its surrounding\
-  while challenging its status quo, radical in its conceptual\
-  ideals and ecological in its principle.",
+      "Empower your vision with our advanced desktop application development\
+      services, designed to turn ideas into efficient, high-performance tools.",
   },
   {
     title: "Mobile Apps",
     description:
-      "We believe in an architecture that dialogs with its surrounding\
-  while challenging its status quo, radical in its conceptual\
-  ideals and ecological in its principle.",
+      "Navigate the mobile landscape confidently with our user-friendly and\
+      feature-rich mobile app solutions, ensuring seamless interaction and a competitive edge.",
   },
 ];
 
@@ -303,13 +284,13 @@ export const teamData = [
   {
     name: "Gobind Singh",
     about: "Demon Lord",
-    imgSrc: "/assets/images/gobind.webp",
+    imgSrc: "/assets/images/team/gobind.webp",
     portfolioLink: "https://youtu.be/dQw4w9WgXcQ?t=43",
   },
   {
     name: "Sai Rohit",
     about: ".childNodes[0] Enjoyer",
-    imgSrc: "/assets/images/sai.webp",
+    imgSrc: "/assets/images/team/sai.webp",
     portfolioLink:
       "https://www.linkedin.com/in/sai-rohit-sanniboyina-7a93aa224/",
   },
@@ -317,25 +298,25 @@ export const teamData = [
   {
     name: "Aishwarya Tewari",
     about: "Developer",
-    imgSrc: "/assets/images/aishwarya.webp",
+    imgSrc: "/assets/images/team/aishwarya.webp",
     portfolioLink: "https://aishwarya.hymnsofweb.com/",
   },
   {
     name: "Abhas Chatterjee",
     about: "Developer",
-    imgSrc: "/assets/images/abhas.webp",
+    imgSrc: "/assets/images/team/abhas.webp",
     portfolioLink: "https://abhas.hymnsofweb.com/",
   },
   {
     name: "Satyam Sinha",
     about: "Designer",
-    imgSrc: "/assets/images/satyam.webp",
-    portfolioLink: "https://www.linkedin.com/in/satyam-sinha-922117133/",
+    imgSrc: "/assets/images/team/satyam.webp",
+    portfolioLink: "https://www.behance.net/satyamsinha_96",
   },
   {
     name: "Pranav Manchanda",
     about: "Designer",
-    imgSrc: "/assets/images/pranav.webp",
+    imgSrc: "/assets/images/team/pranav.webp",
     portfolioLink: "https://www.linkedin.com/in/pranavmanchanda/",
   },
 ];

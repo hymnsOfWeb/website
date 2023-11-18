@@ -9,7 +9,7 @@ export default function WorkHeading() {
     <div css={workHeadingCss} className="home-child">
       <h2 css={workMainHeadingCss}>Works</h2>
       <span css={workMainSubHeadingCss}>
-        Exclusively designed & developed by HOW
+        Exclusively designed & developed by us.
       </span>
     </div>
   );
