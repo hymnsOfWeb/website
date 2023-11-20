@@ -34,6 +34,7 @@ export const secBtnsCss = css`
 
 export const buttonCss = css`
   ${commonBtnsCss}
+  /* background-color: var(--color-text-highlight); */
   background-color: var(--color-text-primary);
   gap: 10px;
   color: var(--color-bg-primary);
@@ -48,6 +49,8 @@ export const buttonCss = css`
 export const workTitleCss = css`
   font-size: clamp(0rem, 5vw, 3rem);
   font-weight: 600;
+  /* color: var(--color-text-highlight); */
+  color: var(--color-text-primary);
   ${mediaQuery.mobile} {
     font-size: clamp(0rem, 10vw, 3rem);
   }

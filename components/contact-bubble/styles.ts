@@ -63,7 +63,7 @@ export const bubbleWrapperCss = css`
   overflow: hidden;
   background-color: var(--color-bg-primary);
   transition: background-color 0.3s ease 0.2s, scale 0.4s ease,
-    opacity 0.3s ease;
+    opacity 0.3s ease, border-color 0.3s ease 0.2s;
   text-decoration: none;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -93,6 +93,7 @@ export const bubbleWrapperCss = css`
     }
   }
   &:hover {
+    border-color: var(--color-text-highlight);
     animation-play-state: paused;
   }
   ${mediaQuery.mobilePortrait} {
@@ -127,7 +128,7 @@ export const bubbleWrapperScale = (scale: number) => css`
   ${mediaQuery.desktop} {
     &:hover {
       scale: ${scale};
-      background-color: var(--color-text-primary);
+      background-color: var(--color-text-highlight);
       .bubble-text {
         color: var(--color-bg-primary);
         transform: scale(calc(1 / ${scale}));
@@ -147,7 +148,7 @@ export const bubbleText = css`
   text-align: center;
   width: fit-content;
   position: absolute;
-  color: var(--color-text-primary);
+  color: var(--color-text-highlight);
   letter-spacing: 2px;
   font-weight: 500;
   transition: color 0.2s ease 0.4s, transform 0.4s ease, opacity 0.3s ease;

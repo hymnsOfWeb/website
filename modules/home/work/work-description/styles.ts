@@ -1,7 +1,5 @@
 import { css } from "@emotion/react";
 
-export const descriptionContainer = css``; //remove blank
-
 export const workCardsCss = css`
   width: 100%;
   padding: 0 5vw;

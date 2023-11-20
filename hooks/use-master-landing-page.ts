@@ -6,7 +6,6 @@ export default function useMasterLandingPage() {
   const landingRefBottom = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
-  const miniNavRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
 
   const workPortionSize = useRef<number>(100 / workData.length);
@@ -53,7 +52,7 @@ export default function useMasterLandingPage() {
         );
         const winHeight = window.innerHeight;
         const docHeight = document.body.offsetHeight;
-        const scrollPercent = scrollPos / (docHeight - winHeight);
+        const scrollPercent = scrollPos / 1.85 / (docHeight - winHeight);
         const percentMove = scrollPercent * 100;
         if (ribbonElem) {
           (
@@ -197,6 +196,5 @@ export default function useMasterLandingPage() {
       workRef,
     },
     homeRef,
-    miniNavRef,
   };
 }

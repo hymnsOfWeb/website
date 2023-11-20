@@ -42,18 +42,22 @@ export const contactCircleCss = css`
   text-decoration: none;
   left: 50%;
   font-size: 4rem;
+  transition: all 0.3s ease 0.1s;
   ${mediaQuery.smallLaptop} {
     --_s: 40%;
-    font-size: 3.2rem;
+    font-size: clamp(0rem, 3vw, 3.2rem);
   }
   .contact-text {
     font-family: var(--font-mono);
     transition: all 0.3s ease 0.1s;
     font-weight: 500;
     z-index: 1;
+    color: var(--color-text-primary);
     font-size: inherit;
+    text-align: center;
   }
   &:hover {
+    border: 2px solid var(--color-text-highlight);
     .contact-text {
       color: var(--color-bg-primary);
     }
@@ -67,7 +71,7 @@ export const shadowCss = css`
   height: 1px;
   width: 1px;
   border-radius: 50%;
-  background-color: var(--color-text-primary);
+  background-color: var(--color-text-highlight);
   position: absolute;
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;

@@ -35,7 +35,7 @@ export const logoWrapper = css`
   position: absolute;
   top: 5vh;
   transition: filter 0.3s ease-in-out 0.6s, backdrop-filter 0.5s ease 0.6s,
-    scale 0.3s ease-in-out;
+    scale 0.3s ease-in-out, border-color 0.3s ease;
   backdrop-filter: blur(30px);
   &.active {
     transition: filter 0.3s ease-in-out 0.2s, backdrop-filter 1s ease 0s,
@@ -45,7 +45,8 @@ export const logoWrapper = css`
   }
   ${mediaQuery.desktop} {
     &:hover {
-      scale: 1.2;
+      border-color: var(--color-text-highlight);
+      scale: 1.15;
     }
   }
 `;

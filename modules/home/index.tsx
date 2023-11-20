@@ -5,8 +5,7 @@ import usePhone from "@hooks/use-phone";
 import { HomeDwebAbout, HomeMwebAbout } from "@modules/home/about";
 import { HomeDwebContact, HomeMwebContact } from "@modules/home/contact";
 import { HomeDwebLanding, HomeMwebLanding } from "@modules/home/landing";
-import MiniNav from "@modules/home/mini-nav";
-import { mainHomeWrapper } from "@modules/home/styles";
+import { fillerCss, mainHomeWrapper } from "@modules/home/styles";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
 
 function HomeHead() {
@@ -19,7 +18,7 @@ function HomeHead() {
 }
 
 function HomeDweb() {
-  const { heroText, aboutSection, workSection, homeRef, miniNavRef } =
+  const { heroText, aboutSection, workSection, homeRef } =
     useMasterLandingPage();
   const { landingRefBottom, landingRefTop } = heroText;
   const { aboutRef } = aboutSection;
@@ -28,12 +27,11 @@ function HomeDweb() {
     <section id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
       <HomeHead />
       <HomeDwebLanding ref={landingRefTop} />
-      <HomeDwebAbout ref={aboutRef} />
       <HomeDwebWork ref={workRef} />
+      <HomeDwebAbout ref={aboutRef} />
       <HomeDwebContact />
       <HomeDwebLanding ref={landingRefBottom} atBottom className="infi-clone" />
-      <HomeDwebAbout className="infi-clone" />
-      <MiniNav ref={miniNavRef} />
+      <div className="filler" aria-disabled css={fillerCss}></div>
     </section>
   );
 }
@@ -43,8 +41,8 @@ function HomeMweb() {
     <section id="home" aria-label="home" css={mainHomeWrapper}>
       <HomeHead />
       <HomeMwebLanding />
-      <HomeMwebAbout />
       <HomeMwebWork />
+      <HomeMwebAbout />
       <HomeMwebContact />
     </section>
   );

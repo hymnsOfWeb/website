@@ -37,6 +37,7 @@ export const charContainer = css`
   .lower-char {
     transform: scaleY(0%) translateY(0%);
     height: 0;
+    -webkit-text-stroke: 1px var(--color-text-highlight);
   }
   &:hover {
     .upper-char {
@@ -60,19 +61,13 @@ const commonChar = css`
   text-transform: uppercase;
   font-family: var(--font-mono);
 `;
+
 export const upperChar = css`
   ${commonChar}
 `;
+
 export const lowerChar = css`
   ${commonChar}
   color: transparent;
   -webkit-text-stroke: 1px var(--color-text-primary);
-`;
-
-const commonSpanWrapper = css``;
-export const upperSpanWrapper = css`
-  ${commonSpanWrapper}
-`;
-export const lowerSpanWrapper = css`
-  ${commonSpanWrapper}
 `;

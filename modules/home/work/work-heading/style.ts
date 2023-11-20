@@ -32,7 +32,7 @@ export const workMainHeadingCss = css`
   color: transparent;
   font-size: 4.5rem;
   font-family: var(--font-mono);
-  -webkit-text-stroke: 1px var(--color-text-primary);
+  -webkit-text-stroke: 1px var(--color-text-highlight);
   ${commonMobile}
 `;
 
@@ -41,5 +41,6 @@ export const workMainSubHeadingCss = css`
   width: 35ch;
   font-size: 1em;
   display: block;
-  ${commonMobile}
+  color: var(--color-text-highlight);
+  ${commonMobile};
 `;
