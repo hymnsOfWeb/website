@@ -17,6 +17,7 @@ export const globalCss = css`
   :root {
     --color-bg-primary: hsl(270, 33%, 11%);
     --color-bg-secondary: rgba(46, 72, 159, 1);
+    --color-bg-tertiary: hsl(227, 16%, 50%);
 
     --color-text-primary: rgb(245, 235, 255);
     --color-text-secondary: hsl(227, 16%, 60%);
@@ -24,8 +25,6 @@ export const globalCss = css`
 
     --box-shadow-primary: rgba(133, 133, 133, 0.6);
     --color-text-shadow: rgba(255, 255, 255, 0.5);
-
-    --color-bg-tertiary: hsl(227, 16%, 50%);
   }
 
   ::-webkit-scrollbar {

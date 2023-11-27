@@ -176,6 +176,18 @@ export default function useMasterLandingPage() {
   }, []);
 
   useEffect(() => {
+    const letterContainers: HTMLSpanElement[] = Array.from(
+      landingRefTop.current?.querySelectorAll(".char-container") ?? []
+    );
+    for (let i = 0; i < letterContainers.length; i++) {
+      const letterContainer = letterContainers[i];
+      setTimeout(() => {
+        letterContainer?.classList.add("active");
+        setTimeout(() => {
+          letterContainer?.classList.remove("active");
+        }, 500);
+      }, 500 + i * 75);
+    }
     window.addEventListener("scroll", scrollCallback);
     window.addEventListener("wheel", wheelCallback, { once: true });
     return () => {

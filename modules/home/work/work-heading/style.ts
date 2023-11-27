@@ -34,6 +34,9 @@ export const workMainHeadingCss = css`
   font-family: var(--font-mono);
   -webkit-text-stroke: 1px var(--color-text-highlight);
   ${commonMobile}
+  ${mediaQuery.mobile} {
+    font-size: 3rem;
+  }
 `;
 
 export const workMainSubHeadingCss = css`
@@ -41,6 +44,9 @@ export const workMainSubHeadingCss = css`
   width: 35ch;
   font-size: 1em;
   display: block;
-  color: var(--color-text-highlight);
+  color: var(--color-text-shadow);
   ${commonMobile};
+  ${mediaQuery.mobile} {
+    font-size: 0.8em;
+  }
 `;

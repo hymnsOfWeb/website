@@ -33,7 +33,7 @@ export const teamCardCss = css`
   ${mediaQuery.desktop} {
     transition: border-color 0.3s ease;
     &:hover {
-      border-color: var(--color-bg-tertiary);
+      border-color: var(--color-text-highlight);
     }
   }
   ${mediaQuery.mobile} {
@@ -86,7 +86,7 @@ export const nameCss = css`
 export const aboutBriefCss = css`
   text-align: center;
   color: var(--color-text-secondary);
-  font-size: clamp(1rem, 1rem, 4rem);
+  font-size: clamp(0.5rem, 1.25vw, 2rem);
   font-weight: 200;
   ${mediaQuery.mobile} {
     font-size: 1rem;

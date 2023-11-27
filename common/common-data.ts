@@ -147,7 +147,8 @@ export const homeAboutCard = {
   We're not your average agency; we're the cool cats crafting websites,\
   mobile apps, and desktop wonders. Forget the tech jargon; we speak emoji.\
   Join us on this digital rollercoaster - where pixels party and apps have\
-  an attitude. Let's make your online presence as sassy as our coding team!",
+  an attitude. Let's make your online presence as sassy as our coding team!\
+  Click to flip ;)",
   href: "/about",
   buttonText: "About Us",
   img: {
@@ -282,40 +283,46 @@ export const aboutServices = [
 
 export const teamData = [
   {
-    name: "Gobind Singh",
-    about: "Demon Lord",
+    name: "Gurdev &\nKanwal",
+    about: "CEO & Founder",
+    imgSrc: "/assets/images/team/founders.webp",
+    portfolioLink: "https://www.hymnsofweb.com",
+  },
+  {
+    name: "Gobind\nSingh",
+    about: "Chief Technical Officer",
     imgSrc: "/assets/images/team/gobind.webp",
     portfolioLink: "https://youtu.be/dQw4w9WgXcQ?t=43",
   },
   {
-    name: "Sai Rohit",
-    about: ".childNodes[0] Enjoyer",
+    name: "Sai\nRohit",
+    about: "Vice President",
     imgSrc: "/assets/images/team/sai.webp",
     portfolioLink:
       "https://www.linkedin.com/in/sai-rohit-sanniboyina-7a93aa224/",
   },
 
   {
-    name: "Aishwarya Tewari",
-    about: "Developer",
+    name: "Aishwarya\nTewari",
+    about: "Head of Management",
     imgSrc: "/assets/images/team/aishwarya.webp",
     portfolioLink: "https://aishwarya.hymnsofweb.com/",
   },
   {
-    name: "Abhas Chatterjee",
-    about: "Developer",
+    name: "Abhas\nChatterjee",
+    about: "Head of Content",
     imgSrc: "/assets/images/team/abhas.webp",
     portfolioLink: "https://abhas.hymnsofweb.com/",
   },
   {
-    name: "Satyam Sinha",
-    about: "Designer",
+    name: "Satyam\nSinha",
+    about: "Head of Marketing",
     imgSrc: "/assets/images/team/satyam.webp",
     portfolioLink: "https://www.behance.net/satyamsinha_96",
   },
   {
-    name: "Pranav Manchanda",
-    about: "Designer",
+    name: "Pranav\nManchanda",
+    about: "Head of Design",
     imgSrc: "/assets/images/team/pranav.webp",
     portfolioLink: "https://www.linkedin.com/in/pranavmanchanda/",
   },

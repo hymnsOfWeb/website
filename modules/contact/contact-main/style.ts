@@ -18,6 +18,7 @@ export const contactHeadingCss = css`
   letter-spacing: 0.5em;
   margin-bottom: 5vh;
   text-align: center;
+  color: var(--color-text-highlight);
   ${mediaQuery.mobile} {
     margin-top: calc(10vh + 70px);
     font-size: 7.5vw;

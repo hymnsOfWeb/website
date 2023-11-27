@@ -39,7 +39,8 @@ export const charContainer = css`
     height: 0;
     -webkit-text-stroke: 1px var(--color-text-highlight);
   }
-  &:hover {
+  &:hover,
+  &.active {
     .upper-char {
       transform: scaleY(0%) translateY(-100%);
       height: 0;

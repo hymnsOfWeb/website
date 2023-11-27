@@ -10,7 +10,7 @@ export const workContainerCss = css`
 `;
 
 export const mwebCardCss = css`
-  margin: 20px 0;
+  margin: 15px 0;
   ${mediaQuery.squeezedScreen} {
     display: flex;
     align-items: center;
@@ -19,6 +19,9 @@ export const mwebCardCss = css`
 `;
 
 export const workDescCss = css`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   ${mediaQuery.squeezedScreen} {
     width: 57.5%;
   }
@@ -30,7 +33,7 @@ export const mwebWorkImgCss = css`
   margin: auto;
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   img {
     height: 120% !important;
   }

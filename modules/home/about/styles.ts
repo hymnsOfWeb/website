@@ -13,7 +13,8 @@ export const aboutWrapper = css`
     -webkit-tap-highlight-color: transparent;
   }
   ${mediaQuery.mobile} {
-    height: 100vh;
+    height: clamp(85vh, 150vw, 100vh);
+    margin-top: 40px;
   }
   ${mediaQuery.mobileLandscape} {
     height: 140vh;
@@ -40,25 +41,20 @@ export const mWebRibbonWrapper = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-text-primary);
+  background-color: var(--color-text-highlight);
   filter: brightness(85%);
   opacity: 0.95;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
-    0 0 20px -5px var(--box-shadow-primary),
-    0 0 30px -10px rgba(185, 185, 185, 0.4), 0 0 60px rgba(255, 255, 255, 0.25);
-  & > * {
-    background-color: var(--color-bg-secondary);
-    color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    text-shadow: 4px 4px 3px var(--color-text-shadow);
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 3rem;
-  }
+    0 0 20px -5px var(--box-shadow-primary), 0 0 30px -10px hsl(162, 74%, 4%),
+    0 0 60px hsl(162, 91%, 15%);
+  font-size: 16vw;
+  flex: 1;
+  user-select: none;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: var(--color-text-highlight);
+  color: var(--color-bg-primary);
 `;
 
 export const ribbonContainer = css`
@@ -108,6 +104,9 @@ export const cardWrapper = css`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  ${mediaQuery.mobile} {
+    transform: translate(-50%, -40%);
+  }
   ${mediaQuery.mobileLandscape} {
     width: 100%;
     height: 100vh;
@@ -179,6 +178,7 @@ export const cardBack = css`
 `;
 
 export const cardButton = css`
+  transition: all 0.3s ease;
   margin-left: auto;
   height: 45px;
   width: 42.5%;
@@ -192,6 +192,11 @@ export const cardButton = css`
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  ${mediaQuery.desktop} {
+    &:hover {
+      background-color: var(--color-text-highlight);
+    }
+  }
   ${mediaQuery.mobile} {
     width: 120px;
     height: 40px;
@@ -206,9 +211,9 @@ export const cardButton = css`
 export const cardText = css`
   text-align: justify;
   height: 100%;
-  font-size: clamp(0.5rem, 1vw, 2rem);
+  font-size: clamp(0.5rem, 1.5vw, 0.9rem);
   ${mediaQuery.desktop} {
-    line-height: clamp(0em, 2em, 2.5em);
+    line-height: 1.5em;
   }
   ${mediaQuery.mobilePortrait} {
     font-size: clamp(0rem, 4vw, 1.5rem);

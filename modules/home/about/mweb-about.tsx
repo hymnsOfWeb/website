@@ -45,9 +45,7 @@ export default function HomeMwebAbout() {
 
   return (
     <div ref={wrapperRef} css={aboutWrapper}>
-      <div css={mWebRibbonWrapper}>
-        <span aria-disabled>{text}</span>
-      </div>
+      <div css={mWebRibbonWrapper}>{text}</div>
       <HomeAboutCard frontRef={cardFrontRef} backRef={cardBackRef} />
     </div>
   );

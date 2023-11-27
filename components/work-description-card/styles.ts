@@ -16,6 +16,9 @@ const commonBtnsCss = css`
   display: flex;
   align-items: center;
   margin-right: 10px;
+  ${mediaQuery.mobile} {
+    font-size: clamp(0.8rem, 4.25vw, 1.25rem);
+  }
 `;
 
 export const ctaContainerCss = css`
@@ -28,29 +31,32 @@ export const secBtnsContainerCss = css`
 
 export const secBtnsCss = css`
   ${commonBtnsCss}
-  border: 2px solid var(--color-text-primary);
-  color: var(--color-text-primary);
+  border: 2px solid var(--color-text-highlight);
+  color: var(--color-text-highlight);
 `;
 
 export const buttonCss = css`
   ${commonBtnsCss}
-  /* background-color: var(--color-text-highlight); */
-  background-color: var(--color-text-primary);
+  background-color: var(--color-text-highlight);
+  transition: all 0.2s ease;
   gap: 10px;
   color: var(--color-bg-primary);
   svg {
     fill: var(--color-bg-primary);
+    transition: all 0.2s ease;
   }
-  ${mediaQuery.mobile} {
-    font-size: clamp(0.8rem, 4vw, 1rem);
+
+  ${mediaQuery.desktop} {
+    &:hover {
+      background-color: var(--color-text-primary);
+    }
   }
 `;
 
 export const workTitleCss = css`
   font-size: clamp(0rem, 5vw, 3rem);
   font-weight: 600;
-  /* color: var(--color-text-highlight); */
-  color: var(--color-text-primary);
+  color: var(--color-text-highlight);
   ${mediaQuery.mobile} {
     font-size: clamp(0rem, 10vw, 3rem);
   }

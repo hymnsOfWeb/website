@@ -118,10 +118,18 @@ export const hamBtn = css`
 `;
 
 export const nav = css`
-  --_col: var(--color-bg-tertiary);
+  --_col: var(--color-text-highlight);
   --nav-width: 160vw;
   ${mediaQuery.mobile} {
     --nav-width: 220vw;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
   }
   position: absolute;
   height: 100vh;
