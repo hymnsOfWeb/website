@@ -1,5 +1,5 @@
-import { mediaQuery } from "@common-styles";
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const globalFontVarsCss = ({
   primary,

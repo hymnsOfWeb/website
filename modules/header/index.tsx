@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { mainNavLinks } from "@common-data";
 import { ImageComp, NavLinkContainer } from "@components";
@@ -14,27 +14,20 @@ import {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const { ref } = useHeader();
-  const hamClickHandler = useCallback(() => {
-    setIsMenuOpen((prev) => !prev);
-  }, []);
-  const linkClickHandler = useCallback(() => {
-    setIsMenuOpen(false);
-  }, []);
-  const linksMapper = useCallback(
-    (link: (typeof mainNavLinks)[0], index: number) => {
-      return (
-        <NavLinkContainer
-          key={"main-nav-" + index}
-          href={link?.href ?? "/"}
-          text={link?.name ?? ""}
-          active={isMenuOpen}
-          index={index}
-          onClick={linkClickHandler}
-        />
-      );
-    },
-    [isMenuOpen, linkClickHandler]
-  );
+  const hamClickHandler = () => setIsMenuOpen((prev) => !prev);
+  const linkClickHandler = () => setIsMenuOpen(false);
+  const linksMapper = (link: (typeof mainNavLinks)[0], index: number) => {
+    return (
+      <NavLinkContainer
+        key={"main-nav-" + index}
+        href={link?.href ?? "/"}
+        text={link?.name ?? ""}
+        active={isMenuOpen}
+        index={index}
+        onClick={linkClickHandler}
+      />
+    );
+  };
   return (
     <header css={headerWrapper} ref={ref}>
       <Link

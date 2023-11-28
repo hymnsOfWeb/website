@@ -240,7 +240,7 @@ export const contactPageData = [
 ];
 
 export const aboutPageHeading =
-  "Our websites might not be comedians, but they sure know how to perform.";
+  "Our softwares might not be comedians, but they sure know how to perform.";
 
 export const aboutDescription =
   "Hymns of Web orchestrates digital excellence, harmonizing the symphony\
