@@ -27,7 +27,7 @@ export default function AboutTeam() {
         href={elem.portfolioLink}
         key={"card-" + index}
         css={teamCardCss}
-        title={elem.name}
+        title={elem.name?.replace(/\n/gm, " ")}
         rel="noopener noreferrer"
         target="_blank"
       >

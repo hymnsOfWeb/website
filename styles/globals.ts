@@ -1,3 +1,4 @@
+import { mediaQuery } from "@common-styles";
 import { css } from "@emotion/react";
 
 export const globalFontVarsCss = ({
@@ -15,7 +16,7 @@ export const globalFontVarsCss = ({
 
 export const globalCss = css`
   :root {
-    --color-bg-primary: hsl(270, 33%, 11%);
+    --color-bg-primary: hsl(255, 45%, 7.5%);
     --color-bg-secondary: rgba(46, 72, 159, 1);
     --color-bg-tertiary: hsl(227, 16%, 50%);
 
@@ -25,6 +26,16 @@ export const globalCss = css`
 
     --box-shadow-primary: rgba(133, 133, 133, 0.6);
     --color-text-shadow: rgba(255, 255, 255, 0.5);
+  }
+
+  .chromium {
+    --text-stroke-width: 1px;
+    ${mediaQuery.mobile} {
+      --text-stroke-width: 2px;
+    }
+  }
+  .safari {
+    --text-stroke-width: 2px;
   }
 
   ::-webkit-scrollbar {

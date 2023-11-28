@@ -15,7 +15,7 @@ export const contactContainerCss = css`
 export const contactHeadingCss = css`
   font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.25em;
   margin-bottom: 5vh;
   text-align: center;
   color: var(--color-text-highlight);

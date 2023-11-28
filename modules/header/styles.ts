@@ -25,7 +25,7 @@ export const logoContainer = css`
 export const logoWrapper = css`
   z-index: 999;
   height: 70px;
-  aspect-ratio: 1;
+  width: 70px;
   left: 5vw;
   border-radius: 50%;
   overflow: hidden;
@@ -62,8 +62,8 @@ export const hamBtn = css`
   gap: 6px;
   top: 5vh;
   right: 5vw;
-  aspect-ratio: 1;
   height: 70px;
+  width: 70px;
   padding: 0 20px;
   cursor: pointer;
   --_h: 2px;

@@ -61,7 +61,7 @@ export const charDynamicDelayCss = (delay: number) => css`
   font-family: var(--font-mono);
   &:nth-of-type(1) {
     color: transparent;
-    -webkit-text-stroke: 1px var(--color-bg-primary);
+    -webkit-text-stroke: var(--text-stroke-width) var(--color-bg-primary);
   }
 `;
 

@@ -9,10 +9,10 @@ export const aboutDescriptionCss = css`
 export const servicesHeadingCss = css`
   font-size: 2rem;
   margin: 10vh 0 2vh 0;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.07em;
   color: var(--color-text-highlight);
   ${mediaQuery.mobile} {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 

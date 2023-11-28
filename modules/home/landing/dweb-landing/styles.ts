@@ -37,7 +37,7 @@ export const charContainer = css`
   .lower-char {
     transform: scaleY(0%) translateY(0%);
     height: 0;
-    -webkit-text-stroke: 1px var(--color-text-highlight);
+    -webkit-text-stroke: var(--text-stroke-width) var(--color-text-highlight);
   }
   &:hover,
   &.active {
@@ -70,5 +70,5 @@ export const upperChar = css`
 export const lowerChar = css`
   ${commonChar}
   color: transparent;
-  -webkit-text-stroke: 1px var(--color-text-primary);
+  -webkit-text-stroke: var(--text-stroke-width) var(--color-text-primary);
 `;

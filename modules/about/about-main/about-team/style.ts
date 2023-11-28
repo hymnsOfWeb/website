@@ -49,10 +49,10 @@ export const teamCardCss = css`
 export const teamHeadingCss = css`
   font-size: 2rem;
   margin: 10vh 0 5vh 0;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.07em;
   color: var(--color-text-highlight);
   ${mediaQuery.mobile} {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 `;
 

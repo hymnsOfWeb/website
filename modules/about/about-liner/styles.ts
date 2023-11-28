@@ -20,6 +20,6 @@ export const aboutLinerCss = css`
   }
   ${mediaQuery.mobile} {
     margin-bottom: 50px;
-    font-size: 1.4rem;
+    font-size: 1.75rem;
   }
 `;

@@ -32,7 +32,7 @@ export const workMainHeadingCss = css`
   color: transparent;
   font-size: 4.5rem;
   font-family: var(--font-mono);
-  -webkit-text-stroke: 1px var(--color-text-highlight);
+  -webkit-text-stroke: var(--text-stroke-width) var(--color-text-highlight);
   ${commonMobile}
   ${mediaQuery.mobile} {
     font-size: 3rem;

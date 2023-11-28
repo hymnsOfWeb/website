@@ -211,7 +211,10 @@ export const cardButton = css`
 export const cardText = css`
   text-align: justify;
   height: 100%;
-  font-size: clamp(0.5rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.5rem, 2vw, 1.125rem);
+  @media screen and (width > 2000px) {
+    font-size: 1.25rem;
+  }
   ${mediaQuery.desktop} {
     line-height: 1.5em;
   }
