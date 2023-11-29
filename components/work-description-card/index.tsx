@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { WorkData } from "@common-data";
 import {
@@ -22,7 +21,7 @@ const WorkDescriptionCard = ({
   const mapper = (link: WorkData["links"][0], index: number) => {
     return (
       <Fragment key={index}>
-        <Link
+        <a
           href={link.url}
           css={buttonCss}
           rel="noopener noreferrer"
@@ -30,7 +29,7 @@ const WorkDescriptionCard = ({
         >
           {link.text}
           <BsArrowUpRight />
-        </Link>
+        </a>
       </Fragment>
     );
   };

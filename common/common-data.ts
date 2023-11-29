@@ -45,7 +45,7 @@ export const workData: WorkData[] = [
   },
   {
     title: "Avita HR Solutions",
-    links: [{ text: "Visit Live", url: "/" }],
+    links: [{ text: "Visit Live", url: "https://www.avitahr.com/" }],
     img: {
       src: "/assets/images/work/avitahr.webp",
       alt: "Dopegood",
@@ -59,7 +59,7 @@ export const workData: WorkData[] = [
   },
   {
     title: "QuantumShift",
-    links: [{ text: "Visit Live", url: "/" }],
+    links: [{ text: "Visit Live", url: "https://www.quantumshift.in/" }],
     img: {
       src: "/assets/images/work/quantumshift.webp",
       alt: "Dopegood",
@@ -74,7 +74,7 @@ export const workData: WorkData[] = [
   },
   {
     title: "VintageInkkk",
-    links: [{ text: "Visit Live", url: "/" }],
+    links: [{ text: "Visit Live", url: "https://vintageinkk.vercel.app/" }],
 
     secondaryBtn: ["Template", "For Sale"],
     img: {

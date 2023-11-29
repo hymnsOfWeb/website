@@ -119,6 +119,7 @@ export const hamBtn = css`
 
 export const nav = css`
   --_col: var(--color-text-highlight);
+  touch-action: none;
   --nav-width: 160vw;
   ${mediaQuery.mobile} {
     --nav-width: 220vw;

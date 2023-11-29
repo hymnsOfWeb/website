@@ -62,7 +62,8 @@ export const contactCircleCss = css`
     --_s: 85%;
     transition: all 0.3s ease;
     &.in-view {
-      background-color: var(--color-text-primary);
+      background-color: var(--color-text-highlight);
+      border-color: var(--color-text-highlight);
       .contact-text {
         color: var(--color-bg-primary);
       }

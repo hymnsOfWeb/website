@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.hymnsofweb.com
+
+# Sitemaps
+Sitemap: https://www.hymnsofweb.com/sitemap.xml
