@@ -9,10 +9,20 @@ import { fillerCss, mainHomeWrapper } from "@modules/home/styles";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
 
 function HomeHead() {
+  const mapper = (key: string, index: number) => {
+    return (
+      <meta
+        property={`og:${key}`}
+        content={homePageMeta.og[key as "title"] ?? ""}
+        key={`home-og-meta-${index}`}
+      />
+    );
+  };
   return (
     <Head>
       <title>{homePageMeta.title}</title>
       <meta name="description" content={homePageMeta.description} />
+      {Object.keys(homePageMeta.og).map(mapper)}
     </Head>
   );
 }

@@ -125,16 +125,34 @@ export const homeLandingTexts: [string, string] = [
 export const homePageMeta = {
   title: "Hymns of Web | Home",
   description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Home`,
+  og: {
+    title: "Hymns of Web | Home",
+    description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Home`,
+    image: "/favicon.ico",
+    url: "https://www.hymnsofweb.com",
+  },
 };
 
 export const aboutPageMeta = {
   title: "Hymns of Web | About",
   description: `Hymns of Web | ${homeLandingTexts.join(" ")} | About`,
+  og: {
+    title: "Hymns of Web | About",
+    description: `Hymns of Web | ${homeLandingTexts.join(" ")} | About`,
+    image: "/favicon.ico",
+    url: "https://www.hymnsofweb.com/about",
+  },
 };
 
 export const contactPageMeta = {
   title: "Hymns of Web | Contact",
   description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Contact`,
+  og: {
+    title: "Hymns of Web | Contact",
+    description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Contact`,
+    image: "/favicon.ico",
+    url: "https://www.hymnsofweb.com/contact",
+  },
 };
 
 export const homeAboutTextRibbon = {

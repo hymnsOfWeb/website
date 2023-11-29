@@ -5,10 +5,20 @@ import AboutMain from "@modules/about/about-main";
 import { aboutSectionCss } from "@modules/about/styles";
 
 function AboutHead() {
+  const mapper = (key: string, index: number) => {
+    return (
+      <meta
+        property={`og:${key}`}
+        content={aboutPageMeta.og[key as "title"] ?? ""}
+        key={`about-og-meta-${index}`}
+      />
+    );
+  };
   return (
     <Head>
       <title>{aboutPageMeta.title}</title>
       <meta name="description" content={aboutPageMeta.description} />
+      {Object.keys(aboutPageMeta.og).map(mapper)}
     </Head>
   );
 }
