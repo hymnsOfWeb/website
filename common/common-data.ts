@@ -116,26 +116,26 @@ pata🥺 ae🤬 tu🤯 fan🥳 Salman🧐 Khan😇 di😚 Ohde😜\
 gaane🤪 gaake😵 tainu😲 main😴 sunauga
 `;
 
-// home page
-export const homePageMeta = {
-  title: "Hymns of Web | Home Page",
-  description: "Hymns of Web | web design and development studio",
-};
-
-export const aboutPageMeta = {
-  title: "Hymns of Web | About Page",
-  description: "Hymns of Web | web design and development studio",
-};
-
-export const contactPageMeta = {
-  title: "Hymns of Web | Contact Page",
-  description: "Hymns of Web | web design and development studio",
-};
-
 export const homeLandingTexts: [string, string] = [
   "Transforming Visions",
   "Into Digital Resonance",
 ];
+
+// home page
+export const homePageMeta = {
+  title: "Hymns of Web | Home",
+  description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Home`,
+};
+
+export const aboutPageMeta = {
+  title: "Hymns of Web | About",
+  description: `Hymns of Web | ${homeLandingTexts.join(" ")} | About`,
+};
+
+export const contactPageMeta = {
+  title: "Hymns of Web | Contact",
+  description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Contact`,
+};
 
 export const homeAboutTextRibbon = {
   text: "About",
