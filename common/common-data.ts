@@ -133,8 +133,8 @@ export const contactPageMeta = {
 };
 
 export const homeLandingTexts: [string, string] = [
-  "Digital design &",
-  "Branding studio",
+  "Transforming Visions",
+  "Into Digital Resonance",
 ];
 
 export const homeAboutTextRibbon = {

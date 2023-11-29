@@ -21,7 +21,7 @@ export const landingHeading = css`
   font-weight: 600;
   margin: 0;
   line-height: 1rem;
-  font-size: 6vw;
+  font-size: 4.5vw;
 `;
 
 export const charContainer = css`

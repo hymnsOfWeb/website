@@ -21,7 +21,7 @@ export const landingHeading = css`
   text-align: center;
   font-weight: 600;
   margin: 0;
-  font-size: 10vw;
+  font-size: 8.25vw;
   gap: 2vh;
   text-transform: uppercase;
   font-family: var(--font-mono);
