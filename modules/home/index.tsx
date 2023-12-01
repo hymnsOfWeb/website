@@ -34,7 +34,7 @@ function HomeDweb() {
   const { aboutRef } = aboutSection;
   const { workRef } = workSection;
   return (
-    <section id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
+    <main id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
       <HomeHead />
       <HomeDwebLanding ref={landingRefTop} />
       <HomeDwebWork ref={workRef} />
@@ -42,19 +42,19 @@ function HomeDweb() {
       <HomeDwebContact />
       <HomeDwebLanding ref={landingRefBottom} atBottom className="infi-clone" />
       <div className="filler" aria-disabled css={fillerCss}></div>
-    </section>
+    </main>
   );
 }
 
 function HomeMweb() {
   return (
-    <section id="home" aria-label="home" css={mainHomeWrapper}>
+    <main id="home" aria-label="home" css={mainHomeWrapper}>
       <HomeHead />
       <HomeMwebLanding />
       <HomeMwebWork />
       <HomeMwebAbout />
       <HomeMwebContact />
-    </section>
+    </main>
   );
 }
 

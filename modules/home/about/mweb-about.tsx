@@ -44,9 +44,9 @@ export default function HomeMwebAbout() {
   const { text } = homeAboutTextRibbon;
 
   return (
-    <div ref={wrapperRef} css={aboutWrapper}>
+    <section ref={wrapperRef} css={aboutWrapper}>
       <div css={mWebRibbonWrapper}>{text}</div>
       <HomeAboutCard frontRef={cardFrontRef} backRef={cardBackRef} />
-    </div>
+    </section>
   );
 }

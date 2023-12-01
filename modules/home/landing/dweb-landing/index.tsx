@@ -18,6 +18,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
   const { atBottom = false, className } = props;
   const firstSplit = homeLandingTexts[0].split("");
   const secondSplit = homeLandingTexts[1].split("");
+
   const ids = useMemo<string[]>(() => {
     const arr = [];
     const length = Math.max(firstSplit.length, secondSplit.length);
@@ -26,6 +27,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
     }
     return arr;
   }, [firstSplit, secondSplit]);
+
   const mapper = useCallback(
     (char: string, index: number, arr: string[]) => {
       return (
@@ -54,7 +56,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
   );
 
   const topJsx = (
-    <main
+    <div
       css={landingWrapper}
       ref={atBottom ? undefined : ref}
       className={`home-child ${className ?? ""}`}
@@ -67,7 +69,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
       >
         {commonJsx}
       </h1>
-    </main>
+    </div>
   );
   const bottomJsx = (
     <div

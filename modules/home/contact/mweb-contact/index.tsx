@@ -54,7 +54,7 @@ export default function MwebHomeContact() {
     );
   };
   return (
-    <div css={contactCss} ref={egRef}>
+    <section css={contactCss} ref={egRef}>
       <div css={contactSquareCss}>
         <Link
           href="/contact"
@@ -62,14 +62,14 @@ export default function MwebHomeContact() {
           css={contactCircleCss}
           ref={circleRef}
         >
-          <span className="contact-text" css={contactTextCss}>
+          <h2 className="contact-text" css={contactTextCss}>
             Contact Us
-          </span>
+          </h2>
         </Link>
       </div>
       <div className="icons-container" css={iconsContainerStyle}>
         {contactBubbleData.map(bubbleMapper)}
       </div>
-    </div>
+    </section>
   );
 }

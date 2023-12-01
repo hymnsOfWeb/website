@@ -33,60 +33,57 @@ export const workData: WorkData[] = [
     links: [{ text: "Visit Live", url: "https://www.thebunch.ai/" }],
     img: {
       src: "/assets/images/work/bunchai.webp",
-      alt: "Dopegood",
+      alt: "Hymns of Web | The Bunch Ai",
     },
     description:
-      "TheBunch.ai aims to bring like-minded people together for exceptional\
-      social experiences, forming friendships and creating memories. Our events\
-      are through invite only. Once you register for an event, The Bunch.ai team\
-      carefully evaluates and accordingly invited will be sent to attend the event.\
-      This is to ensure that the members are of the mindset ensuring that everyone\
-      blends in well and can network easily.",
+      "Hymns Of Web proudly crafted the website for TheBunch.ai, a visionary platform\
+ fostering exceptional social experiences and meaningful connections. Their exclusive,\
+ invite-only events ensure a curated gathering of like-minded individuals, carefully\
+ selected by TheBunch.ai team to guarantee a harmonious and conducive networking environment.",
   },
   {
     title: "Avita HR Solutions",
     links: [{ text: "Visit Live", url: "https://www.avitahr.com/" }],
     img: {
       src: "/assets/images/work/avitahr.webp",
-      alt: "Dopegood",
+      alt: "Hymns of Web | Avita HR Solutions",
     },
     description:
-      "AVITA HR Solutions is designed to meet the governing need for professional\
-      approach in Human Resource Development, Recruitment and Training activities\
-      in the corporate world. AVITA HR Solutions is backed by professionals having\
-      rich industry experience in India and overseas countries. Our database consists\
-      of highly qualified and experienced professionals.",
+      "Hymns Of Web proudly presents our work with Avita HR Solutions, a leading player\
+ in Human Resource Development, Recruitment, and Training. Designed to meet the evolving\
+ needs of the corporate world, Avita HR Solutions boasts a team of experienced professionals\
+ with rich industry expertise both in India and overseas. Their commitment to excellence\
+ aligns seamlessly with Hymns Of Web's dedication to crafting top-notch websites and software solutions.",
   },
   {
     title: "QuantumShift",
     links: [{ text: "Visit Live", url: "https://www.quantumshift.in/" }],
     img: {
       src: "/assets/images/work/quantumshift.webp",
-      alt: "Dopegood",
+      alt: "Hymns of Web | QuantumShift",
     },
     description:
-      "Quantumshift is a deep-tech startup that specializes in transforming quantum\
-      solutions. Our team of experts is devoted to delivering the most cutting-edge\
-      and effective solutions for industries and government organizations that want\
-      to leverage the potential of quantum mechanics. We envision that tomorrow's technology\
-      begins with attempts of today. At Quantumshift, we guarantee to provide our clients\
-      with the highest quality of service and support",
+      "Hymns Of Web proudly collaborated with Quantumshift, a pioneering deep tech startup,\
+ to craft their exceptional website. Specializing in transforming quantum solutions,\
+ Quantumshift envisions tomorrow's technology through today's efforts. Our team, dedicated \
+ to delivering cutting-edge websites and software, is honored to have contributed to \
+ Quantumshift's mission of providing top-quality services and support to industries \
+ and government organizations exploring the potential of quantum mechanics.",
   },
   {
-    title: "VintageInkkk",
+    title: "The Aesthetic One",
     links: [{ text: "Visit Live", url: "https://vintageinkk.vercel.app/" }],
-
     secondaryBtn: ["Template", "For Sale"],
     img: {
       src: "/assets/images/work/vintageinkkk.webp",
-      alt: "Dopegood",
+      alt: "Hymns of Web",
     },
     description:
-      "Unveil tranquility online with our aesthetic and elegant website template. Elevate your\
-      digital presence effortlessly, offering visitors a serene and calming experience.\
-      Immerse them in seamless navigation and visually soothing design, creating a harmonious\
-      blend of aesthetics. Make a lasting impression with a site that exudes elegance while\
-      providing a tranquil online haven for users to explore and engage with ease.",
+      "Reveal online serenity with this Hymns Of Web's sophisticated and stylish website template.\
+ Enhance your digital footprint effortlessly, providing visitors with a tranquil and aesthetically\
+ pleasing experience. Immerse them in seamless navigation and visually pleasing designs, creating a\
+ harmonious blend of tech and aesthetics. Leave a lasting impression with a website that radiates\
+ elegance, offering users a serene online haven for exploration and engagement with ease.",
   },
 ];
 
@@ -123,11 +120,14 @@ export const homeLandingTexts: [string, string] = [
 
 // home page
 export const homePageMeta = {
-  title: "Hymns of Web | Home",
-  description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Home`,
+  title: "Hymns of Web",
+  description:
+    "Elevate digital presence with Hymns of Web: premier SaaS for cutting-edge website & software solutions.",
   og: {
-    title: "Hymns of Web | Home",
-    description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Home`,
+    title: "Hymns of Web",
+    description:
+      "Elevate digital presence with Hymns of Web:\
+ premier SaaS for cutting-edge website & software solutions.",
     image: "/favicon.ico",
     url: "https://www.hymnsofweb.com",
   },
@@ -135,10 +135,14 @@ export const homePageMeta = {
 
 export const aboutPageMeta = {
   title: "Hymns of Web | About",
-  description: `Hymns of Web | ${homeLandingTexts.join(" ")} | About`,
+  description:
+    "Elevate digital presence with Hymns of Web:\
+ premier SaaS for cutting-edge website & software solutions.",
   og: {
     title: "Hymns of Web | About",
-    description: `Hymns of Web | ${homeLandingTexts.join(" ")} | About`,
+    description:
+      "Elevate digital presence with Hymns of Web:\
+ premier SaaS for cutting-edge website & software solutions.",
     image: "/favicon.ico",
     url: "https://www.hymnsofweb.com/about",
   },
@@ -146,10 +150,14 @@ export const aboutPageMeta = {
 
 export const contactPageMeta = {
   title: "Hymns of Web | Contact",
-  description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Contact`,
+  description:
+    "Elevate digital presence with Hymns of Web:\
+ premier SaaS for cutting-edge website & software solutions.",
   og: {
     title: "Hymns of Web | Contact",
-    description: `Hymns of Web | ${homeLandingTexts.join(" ")} | Contact`,
+    description:
+      "Elevate digital presence with Hymns of Web:\
+ premier SaaS for cutting-edge website & software solutions.",
     image: "/favicon.ico",
     url: "https://www.hymnsofweb.com/contact",
   },

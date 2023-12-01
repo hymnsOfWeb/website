@@ -7,11 +7,11 @@ import WorkHeading from "../work-heading";
 function DW(_: unknown, ref: Ref<HTMLDivElement>) {
   const descriptionRef = useRef<HTMLDivElement>(null);
   return (
-    <div id="work" ref={ref} css={workContainerCss}>
+    <section id="work" ref={ref} css={workContainerCss} className="home-child">
       <WorkHeading />
       <WorkCarousel />
       <WorkDescription ref={descriptionRef} />
-    </div>
+    </section>
   );
 }
 

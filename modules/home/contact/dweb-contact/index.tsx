@@ -28,7 +28,7 @@ export default function DwebHomeContact() {
     );
   };
   return (
-    <div css={contactCss} className="home-child">
+    <section css={contactCss} className="home-child">
       <div css={contactSquareCss} ref={containerRef}>
         <Link
           href="/contact"
@@ -37,10 +37,10 @@ export default function DwebHomeContact() {
           ref={linkRef}
         >
           <span className="shadow" css={shadowCss} ref={shadowRef}></span>
-          <span className="contact-text">Contact Us</span>
+          <h2 className="contact-text">Contact Us</h2>
         </Link>
       </div>
       {contactBubbleData.map(bubbleMapper)}
-    </div>
+    </section>
   );
 }

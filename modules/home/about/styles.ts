@@ -208,6 +208,14 @@ export const cardButton = css`
   }
 `;
 
+export const cardButtonHeading = css`
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: var(--font-primary);
+`;
+
 export const cardText = css`
   text-align: justify;
   height: 100%;

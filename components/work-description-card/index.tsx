@@ -43,7 +43,7 @@ const WorkDescriptionCard = ({
   };
 
   return (
-    <div className={className}>
+    <article className={className}>
       <h3 className="work-title" css={workTitleCss}>
         {data.title}
       </h3>
@@ -54,7 +54,7 @@ const WorkDescriptionCard = ({
         </div>
       </div>
       <p css={workDescriptionCss}>{data.description}</p>
-    </div>
+    </article>
   );
 };
 

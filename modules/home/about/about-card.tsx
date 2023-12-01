@@ -5,6 +5,7 @@ import { ImageComp } from "@components";
 import {
   cardBack,
   cardButton,
+  cardButtonHeading,
   cardContainer,
   cardFront,
   cardText,
@@ -39,12 +40,14 @@ const HomeAboutCard = ({
             src={homeAboutCard.img.src}
             alt={homeAboutCard.img.alt}
           />
-          <div ref={backRef} css={[cardBack, commonBoxStyle]}>
-            <p onClick={clickHandler} css={cardText}>
-              {homeAboutCard.text}
-            </p>
+          <div
+            ref={backRef}
+            css={[cardBack, commonBoxStyle]}
+            onClick={clickHandler}
+          >
+            <p css={cardText}>{homeAboutCard.text}</p>
             <Link css={cardButton} href={homeAboutCard.href}>
-              {homeAboutCard.buttonText}
+              <h2 css={cardButtonHeading}>{homeAboutCard.buttonText}</h2>
             </Link>
           </div>
         </div>

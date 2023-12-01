@@ -67,7 +67,7 @@ function A(props: DwebAboutProps, ref: Ref<HTMLDivElement>) {
     });
 
   return (
-    <div
+    <section
       ref={ref}
       css={aboutWrapper}
       className={`home-child ${className ?? ""}`}
@@ -82,7 +82,7 @@ function A(props: DwebAboutProps, ref: Ref<HTMLDivElement>) {
         </div>
       </div>
       <HomeAboutCard frontRef={cardFrontRef} backRef={cardBackRef} />
-    </div>
+    </section>
   );
 }
 const About = forwardRef(A);

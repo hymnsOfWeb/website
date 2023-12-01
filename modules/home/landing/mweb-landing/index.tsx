@@ -3,7 +3,7 @@ import { homeLandingTexts } from "@common-data";
 import { landingHeading, landingWrapper, spanCss } from "./styles";
 
 const HomeMwebLanding = () => {
-  const landingRef = useRef<HTMLElement>(null);
+  const landingRef = useRef<HTMLDivElement>(null);
   const height = useRef<number>(0.1);
   const allSpans = useRef<HTMLSpanElement[]>([]);
   const arrLength = useRef<number>(0);
@@ -64,23 +64,25 @@ const HomeMwebLanding = () => {
 
   const words = homeLandingTexts.join(" ").split(" ");
 
+  const mapper = (word: string, index: number) => {
+    return (
+      <span key={index} css={spanCss}>
+        {word}
+      </span>
+    );
+  };
+
   return (
-    <main css={landingWrapper} ref={landingRef}>
+    <div css={landingWrapper} ref={landingRef}>
       <h1
         css={landingHeading}
         title={homeLandingTexts.join(" ")}
         aria-label={homeLandingTexts.join(" ")}
         className="landing-heading"
       >
-        {words.map((word: string, index: number) => {
-          return (
-            <span key={index} css={spanCss}>
-              {word}
-            </span>
-          );
-        })}
+        {words.map(mapper)}
       </h1>
-    </main>
+    </div>
   );
 };
 export default HomeMwebLanding;
