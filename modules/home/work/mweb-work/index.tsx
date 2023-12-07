@@ -73,6 +73,7 @@ export default function MwebWork() {
       css={workContainerCss}
       ref={workRef}
       className="home-child"
+      aria-labelledby="works-heading"
     >
       <WorkHeading />
       {workData.map(mapper)}

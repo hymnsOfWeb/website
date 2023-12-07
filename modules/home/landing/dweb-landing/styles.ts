@@ -72,3 +72,14 @@ export const lowerChar = css`
   color: transparent;
   -webkit-text-stroke: var(--text-stroke-width) var(--color-text-primary);
 `;
+
+export const hiddenMainHeading = css`
+  position: absolute;
+  left: -9999px;
+  color: rgba(0, 0, 0, 0);
+  font-size: 1px;
+  height: 1px;
+  width: 1px;
+  display: block;
+  opacity: 0.01;
+`;

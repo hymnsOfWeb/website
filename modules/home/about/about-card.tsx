@@ -47,7 +47,9 @@ const HomeAboutCard = ({
           >
             <p css={cardText}>{homeAboutCard.text}</p>
             <Link css={cardButton} href={homeAboutCard.href}>
-              <h2 css={cardButtonHeading}>{homeAboutCard.buttonText}</h2>
+              <h2 css={cardButtonHeading} id="about-heading">
+                {homeAboutCard.buttonText}
+              </h2>
             </Link>
           </div>
         </div>

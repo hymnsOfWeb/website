@@ -3,6 +3,7 @@ import getid from "@common/getid";
 import { homeLandingTexts } from "@common-data";
 import {
   charContainer,
+  hiddenMainHeading,
   landingHeading,
   landingWrapper,
   lowerChar,
@@ -18,6 +19,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
   const { atBottom = false, className } = props;
   const firstSplit = homeLandingTexts[0].split("");
   const secondSplit = homeLandingTexts[1].split("");
+  const joinedHomeLandingText = homeLandingTexts.join(" ");
 
   const ids = useMemo<string[]>(() => {
     const arr = [];
@@ -62,13 +64,22 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
       className={`home-child ${className ?? ""}`}
     >
       <h1
+        css={hiddenMainHeading}
+        title={joinedHomeLandingText}
+        aria-label={joinedHomeLandingText}
+      >
+        {joinedHomeLandingText}
+      </h1>
+      <span
         css={landingHeading}
-        title={homeLandingTexts.join(" ")}
-        aria-label={homeLandingTexts.join(" ")}
+        title={joinedHomeLandingText}
+        aria-label={joinedHomeLandingText}
         className="landing-heading"
+        aria-hidden
+        aria-disabled
       >
         {commonJsx}
-      </h1>
+      </span>
     </div>
   );
   const bottomJsx = (

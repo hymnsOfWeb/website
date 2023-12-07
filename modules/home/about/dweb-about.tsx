@@ -71,6 +71,7 @@ function A(props: DwebAboutProps, ref: Ref<HTMLDivElement>) {
       ref={ref}
       css={aboutWrapper}
       className={`home-child ${className ?? ""}`}
+      aria-labelledby="about-heading"
     >
       <div className="text-ribbon-wrapper" css={ribbonWrapper}>
         <div

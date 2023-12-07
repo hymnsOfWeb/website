@@ -54,7 +54,7 @@ export default function MwebHomeContact() {
     );
   };
   return (
-    <section css={contactCss} ref={egRef}>
+    <section css={contactCss} ref={egRef} aria-labelledby="contact-heading">
       <div css={contactSquareCss}>
         <Link
           href="/contact"
@@ -62,7 +62,11 @@ export default function MwebHomeContact() {
           css={contactCircleCss}
           ref={circleRef}
         >
-          <h2 className="contact-text" css={contactTextCss}>
+          <h2
+            className="contact-text"
+            css={contactTextCss}
+            id="contact-heading"
+          >
             Contact Us
           </h2>
         </Link>

@@ -1,6 +1,6 @@
 import { useRef, useCallback, useEffect } from "react";
 import { homeLandingTexts } from "@common-data";
-import { landingHeading, landingWrapper, spanCss } from "./styles";
+import { landingWrapper } from "./styles";
 
 const HomeMwebLanding = () => {
   const landingRef = useRef<HTMLDivElement>(null);
@@ -62,22 +62,19 @@ const HomeMwebLanding = () => {
     return () => observer.disconnect();
   }, [obvCallback]);
 
-  const words = homeLandingTexts.join(" ").split(" ");
+  const joinedHomeLandingText = homeLandingTexts.join(" ");
+
+  const words = joinedHomeLandingText.split(" ");
 
   const mapper = (word: string, index: number) => {
-    return (
-      <span key={index} css={spanCss}>
-        {word}
-      </span>
-    );
+    return <span key={"landing-span-" + index}>{word + " "}</span>;
   };
 
   return (
     <div css={landingWrapper} ref={landingRef}>
       <h1
-        css={landingHeading}
-        title={homeLandingTexts.join(" ")}
-        aria-label={homeLandingTexts.join(" ")}
+        title={joinedHomeLandingText}
+        aria-label={joinedHomeLandingText}
         className="landing-heading"
       >
         {words.map(mapper)}

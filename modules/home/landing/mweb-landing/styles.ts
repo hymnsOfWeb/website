@@ -1,20 +1,7 @@
 import { css } from "@emotion/react";
 import { mediaQuery } from "@common-styles";
 
-export const landingWrapper = css`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  * {
-    user-select: none;
-    cursor: default;
-  }
-`;
-
-export const landingHeading = css`
+const landingHeading = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +18,26 @@ export const landingHeading = css`
   }
 `;
 
-export const spanCss = css`
+const spanCss = css`
   font-family: inherit;
   transition: transform 0.05s ease;
+`;
+
+export const landingWrapper = css`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  * {
+    user-select: none;
+    cursor: default;
+  }
+  & > .landing-heading {
+    ${landingHeading}
+    & > * {
+      ${spanCss}
+    }
+  }
 `;

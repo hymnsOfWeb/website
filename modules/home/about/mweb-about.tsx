@@ -44,7 +44,11 @@ export default function HomeMwebAbout() {
   const { text } = homeAboutTextRibbon;
 
   return (
-    <section ref={wrapperRef} css={aboutWrapper}>
+    <section
+      ref={wrapperRef}
+      css={aboutWrapper}
+      aria-labelledby="about-heading"
+    >
       <div css={mWebRibbonWrapper}>{text}</div>
       <HomeAboutCard frontRef={cardFrontRef} backRef={cardBackRef} />
     </section>
