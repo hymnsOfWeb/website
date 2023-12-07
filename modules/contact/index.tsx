@@ -18,6 +18,7 @@ function ContactHead() {
       <title>{contactPageMeta.title}</title>
       <meta name="description" content={contactPageMeta.description} />
       {Object.keys(contactPageMeta.og).map(mapper)}
+      <link rel="canonical" href="https://hymnsofweb.com/contact" />
     </Head>
   );
 }

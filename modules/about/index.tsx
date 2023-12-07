@@ -19,6 +19,7 @@ function AboutHead() {
       <title>{aboutPageMeta.title}</title>
       <meta name="description" content={aboutPageMeta.description} />
       {Object.keys(aboutPageMeta.og).map(mapper)}
+      <link rel="canonical" href="https://hymnsofweb.com/about" />
     </Head>
   );
 }

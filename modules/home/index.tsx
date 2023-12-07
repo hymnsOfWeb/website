@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { homePageMeta } from "@common-data";
+import { homePageMeta, phoneNumber, mail } from "@common-data";
 import useMasterLandingPage from "@hooks/use-master-landing-page";
 import usePhone from "@hooks/use-phone";
 import { HomeDwebAbout, HomeMwebAbout } from "@modules/home/about";
@@ -8,13 +8,33 @@ import { HomeDwebLanding, HomeMwebLanding } from "@modules/home/landing";
 import { fillerCss, mainHomeWrapper } from "@modules/home/styles";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
 
+const homeSchemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Hymns of Web",
+  telephone: phoneNumber,
+  email: mail,
+  url: "https://www.hymnsofweb.com",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: phoneNumber,
+      email: mail,
+      contactType: "customer service",
+    },
+  ],
+  keywords:
+    "hymns,web,web development,web design,web development company,website,\
+website development,website design, website development company,website design\
+company,web development company in india",
+};
 function HomeHead() {
-  const mapper = (key: string, index: number) => {
+  const mapper = (key: string) => {
     return (
       <meta
         property={`og:${key}`}
         content={homePageMeta.og[key as "title"] ?? ""}
-        key={`home-og-meta-${index}`}
+        key={`home-og-meta-${key}`}
       />
     );
   };
@@ -23,6 +43,11 @@ function HomeHead() {
       <title>{homePageMeta.title}</title>
       <meta name="description" content={homePageMeta.description} />
       {Object.keys(homePageMeta.og).map(mapper)}
+      <link rel="canonical" href="https://hymnsofweb.com" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchemaOrg) }}
+      />
     </Head>
   );
 }
