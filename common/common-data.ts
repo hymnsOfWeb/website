@@ -114,8 +114,8 @@ gaane🤪 gaake😵 tainu😲 main😴 sunauga
 `;
 
 export const homeLandingTexts: [string, string] = [
-  "Transforming Visions",
-  "Into Digital Resonance",
+  "Websites & applications",
+  "built for impact",
 ];
 
 // home page

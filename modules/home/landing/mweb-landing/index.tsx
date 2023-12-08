@@ -62,7 +62,7 @@ const HomeMwebLanding = () => {
     return () => observer.disconnect();
   }, [obvCallback]);
 
-  const joinedHomeLandingText = homeLandingTexts.join(" ");
+  const joinedHomeLandingText = homeLandingTexts.join(" ").replace(/&/g, "and");
 
   const words = joinedHomeLandingText.split(" ");
 
