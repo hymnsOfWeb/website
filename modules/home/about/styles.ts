@@ -17,7 +17,7 @@ export const aboutWrapper = css`
     margin-top: 40px;
   }
   ${mediaQuery.mobileLandscape} {
-    height: 140vh;
+    height: fit-content;
   }
 `;
 
@@ -47,7 +47,6 @@ export const mWebRibbonWrapper = css`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
     0 0 20px -5px var(--box-shadow-primary), 0 0 30px -10px hsl(162, 74%, 4%),
     0 0 60px hsl(162, 91%, 15%);
-  font-size: 16vw;
   flex: 1;
   user-select: none;
   font-family: var(--font-mono);
@@ -55,6 +54,10 @@ export const mWebRibbonWrapper = css`
   font-weight: 900;
   background-color: var(--color-text-highlight);
   color: var(--color-bg-primary);
+  font-size: 16vw;
+  ${mediaQuery.mobileLandscape} {
+    font-size: 4rem;
+  }
 `;
 
 export const ribbonContainer = css`
@@ -180,8 +183,6 @@ export const cardBack = css`
 export const cardButton = css`
   transition: all 0.3s ease;
   margin-left: auto;
-  height: 45px;
-  width: 42.5%;
   background-color: var(--color-text-primary);
   display: flex;
   text-align: center;
@@ -191,20 +192,12 @@ export const cardButton = css`
   color: var(--color-bg-primary);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.25vw, 1.75rem);
+  padding: 1vw 2.5vw;
   ${mediaQuery.desktop} {
     &:hover {
       background-color: var(--color-text-highlight);
     }
-  }
-  ${mediaQuery.mobile} {
-    width: 120px;
-    height: 40px;
-  }
-  ${mediaQuery.tablet} {
-    font-size: 2.5vw;
-    width: 150px;
-    height: 50px;
   }
 `;
 
@@ -219,7 +212,7 @@ export const cardButtonHeading = css`
 export const cardText = css`
   text-align: justify;
   height: 100%;
-  font-size: clamp(0.5rem, 2vw, 1.125rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   @media screen and (width > 2000px) {
     font-size: 1.25rem;
   }
@@ -228,5 +221,8 @@ export const cardText = css`
   }
   ${mediaQuery.mobilePortrait} {
     font-size: clamp(0rem, 4vw, 1.5rem);
+  }
+  ${mediaQuery.mobileLandscape} {
+    font-size: clamp(0rem, 2vw, 1.5rem);
   }
 `;
