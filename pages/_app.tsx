@@ -43,7 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AppContexProvider>
       <Head>
-        <script src="/gtm-script.js" async />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
       </Head>
       <noscript>
         <iframe
@@ -53,19 +54,21 @@ export default function App({ Component, pageProps }: AppProps) {
           style={{ visibility: "hidden", display: "none" }}
         ></iframe>
       </noscript>
-
+      <Script src="/gtm-script.js" async defer id="gtm-script" />
       <Script
         strategy="afterInteractive"
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-PWC9JE6P3D"
-      ></Script>
-      <Script id="ga-analaytics" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PWC9JE6P3D');`}
-      </Script>
+        defer
+        id="gtm-manager"
+      />
+      <Script
+        async
+        defer
+        id="ga-analaytics"
+        strategy="afterInteractive"
+        src="/ga-analytics-script.js"
+      />
       <Global
         styles={[
           globalCss,
