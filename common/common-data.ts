@@ -5,6 +5,7 @@ import {
   BsWhatsapp,
 } from "react-icons/bs";
 import { BubbleDataProps } from "@components/contact-bubble/types";
+import { DesktopApp, MobileApp, WebApp, Websites } from "@icons";
 
 //nav
 export const mainNavLinks = [
@@ -286,24 +287,37 @@ export const aboutServices = [
     description:
       "Craft an impactful online presence with our dynamic and responsive\
       website designs, developed with absolute care and precision.",
+    imgSrc: "/assets/images/services/tl.webp",
+    mainImgSrc: "/assets/images/services/main-service.webp",
+    icon: Websites,
   },
   {
     title: "Web Apps",
     description:
       "Unleash innovation with our cutting-edge web application solutions,\
       customized to meet your unique business requirements and technological aspirations.",
+
+    imgSrc: "/assets/images/services/tr.webp",
+    mainImgSrc: "/assets/images/services/main-service.webp",
+    icon: WebApp,
   },
   {
     title: "Desktop Apps",
     description:
       "Empower your vision with our advanced desktop application development\
       services, designed to turn ideas into efficient, high-performance tools.",
+    imgSrc: "/assets/images/services/bl.webp",
+    mainImgSrc: "/assets/images/services/main-service.webp",
+    icon: DesktopApp,
   },
   {
     title: "Mobile Apps",
     description:
       "Navigate the mobile landscape confidently with our user-friendly and\
       feature-rich mobile app solutions, ensuring seamless interaction and a competitive edge.",
+    imgSrc: "/assets/images/services/br.webp",
+    mainImgSrc: "/assets/images/services/main-service.webp",
+    icon: MobileApp,
   },
 ];
 

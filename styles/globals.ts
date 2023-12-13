@@ -18,7 +18,7 @@ export const globalCss = css`
   :root {
     --color-bg-primary: hsl(255, 45%, 7.5%);
     --color-bg-secondary: rgba(46, 72, 159, 1);
-    --color-bg-tertiary: hsl(227, 16%, 50%);
+    --color-bg-tertiary: hsl(227, 16%, 45%);
 
     --color-text-primary: rgb(245, 235, 255);
     --color-text-secondary: hsl(227, 16%, 60%);

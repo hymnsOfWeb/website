@@ -258,7 +258,7 @@ export const serviceCardParaCss = css`
 `;
 
 export const serviceIconContainerCss = css`
-  padding: 15px;
+  padding: 7.5px;
   background-color: var(--color-text-highlight);
   position: absolute;
   width: fit-content;
@@ -266,7 +266,7 @@ export const serviceIconContainerCss = css`
   display: grid;
   place-items: center;
   svg {
-    font-size: clamp(1rem, 1.75vw, 2rem);
+    font-size: clamp(1rem, 2.25vw, 4rem);
     ${mediaQuery.tablet} {
       font-size: clamp(0rem, 3vw, 2.5rem);
     }

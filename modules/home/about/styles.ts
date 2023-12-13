@@ -192,8 +192,8 @@ export const cardButton = css`
   color: var(--color-bg-primary);
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(1rem, 1.25vw, 1.75rem);
-  padding: 1vw 2.5vw;
+  font-size: clamp(1rem, 1.1vw, 1.75rem);
+  padding: 0.8vw 2.25vw;
   ${mediaQuery.desktop} {
     &:hover {
       background-color: var(--color-text-highlight);

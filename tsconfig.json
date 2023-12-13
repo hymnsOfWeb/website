@@ -35,6 +35,7 @@
       "@common-data": ["./common/common-data"],
       "@common-styles": ["./common/common-styles"],
       "@common/*": ["./common/*"],
+      "@icons": ["./icons"],
       "@/*": ["./*"]
     },
     "noPropertyAccessFromIndexSignature": false,

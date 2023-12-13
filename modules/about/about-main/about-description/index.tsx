@@ -1,4 +1,4 @@
-import { BsInstagram } from "react-icons/bs";
+import { useCallback, useEffect, useState } from "react";
 import { aboutDescription, aboutServices } from "@common-data";
 import { ImageComp } from "@components";
 import {
@@ -13,11 +13,16 @@ import {
   servicesHeadingCss,
 } from "@modules/about/about-main/about-description/styles";
 
-export const ServiceCards = () => {
+export const ServiceCards = ({
+  accessProperty = "mainImgSrc",
+}: {
+  accessProperty: "imgSrc" | "mainImgSrc";
+}) => {
   const servicesDataMapper = (
     data: (typeof aboutServices)[0],
     index: number
   ) => {
+    const { icon: Icon, title, description } = data;
     return (
       <div
         key={"service-card-" + index}
@@ -27,7 +32,7 @@ export const ServiceCards = () => {
         <div css={serviceTextWrapperCss}>
           <ImageComp
             alt="-"
-            src="/assets/images/about-bg.png"
+            src={data[accessProperty]}
             width={200}
             height={200}
             containerCss={serviceImgCompCss}
@@ -38,11 +43,11 @@ export const ServiceCards = () => {
               css={serviceIconContainerCss}
               className={"service-icon icon-" + index}
             >
-              <BsInstagram />
+              <Icon />
             </span>
           </ImageComp>
-          <h3 css={serviceCardHeadingCss}>{data.title}</h3>
-          <p css={serviceCardParaCss}>{data.description}</p>
+          <h3 css={serviceCardHeadingCss}>{title}</h3>
+          <p css={serviceCardParaCss}>{description}</p>
         </div>
       </div>
     );
@@ -55,11 +60,28 @@ export const ServiceCards = () => {
 };
 
 export default function AboutDescription() {
+  const [accessPropState, setAccessPropState] = useState<
+    "imgSrc" | "mainImgSrc"
+  >("mainImgSrc");
+  const resizeCallback = useCallback(() => {
+    if (innerWidth > 900) {
+      setAccessPropState("imgSrc");
+    } else {
+      setAccessPropState("mainImgSrc");
+    }
+  }, []);
+  useEffect(() => {
+    if (innerWidth > 900) {
+      setAccessPropState("imgSrc");
+    }
+    window.addEventListener("resize", resizeCallback);
+    return () => window.removeEventListener("resize", resizeCallback);
+  }, [resizeCallback]);
   return (
     <div>
       <p css={aboutDescriptionCss}>{aboutDescription}</p>
       <h2 css={servicesHeadingCss}>Our Services</h2>
-      <ServiceCards />
+      <ServiceCards accessProperty={accessPropState} />
     </div>
   );
 }

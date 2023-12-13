@@ -45,6 +45,7 @@ export default function Header() {
           priority
           height={70}
           width={70}
+          sizes="100%"
         />
       </Link>
       <nav className={isMenuOpen ? "active" : undefined} css={nav}>
