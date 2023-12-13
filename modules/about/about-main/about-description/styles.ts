@@ -16,17 +16,6 @@ export const servicesHeadingCss = css`
   }
 `;
 
-export const serviceListCss = css`
-  line-height: 2em;
-  text-align: justify;
-  margin: 4vh 0;
-  font-weight: 200;
-`;
-
-export const serviceTitleCss = css`
-  font-weight: 500;
-`;
-
 export const serviceCardsWrapperCss = css`
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { BsInstagram } from "react-icons/bs";
 import { aboutDescription, aboutServices } from "@common-data";
 import { ImageComp } from "@components";
@@ -10,9 +9,7 @@ import {
   serviceCardsWrapperCss,
   serviceIconContainerCss,
   serviceImgCompCss,
-  serviceListCss,
   serviceTextWrapperCss,
-  serviceTitleCss,
   servicesHeadingCss,
 } from "@modules/about/about-main/about-description/styles";
 
@@ -58,20 +55,10 @@ export const ServiceCards = () => {
 };
 
 export default function AboutDescription() {
-  const mapper = (elem: (typeof aboutServices)[0], index: number) => {
-    return (
-      <p key={index} css={serviceListCss}>
-        <span css={serviceTitleCss}>{elem.title}</span>
-        <span> : </span>
-        <span>{elem.description}</span>
-      </p>
-    );
-  };
   return (
     <div>
       <p css={aboutDescriptionCss}>{aboutDescription}</p>
       <h2 css={servicesHeadingCss}>Our Services</h2>
-      <Fragment>{aboutServices.map(mapper)}</Fragment>
       <ServiceCards />
     </div>
   );
