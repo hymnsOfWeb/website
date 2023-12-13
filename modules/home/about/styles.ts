@@ -199,6 +199,12 @@ export const cardButton = css`
       background-color: var(--color-text-highlight);
     }
   }
+  ${mediaQuery.mobilePortrait} {
+    padding: 0.5em 1.75em;
+  }
+  ${mediaQuery.mobileLandscape} {
+    padding: 0.5em 1.75em;
+  }
 `;
 
 export const cardButtonHeading = css`
