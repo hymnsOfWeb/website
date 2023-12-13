@@ -115,7 +115,7 @@ gaane🤪 gaake😵 tainu😲 main😴 sunauga
 `;
 
 export const homeLandingTexts: [string, string] = [
-  "Websites & applications",
+  "Websites & apps",
   "built for impact",
 ];
 
