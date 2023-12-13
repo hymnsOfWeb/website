@@ -7,12 +7,12 @@ export const aboutDescriptionCss = css`
 `;
 
 export const servicesHeadingCss = css`
-  font-size: 2rem;
+  font-size: 2vw;
   margin: 10vh 0 2vh 0;
   letter-spacing: 0.07em;
   color: var(--color-text-highlight);
   ${mediaQuery.mobile} {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 `;
 
@@ -220,7 +220,7 @@ export const serviceCardHeadingCss = css`
     font-size: clamp(1rem, 4vw, 3rem);
   }
   ${mediaQuery.mobilePortrait} {
-    font-size: clamp(1rem, 8vw, 3rem);
+    font-size: 1.5rem;
     margin-bottom: 1.5vh;
     margin-top: 10px;
   }
@@ -295,24 +295,27 @@ export const serviceIconContainerCss = css`
     &.icon-1,
     &.icon-2,
     &.icon-3 {
-      top: 16px;
-      left: 20px;
+      height: 45%;
+      aspect-ratio: 1;
+      border-radius: 0 100% 0 0;
+      bottom: 0;
+      left: 0;
       padding: 0;
-      svg {
-        padding: 25%;
-        font-size: clamp(1rem, 8vw, 3rem);
+      overflow: hidden;
+      background-color: transparent;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-text-highlight);
+        opacity: 0.85;
       }
-    }
-  }
-  ${mediaQuery.squeezedScreen} {
-    &.icon-0,
-    &.icon-1,
-    &.icon-2,
-    &.icon-3 {
-      top: unset;
-      left: unset;
-      bottom: 20px;
-      right: 20px;
+      svg {
+        padding: 0;
+        font-size: 3rem;
+        transform: translate(-25%, 25%);
+      }
     }
   }
   ${mediaQuery.mobileLandscape} {
