@@ -66,6 +66,7 @@ export const hamBtn = css`
   width: 70px;
   padding: 0 20px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   --_h: 2px;
   --_t: 0.15s;
   --_e: ease-in-out;

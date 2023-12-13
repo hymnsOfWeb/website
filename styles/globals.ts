@@ -68,6 +68,7 @@ export const globalCss = css`
     padding: 0;
     color: var(--color-text-primary);
     font-family: var(--font-primary);
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     overflow-x: hidden;
