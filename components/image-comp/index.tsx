@@ -1,10 +1,14 @@
 /* eslint-disable jsx-a11y/alt-text */
+import { PropsWithChildren } from "react";
 import Image from "next/image";
 import { imgContainerWrapper } from "./styles";
 import type { ImageContainerProps } from "./types";
 
-export default function ImageComp(props: ImageContainerProps) {
+export default function ImageComp(
+  props: PropsWithChildren<ImageContainerProps>
+) {
   const {
+    children,
     containerClassName,
     containerCss,
     containerRef,
@@ -41,6 +45,7 @@ export default function ImageComp(props: ImageContainerProps) {
         sizes="100%"
         className="img"
       />
+      {children}
     </div>
   );
 }

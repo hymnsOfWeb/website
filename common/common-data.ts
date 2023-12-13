@@ -128,7 +128,7 @@ export const homePageMeta = {
     description:
       "Elevate digital presence with Hymns of Web:\
  premier SaaS for cutting-edge website & software solutions.",
-    image: "/favicon.ico",
+    image: "/assets/images/logo.png",
     url: "https://www.hymnsofweb.com",
   },
 };
