@@ -37,7 +37,7 @@ export const serviceCardCss = css`
     height: 30vh;
   }
   ${mediaQuery.mobilePortrait} {
-    height: 40vh;
+    height: 80vw;
     position: relative;
     &:nth-of-type(n) {
       text-align: right;
@@ -238,12 +238,12 @@ export const serviceCardHeadingCss = css`
 export const serviceCardParaCss = css`
   padding: 0 20px;
   font-size: clamp(0.75rem, 1vw, 2rem);
-  line-height: 1.625em;
+  line-height: 2em;
   ${mediaQuery.tablet} {
     font-size: clamp(0.75rem, 2vw, 2rem);
   }
   ${mediaQuery.mobilePortrait} {
-    line-height: 1.5em;
+    line-height: 2em;
     font-size: clamp(0.8rem, 3.5vw, 3rem);
   }
   ${mediaQuery.squeezedScreen} {
@@ -331,7 +331,7 @@ export const serviceIconContainerCss = css`
   }
   @media (900px <= width <= 1000px) {
     svg {
-      font-size: 1rem;
+      font-size: 2.5rem;
     }
     &.icon-0 {
       inset: unset;
