@@ -8,7 +8,7 @@ import { AppContexProvider } from "@/context";
 import Header from "@/modules/header";
 import { globalCss, globalFontVarsCss } from "@/styles/globals";
 import { consoleMessage } from "@common-data";
-import { getBrowser } from "../utils";
+import { getClass } from "../utils";
 
 const primary = DmSans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -32,11 +32,9 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     // eslint-disable-next-line no-console
     console.log(consoleMessage);
-    const browser = getBrowser();
-    if (browser === "safari") {
-      document?.body?.classList.remove("chromium");
-      document?.body?.classList.add("safari");
-    }
+    const bodyClass = getClass();
+    document?.body?.classList.remove("chromium");
+    document?.body?.classList.add(bodyClass);
     // eslint-disable-next-line no-console
     return () => console.clear();
   }, []);
