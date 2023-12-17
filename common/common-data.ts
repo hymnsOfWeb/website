@@ -285,7 +285,7 @@ export const aboutServices = [
   {
     title: "Websites",
     description:
-      "Craft an impactful online presence with our dynamic and responsive\
+      "Craft an impactful online presence with Hymns of Web's dynamic and responsive\
       website designs, developed with absolute care and precision.",
     imgSrc: "/assets/images/services/tl.webp",
     mainImgSrc: "/assets/images/services/main-service.webp",
