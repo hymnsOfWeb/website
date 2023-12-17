@@ -17,7 +17,7 @@ rm -rf .next
 
 mv temp .next
 
-pm2 reload app --update-env
+pm2 reload main-website --update-env
 
 echo "Deploy done."
 
