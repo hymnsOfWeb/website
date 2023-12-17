@@ -35,6 +35,9 @@ export const globalCss = css`
       --text-stroke-width: 2px;
     }
   }
+  .iOS {
+    --text-stroke-width: 1px;
+  }
   .safari {
     --text-stroke-width: 2px;
   }
