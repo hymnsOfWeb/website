@@ -29,7 +29,7 @@ export const globalCss = css`
   }
 
   .chromium,
-  .android {
+  .Android {
     --text-stroke-width: 1px;
     ${mediaQuery.mobile} {
       --text-stroke-width: 2px;
