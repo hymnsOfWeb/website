@@ -28,7 +28,8 @@ export const globalCss = css`
     --color-text-shadow: rgba(255, 255, 255, 0.5);
   }
 
-  .chromium {
+  .chromium,
+  .android {
     --text-stroke-width: 1px;
     ${mediaQuery.mobile} {
       --text-stroke-width: 2px;
