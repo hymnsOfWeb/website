@@ -8,3 +8,4 @@ This template includes the following features:
   * [Sass](https://sass-lang.com/)
 
 FYI: I have git ignored all css files and any lock files. 
+changed
