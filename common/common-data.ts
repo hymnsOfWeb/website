@@ -304,7 +304,7 @@ export const aboutServices = [
   {
     title: "Desktop Apps",
     description:
-      "Empower your vision with our advanced desktop application development\
+      "Empower your vision with Hymns ofWeb's advanced desktop application development\
       services, designed to turn ideas into efficient, high-performance tools.",
     imgSrc: "/assets/images/services/bl.webp",
     mainImgSrc: "/assets/images/services/main-service.webp",
