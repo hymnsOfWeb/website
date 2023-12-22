@@ -1,14 +1,11 @@
-import { type Ref, forwardRef, useCallback, useMemo } from "react";
-import getid from "@common/getid";
+import { type Ref, forwardRef, useEffect, RefObject } from "react";
+import dynamic from "next/dynamic";
 import { homeLandingTexts } from "@common-data";
-import {
-  charContainer,
-  hiddenMainHeading,
-  landingHeading,
-  landingWrapper,
-  lowerChar,
-  upperChar,
-} from "./styles";
+import { hiddenMainHeading, landingHeading, landingWrapper } from "./styles";
+
+const TsParticles = dynamic(() => import("@components/ts-particles"), {
+  ssr: false,
+});
 
 interface HomeLandingProps {
   atBottom?: boolean;
@@ -17,43 +14,12 @@ interface HomeLandingProps {
 
 function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
   const { atBottom = false, className } = props;
-  const firstSplit = homeLandingTexts[0].split("");
-  const secondSplit = homeLandingTexts[1].split("");
   const joinedHomeLandingText = homeLandingTexts.join(" ");
-
-  const ids = useMemo<string[]>(() => {
-    const arr = [];
-    const length = Math.max(firstSplit.length, secondSplit.length);
-    for (let i = 0; i < length; i++) {
-      arr.push(getid());
-    }
-    return arr;
-  }, [firstSplit, secondSplit]);
-
-  const mapper = useCallback(
-    (char: string, index: number, arr: string[]) => {
-      return (
-        <span
-          key={arr === firstSplit ? "ar1" + ids[index] : "ar2" + ids[index]}
-          css={charContainer}
-          className="char-container"
-        >
-          <span css={upperChar} className="upper-char">
-            {char}
-          </span>
-          <span css={lowerChar} className="lower-char">
-            {char}
-          </span>
-        </span>
-      );
-    },
-    [ids, firstSplit]
-  );
 
   const commonJsx = (
     <>
-      <span className="main-span-wrapper">{firstSplit.map(mapper)}</span>
-      <span className="main-span-wrapper">{secondSplit.map(mapper)}</span>
+      <span className="main-span-wrapper">{homeLandingTexts[0]}</span>
+      <span className="main-span-wrapper">{homeLandingTexts[1]}</span>
     </>
   );
 
@@ -63,6 +29,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
       ref={atBottom ? undefined : ref}
       className={`home-child ${className ?? ""}`}
     >
+      <TsParticles />
       <h1
         css={hiddenMainHeading}
         title={joinedHomeLandingText}

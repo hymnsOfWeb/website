@@ -28,7 +28,11 @@ export default function NavLinkContainer({
     const delay = charIndex * 0.075;
     return (
       <span key={"char" + charIndex} css={charContainer}>
-        <span css={charDynamicDelayCss(delay)} className="char-child">
+        <span
+          css={charDynamicDelayCss(delay)}
+          className="char-child"
+          aria-disabled
+        >
           {char}
         </span>
         <span css={charDynamicDelayCss(delay)} className="char-child">

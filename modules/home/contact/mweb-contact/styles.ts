@@ -82,7 +82,7 @@ export const contactCircleCss = css`
 `;
 
 export const contactTextCss = css`
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   transition: all 0.3s ease 0.1s;
   font-size: 4rem;
   font-weight: 500;

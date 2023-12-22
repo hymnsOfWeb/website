@@ -30,9 +30,7 @@ export const ribbonWrapper = css`
   background-color: var(--color-text-highlight);
   filter: brightness(85%);
   opacity: 0.95;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
-    0 0 20px -5px var(--box-shadow-primary), 0 0 30px -10px hsl(162, 74%, 4%),
-    0 0 60px hsl(162, 91%, 15%);
+  box-shadow: 0 0 30px var(--color-secondary-800);
 `;
 
 export const mWebRibbonWrapper = css`
@@ -44,12 +42,10 @@ export const mWebRibbonWrapper = css`
   background-color: var(--color-text-highlight);
   filter: brightness(85%);
   opacity: 0.95;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
-    0 0 20px -5px var(--box-shadow-primary), 0 0 30px -10px hsl(162, 74%, 4%),
-    0 0 60px hsl(162, 91%, 15%);
+  box-shadow: 0 0 30px var(--color-secondary-800);
   flex: 1;
   user-select: none;
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   text-transform: uppercase;
   font-weight: 900;
   background-color: var(--color-text-highlight);
@@ -72,11 +68,11 @@ export const ribbonSpan = css`
   font-size: 8vw;
   flex: 1;
   user-select: none;
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 600;
   background-color: var(--color-text-highlight);
-  color: var(--color-bg-primary);
+  color: var(--color-secondary-900);
 `;
 
 export const commonBoxStyle = css`
@@ -183,17 +179,18 @@ export const cardBack = css`
 export const cardButton = css`
   transition: all 0.3s ease;
   margin-left: auto;
-  background-color: var(--color-text-primary);
+  background-color: var(--color-primary-700);
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  color: var(--color-bg-primary);
+  color: var(--color-primary-000);
   text-decoration: none;
   font-weight: 600;
   font-size: clamp(1rem, 1.1vw, 1.75rem);
-  padding: 0.8vw 2.25vw;
+  /* height: 44px; */
+  padding: 0.85vw 2.25vw;
   ${mediaQuery.desktop} {
     &:hover {
       background-color: var(--color-text-highlight);
@@ -218,6 +215,7 @@ export const cardButtonHeading = css`
 export const cardText = css`
   text-align: justify;
   height: 100%;
+  color: var(--color-primary-900);
   font-size: clamp(1rem, 1.25vw, 1.25rem);
   @media screen and (width > 2000px) {
     font-size: 1.25rem;

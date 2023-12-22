@@ -48,7 +48,7 @@ export const contactCircleCss = css`
     font-size: clamp(0rem, 3vw, 3.2rem);
   }
   .contact-text {
-    font-family: var(--font-mono);
+    font-family: var(--font-primary);
     transition: all 0.3s ease 0.1s;
     font-weight: 500;
     z-index: 1;

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import { homePageMeta, phoneNumber, mail } from "@common-data";
 import useMasterLandingPage from "@hooks/use-master-landing-page";
@@ -53,6 +54,42 @@ function HomeHead() {
 }
 
 function HomeDweb() {
+  useEffect(() => {
+    const targetObjOne = landingRefTop?.current as HTMLDivElement;
+    const targetObjTwo = landingRefBottom?.current as HTMLDivElement;
+
+    const obvOptions: IntersectionObserverInit = {
+      root: document,
+      threshold: 0.75,
+    };
+    const obvCallback: IntersectionObserverCallback = (entries) => {
+      const particles = targetObjOne?.querySelector(
+        "#tsparticles"
+      ) as HTMLDivElement;
+      if (particles) {
+        if (entries[0]?.isIntersecting || entries?.[1]?.isIntersecting) {
+          particles.style.opacity = "1";
+        } else {
+          particles.style.opacity = "0";
+        }
+      }
+    };
+
+    const obv: IntersectionObserver = new IntersectionObserver(
+      obvCallback,
+      obvOptions
+    );
+
+    if (targetObjOne && targetObjTwo) {
+      obv.observe(targetObjOne);
+      obv.observe(targetObjTwo);
+      return () => {
+        obv.disconnect();
+      };
+    }
+    return;
+  });
+
   const { heroText, aboutSection, workSection, homeRef } =
     useMasterLandingPage();
   const { landingRefBottom, landingRefTop } = heroText;

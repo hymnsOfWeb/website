@@ -58,10 +58,10 @@ export const navLinkContainerCss = css`
 
 export const charDynamicDelayCss = (delay: number) => css`
   transition: transform 0.5s ease-in-out ${delay}s;
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   &:nth-of-type(1) {
-    color: transparent;
-    -webkit-text-stroke: var(--text-stroke-width) var(--color-bg-primary);
+    color: var(--color-bg-bright);
+    text-shadow: 0 0 2px black, 0 0 2px black;
   }
 `;
 

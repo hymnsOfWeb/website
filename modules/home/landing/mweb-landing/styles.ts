@@ -11,7 +11,7 @@ const landingHeading = css`
   font-size: 8.25vw;
   gap: 2vh;
   text-transform: uppercase;
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   letter-spacing: 0.25em;
   ${mediaQuery.mobileLandscape} {
     font-size: 4vw;

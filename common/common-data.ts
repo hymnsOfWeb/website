@@ -167,7 +167,7 @@ export const contactPageMeta = {
 
 export const homeAboutTextRibbon = {
   text: "About",
-  count: 7,
+  count: 5,
 };
 
 export const homeAboutCard = {

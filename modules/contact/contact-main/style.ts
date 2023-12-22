@@ -113,7 +113,7 @@ export const contactCardTitleCss = css`
 
 export const contactParaCss = css`
   font-size: clamp(0.8rem, 1.5vw, 1.8rem);
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   margin: 16px 0;
   ${mediaQuery.mobile} {
     font-size: 3.25vw;

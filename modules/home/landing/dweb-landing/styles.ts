@@ -10,67 +10,20 @@ export const landingWrapper = css`
   * {
     user-select: none;
     cursor: default;
+    text-transform: capitalize;
   }
 `;
 
 export const landingHeading = css`
   display: flex;
+  word-spacing: 20px;
+  letter-spacing: 5px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
-  line-height: 1rem;
-  font-size: 4.5vw;
-`;
-
-export const charContainer = css`
-  font-size: inherit;
-  --_unit-height: 1.5em;
-  height: var(--_unit-height);
-  display: inline-block;
-  overflow: hidden;
-  .upper-char {
-    transform: scaleY(100%) translateY(00%);
-    height: var(--_unit-height);
-  }
-  .lower-char {
-    transform: scaleY(0%) translateY(0%);
-    height: 0;
-    -webkit-text-stroke: var(--text-stroke-width) var(--color-text-highlight);
-  }
-  &:hover,
-  &.active {
-    .upper-char {
-      transform: scaleY(0%) translateY(-100%);
-      height: 0;
-    }
-    .lower-char {
-      transform: scaleY(100%) translateY(0%);
-      height: var(--_unit-height);
-    }
-  }
-`;
-const commonChar = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 0.8em;
-  height: var(--_unit-height);
-  transition: all 0.4s ease-in-out;
-  text-transform: uppercase;
-  font-family: var(--font-mono);
-`;
-
-export const upperChar = css`
-  ${commonChar}
-`;
-
-export const lowerChar = css`
-  ${commonChar}
-  color: transparent;
-  -webkit-text-stroke: var(--text-stroke-width) var(--color-text-primary);
+  font-size: 7vw;
 `;
 
 export const hiddenMainHeading = css`

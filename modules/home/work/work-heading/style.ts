@@ -29,10 +29,11 @@ const commonMobile = css`
 `;
 
 export const workMainHeadingCss = css`
-  color: transparent;
+  color: var(--color-primary-900);
   font-size: 4.5rem;
-  font-family: var(--font-mono);
-  -webkit-text-stroke: var(--text-stroke-width) var(--color-text-highlight);
+  font-family: var(--font-primary);
+  text-shadow: 0 0 2px var(--color-secondary-400),
+    0 0 2px var(--color-secondary-400);
   ${commonMobile}
   ${mediaQuery.mobile} {
     font-size: 3rem;

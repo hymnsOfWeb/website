@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
+    "@tsparticles/all": "^3.0.2",
+    "@tsparticles/engine": "^3.0.2",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.0.2",
     "@types/node": "18.15.10",
     "@types/react": "18.0.30",
     "@types/react-dom": "18.0.11",
@@ -22,7 +26,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
-    "sharp": "^0.32.6"
+    "sharp": "^0.32.6",
+    "tsparticles": "^3.0.2"
   },
   "devDependencies": {
     "@tsconfig/esm": "^1.0.2",

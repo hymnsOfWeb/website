@@ -70,7 +70,7 @@ export const profileImgCss = css`
 `;
 
 export const nameCss = css`
-  font-family: var(--font-mono);
+  font-family: var(--font-primary);
   font-size: clamp(0rem, 2vw, 4rem);
   font-weight: 700;
   text-align: center;
