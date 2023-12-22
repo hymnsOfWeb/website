@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { Outfit as Outfit } from "next/font/google";
+import LocalFont from "next/font/local";
 import Head from "next/head";
 import Script from "next/script";
 import { Global } from "@emotion/react";
@@ -10,13 +10,41 @@ import { globalCss, globalFontVarsCss } from "@/styles/globals";
 import { consoleMessage } from "@common-data";
 import { getClass } from "../utils";
 
-const primary = Outfit({
-  weight: ["200", "300", "400", "500", "600", "700"],
-  style: ["normal"],
-  subsets: ["latin"],
+const primary = LocalFont({
+  src: [
+    {
+      path: "../public/assets/fonts/outfit.ttf",
+      style: "normal",
+      weight: "200",
+    },
+    {
+      path: "../public/assets/fonts/outfit.ttf",
+      style: "normal",
+      weight: "300",
+    },
+    {
+      path: "../public/assets/fonts/outfit.ttf",
+      style: "normal",
+      weight: "400",
+    },
+    {
+      path: "../public/assets/fonts/outfit.ttf",
+      style: "normal",
+      weight: "500",
+    },
+    {
+      path: "../public/assets/fonts/outfit.ttf",
+      style: "normal",
+      weight: "600",
+    },
+    {
+      path: "../public/assets/fonts/outfit.ttf",
+      style: "normal",
+      weight: "700",
+    },
+  ],
   display: "swap",
-  fallback: ["sans"],
-  preload: false,
+  fallback: ["sans-serif"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {

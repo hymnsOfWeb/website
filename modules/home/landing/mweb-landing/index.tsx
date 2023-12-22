@@ -1,9 +1,16 @@
-import { useRef, useCallback, useEffect } from "react";
+import {
+  useRef,
+  useCallback,
+  useEffect,
+  forwardRef,
+  Ref,
+  RefObject,
+} from "react";
 import { homeLandingTexts } from "@common-data";
 import { landingWrapper } from "./styles";
 
-const HomeMwebLanding = () => {
-  const landingRef = useRef<HTMLDivElement>(null);
+const HML = (_: unknown, ref: Ref<HTMLDivElement>) => {
+  const landingRef = ref as RefObject<HTMLDivElement>;
   const height = useRef<number>(0.1);
   const allSpans = useRef<HTMLSpanElement[]>([]);
   const arrLength = useRef<number>(0);
@@ -82,4 +89,5 @@ const HomeMwebLanding = () => {
     </div>
   );
 };
+const HomeMwebLanding = forwardRef(HML);
 export default HomeMwebLanding;

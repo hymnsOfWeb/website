@@ -60,8 +60,8 @@ export const charDynamicDelayCss = (delay: number) => css`
   transition: transform 0.5s ease-in-out ${delay}s;
   font-family: var(--font-primary);
   &:nth-of-type(1) {
-    color: var(--color-bg-bright);
-    text-shadow: 0 0 2px black, 0 0 2px black;
+    color: var(--_col);
+    text-shadow: 0 0 2px black, 0 0 1px black, 0 0 1px black;
   }
 `;
 

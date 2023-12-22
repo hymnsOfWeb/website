@@ -9,3 +9,6 @@ export const mediaQuery = {
   squeezedScreen: "@media only screen and (600px <= width <= 900px)",
   smallLaptop: "@media only screen and (900px <= width <= 1200px)",
 };
+
+export const textOutlineShadow = (color: string) =>
+  `0 0 2px ${color}, 0 0 1px ${color}, 0 0 1px ${color}`;

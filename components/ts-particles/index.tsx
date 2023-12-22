@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { loadAll } from "@tsparticles/all";
-import { type Container } from "@tsparticles/engine";
+// import { type Container } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
-export default function TsParticles() {
+export default function TsParticles({
+  onLoad = () => {
+    return;
+  },
+}: {
+  onLoad?: () => void;
+}) {
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -12,8 +18,8 @@ export default function TsParticles() {
       setInit(true);
     });
   }, []);
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    //
+  const particlesLoaded = async () => {
+    onLoad();
   };
   return init ? (
     <Particles

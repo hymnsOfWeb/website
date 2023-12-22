@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { mediaQuery } from "@common-styles";
+import { mediaQuery, textOutlineShadow } from "@common-styles";
 
 export const workHeadingCss = css`
   position: sticky;
@@ -32,8 +32,7 @@ export const workMainHeadingCss = css`
   color: var(--color-primary-900);
   font-size: 4.5rem;
   font-family: var(--font-primary);
-  text-shadow: 0 0 2px var(--color-secondary-400),
-    0 0 2px var(--color-secondary-400);
+  text-shadow: ${textOutlineShadow("var(--color-secondary-400)")};
   ${commonMobile}
   ${mediaQuery.mobile} {
     font-size: 3rem;

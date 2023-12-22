@@ -1,11 +1,6 @@
-import { type Ref, forwardRef, useEffect, RefObject } from "react";
-import dynamic from "next/dynamic";
+import { type Ref, forwardRef } from "react";
 import { homeLandingTexts } from "@common-data";
 import { hiddenMainHeading, landingHeading, landingWrapper } from "./styles";
-
-const TsParticles = dynamic(() => import("@components/ts-particles"), {
-  ssr: false,
-});
 
 interface HomeLandingProps {
   atBottom?: boolean;
@@ -29,7 +24,6 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
       ref={atBottom ? undefined : ref}
       className={`home-child ${className ?? ""}`}
     >
-      <TsParticles />
       <h1
         css={hiddenMainHeading}
         title={joinedHomeLandingText}

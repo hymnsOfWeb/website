@@ -119,7 +119,7 @@ export const hamBtn = css`
 `;
 
 export const nav = css`
-  --_col: var(--color-bg-bright);
+  --_col: var(--color-secondary-600);
   touch-action: none;
   --nav-width: 160vw;
   ${mediaQuery.mobile} {
