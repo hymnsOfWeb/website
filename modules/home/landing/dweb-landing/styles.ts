@@ -8,6 +8,8 @@ export const landingWrapper = css`
   align-items: center;
   overflow-x: hidden;
   scroll-snap-align: center;
+  flex-direction: column;
+  gap: 30px;
   * {
     user-select: none;
     cursor: default;

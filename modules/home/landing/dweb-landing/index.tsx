@@ -1,6 +1,7 @@
 import { type Ref, forwardRef } from "react";
 import { homeLandingTexts } from "@common-data";
 import { hiddenMainHeading, landingHeading, landingWrapper } from "./styles";
+import SubText from "@modules/home/landing/sub-text";
 
 interface HomeLandingProps {
   atBottom?: boolean;
@@ -41,6 +42,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
       >
         {commonJsx}
       </span>
+      <SubText />
     </div>
   );
   const bottomJsx = (
@@ -57,6 +59,7 @@ function HL(props: HomeLandingProps, ref: Ref<HTMLDivElement>) {
       >
         {commonJsx}
       </span>
+      <SubText />
     </div>
   );
   return atBottom ? bottomJsx : topJsx;
