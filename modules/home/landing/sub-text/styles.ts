@@ -5,6 +5,7 @@ export const subTextWrapper = css`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  z-index: 1;
   .text {
     font-size: 1.5rem;
   }

@@ -10,9 +10,12 @@ import { HomeDwebLanding, HomeMwebLanding } from "@modules/home/landing";
 import { fillerCss, mainHomeWrapper } from "@modules/home/styles";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
 
-const TsParticles = dynamic(() => import("@components/ts-particles"), {
-  ssr: false,
-});
+const ThreeD = dynamic(
+  () => import("@components").then((comps) => comps.ThreeD),
+  {
+    ssr: false,
+  }
+);
 
 const homeSchemaOrg = {
   "@context": "https://schema.org",
@@ -104,7 +107,7 @@ function HomeDweb() {
 
   return (
     <main id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
-      <TsParticles />
+      <ThreeD observerRefs={[landingRefBottom, landingRefTop]} />
       <HomeHead />
       <HomeDwebLanding ref={landingRefTop} />
       <HomeDwebWork ref={workRef} />
@@ -119,44 +122,44 @@ function HomeDweb() {
 function HomeMweb() {
   const homeRef = useRef<HTMLDivElement>(null);
   const landingRefTop = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const homeRefObj = homeRef?.current as HTMLDivElement;
-    const targetObjOne = landingRefTop?.current as HTMLDivElement;
+  // useEffect(() => {
+  //   const homeRefObj = homeRef?.current as HTMLDivElement;
+  //   const targetObjOne = landingRefTop?.current as HTMLDivElement;
 
-    const obvOptions: IntersectionObserverInit = {
-      root: document,
-      threshold: 0.75,
-    };
-    const obvCallback: IntersectionObserverCallback = (entries) => {
-      const particles = homeRefObj?.querySelector(
-        "#tsparticles"
-      ) as HTMLDivElement;
-      if (particles) {
-        if (entries[0]?.isIntersecting || entries?.[1]?.isIntersecting) {
-          particles.style.opacity = "1";
-        } else {
-          particles.style.opacity = "0";
-        }
-      }
-    };
+  //   const obvOptions: IntersectionObserverInit = {
+  //     root: document,
+  //     threshold: 0.75,
+  //   };
+  //   const obvCallback: IntersectionObserverCallback = (entries) => {
+  //     const particles = homeRefObj?.querySelector(
+  //       "#tsparticles"
+  //     ) as HTMLDivElement;
+  //     if (particles) {
+  //       if (entries[0]?.isIntersecting || entries?.[1]?.isIntersecting) {
+  //         particles.style.opacity = "1";
+  //       } else {
+  //         particles.style.opacity = "0";
+  //       }
+  //     }
+  //   };
 
-    const obv: IntersectionObserver = new IntersectionObserver(
-      obvCallback,
-      obvOptions
-    );
+  //   const obv: IntersectionObserver = new IntersectionObserver(
+  //     obvCallback,
+  //     obvOptions
+  //   );
 
-    if (targetObjOne) {
-      obv.observe(targetObjOne);
-      return () => {
-        obv.disconnect();
-      };
-    }
-    return;
-  });
+  //   if (targetObjOne) {
+  //     obv.observe(targetObjOne);
+  //     return () => {
+  //       obv.disconnect();
+  //     };
+  //   }
+  //   return;
+  // });
 
   return (
     <main id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
-      <TsParticles />
+      {/* <ThreeD /> */}
       <HomeHead />
       <HomeMwebLanding ref={landingRefTop} />
       <HomeMwebWork />
