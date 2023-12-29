@@ -5,9 +5,9 @@ export const canvasWrapperCss = css`
   bottom: 0;
   height: 100vh;
   width: 100%;
-  z-index: -1;
+  z-index: 2;
 `;
 
 export const canvasCss = css`
-  z-index: -1;
+  /* z-index: -1; */
 `;
