@@ -182,7 +182,7 @@ export const cardBack = css`
 export const cardButton = css`
   transition: all 0.3s ease;
   margin-left: auto;
-  background-color: var(--color-primary-700);
+  background-color: var(--color-primary-600);
   display: flex;
   text-align: center;
   justify-content: center;
@@ -192,11 +192,13 @@ export const cardButton = css`
   text-decoration: none;
   font-weight: 600;
   font-size: clamp(1rem, 1.1vw, 1.75rem);
+  box-shadow: 0 0 0px var(--box-shadow-primary);
   /* height: 44px; */
   padding: 0.85vw 2.25vw;
   ${mediaQuery.desktop} {
     &:hover {
-      background-color: var(--color-text-highlight);
+      /* background-color: var(--color-text-highlight); */
+      box-shadow: 4px 4px 14px 0px var(--box-shadow-primary);
     }
   }
   ${mediaQuery.mobilePortrait} {

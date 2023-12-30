@@ -31,15 +31,16 @@ export const globalCss = css`
     --color-secondary-800: #55330b;
     --color-secondary-900: #2b170e;
 
+    --color-text-primary: rgb(245, 235, 255);
+
     --color-bg-primary: #151515; //var(--color-primary-900);
     --color-bg-tertiary: var(--color-primary-000);
     --color-bg-bright: var(--color-secondary-400);
 
-    --color-text-primary: rgb(245, 235, 255);
     --color-text-secondary: hsl(227, 16%, 60%);
     --color-text-highlight: var(--color-secondary-400);
 
-    --box-shadow-primary: rgba(133, 133, 133, 0.6);
+    --box-shadow-primary: hsla(195, 50%, 20%, 50%);
     --color-text-shadow: rgba(255, 255, 255, 0.5);
   }
 

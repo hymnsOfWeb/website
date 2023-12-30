@@ -1,9 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Suspense, useEffect, useRef } from "react";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import {
+  MeshReflectorMaterial,
+  OrbitControls,
+  useGLTF,
+} from "@react-three/drei";
 import { Canvas, CanvasProps } from "@react-three/fiber";
 import gsap from "gsap";
 import { canvasCss, canvasWrapperCss } from "./styles";
+import { MeshStandardMaterial } from "three";
 
 export default function ThreeD() {
   const cameraProps: CanvasProps["camera"] = {
@@ -18,7 +23,7 @@ export default function ThreeD() {
     <div css={canvasWrapperCss} className="canvas-wrapper">
       <Canvas css={canvasCss} camera={cameraProps}>
         <Suspense fallback={null}>
-          <ambientLight intensity={0.75} />
+          <ambientLight intensity={1} color={"#60c8e5"} />
           <Model />
           <OrbitControls enableDamping />
         </Suspense>

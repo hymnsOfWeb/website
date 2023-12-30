@@ -270,7 +270,7 @@ export const contactPageData = [
 ];
 
 export const aboutPageHeading =
-  "Our softwares might not be comedians, but they sure know how to perform.";
+  "Our softwares might not be\ncomedians, but they sure know\nhow to perform.";
 
 export const aboutDescription =
   "Hymns of Web orchestrates digital excellence, harmonizing the symphony\
@@ -348,7 +348,7 @@ export const teamData = [
   {
     name: "Aishwarya\nTewari",
     about: "Head of Management",
-    imgSrc: "/assets/images/team/aishwarya.webp",
+    imgSrc: "/assets/images/team/aish.webp",
     portfolioLink: "https://aishwarya.hymnsofweb.com/",
   },
   {

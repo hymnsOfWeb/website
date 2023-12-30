@@ -3,11 +3,10 @@ import { mediaQuery } from "@common-styles";
 
 export const aboutLinerCss = css`
   display: flex;
-  justify-content: center;
   width: 100%;
   margin-top: calc(10vh + 70px);
   font-size: 2rem;
-  color: var(--color-text-highlight);
+  color: var(--color-primary-400);
   ${mediaQuery.desktop} {
     font-size: 2.5vw;
     padding-top: var(--padding-top);

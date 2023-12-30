@@ -49,7 +49,7 @@ export const serviceCardCss = css`
   ${mediaQuery.mobileLandscape} {
     height: 70vh;
   }
-  border: 2px solid #1bbb8b;
+  border: 2px solid var(--color-primary-300);
   overflow: hidden;
   border-radius: 10px;
   display: flex;
@@ -211,11 +211,12 @@ export const serviceImgCompCss = css`
 `;
 
 export const serviceCardHeadingCss = css`
-  color: var(--color-text-highlight);
+  color: var(--color-text-primary);
   font-size: clamp(1rem, 1.8vw, 3rem);
   margin-bottom: 20px;
   margin-top: 0.5em;
   padding: 0 20px;
+
   ${mediaQuery.tablet} {
     font-size: clamp(1rem, 4vw, 3rem);
   }
@@ -239,6 +240,7 @@ export const serviceCardParaCss = css`
   padding: 0 20px;
   font-size: clamp(0.75rem, 1vw, 2rem);
   line-height: 2em;
+  color: var(--color-primary-200);
   ${mediaQuery.tablet} {
     font-size: clamp(0.75rem, 2vw, 2rem);
   }

@@ -33,7 +33,7 @@ export const teamCardCss = css`
   ${mediaQuery.desktop} {
     transition: border-color 0.3s ease;
     &:hover {
-      border-color: var(--color-text-highlight);
+      border-color: var(--color-primary-300);
     }
   }
   ${mediaQuery.mobile} {
