@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { WorkData } from "@common-data";
+import { WorkData, dWebWorkHeading } from "@common-data";
 import {
   buttonCss,
   workTitleCss,
@@ -9,6 +9,7 @@ import {
   ctaContainerCss,
   secBtnsContainerCss,
   secBtnsCss,
+  workHeadingCss,
 } from "./styles";
 
 const WorkDescriptionCard = ({
@@ -44,6 +45,7 @@ const WorkDescriptionCard = ({
 
   return (
     <article className={className}>
+      <span css={workHeadingCss}>{dWebWorkHeading}</span>
       <h3 className="work-title" css={workTitleCss}>
         {data.title}
       </h3>

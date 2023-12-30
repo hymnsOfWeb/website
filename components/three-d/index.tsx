@@ -98,7 +98,6 @@ function Model() {
         const mainPercent = percentCalc(5, 9, scrollPercentage);
         const rotationPercent = changeValue(-1, 5, mainPercent);
         const positionXPercent = changeValue(-100, 300, mainPercent);
-        const positionYPercent = changeValue(15, 15, mainPercent);
         const positionZPercent = changeValue(-50, -100, mainPercent);
         const scalePercent = changeValue(0.15, 0.3, mainPercent);
         const t1 = gsap.timeline();
@@ -148,11 +147,11 @@ function Model() {
       }
       if (scrollPercentage > 85 && scrollPercentage <= 90) {
         const mainPercent = percentCalc(85, 90, scrollPercentage);
-        const rotationPercent = changeValue(5, -1, mainPercent);
-        const positionXPercent = changeValue(300, -100, mainPercent);
-        const positionYPercent = changeValue(15, 15, mainPercent);
-        const positionZPercent = changeValue(-100, -50, mainPercent);
-        const scalePercent = changeValue(0.3, 0.15, mainPercent);
+        const rotationPercent = changeValue(-8, -6, mainPercent);
+        const positionXPercent = changeValue(300, 195, mainPercent);
+        const positionYPercent = changeValue(15, 4, mainPercent);
+        const positionZPercent = changeValue(-100, 175, mainPercent);
+        const scalePercent = changeValue(0.3, 0.06, mainPercent);
         const t1 = gsap.timeline();
         t1.fromTo(
           ref.current?.rotation,
@@ -169,7 +168,7 @@ function Model() {
             },
             {
               x: positionXPercent,
-              y: ref.current?.position?.y ?? 0,
+              y: positionYPercent,
               z: positionZPercent,
             },
             0
@@ -185,13 +184,12 @@ function Model() {
             0
           );
       }
-      if (scrollPercentage > 90 && scrollPercentage <= 95) {
+      if (scrollPercentage > 90 && scrollPercentage <= 100) {
         const mainPercent = percentCalc(90, 95, scrollPercentage);
-        const rotationPercent = changeValue(-1, -4.3, mainPercent);
-        const positionXPercent = changeValue(-60, 195, mainPercent);
-        const positionYPercent = changeValue(15, 4, mainPercent);
-        const positionZPercent = changeValue(-50, 175, mainPercent);
-        const scalePercent = changeValue(0.15, 0.055, mainPercent);
+        const rotationPercent = changeValue(-6, -4.3, mainPercent);
+        const positionXPercent = changeValue(195, 195, mainPercent);
+        const positionZPercent = changeValue(175, 175, mainPercent);
+        const scalePercent = changeValue(0.06, 0.06, mainPercent);
         const t1 = gsap.timeline();
         t1.fromTo(
           ref.current?.rotation,
@@ -236,7 +234,7 @@ function Model() {
       dispose={null}
       ref={ref}
       position={[195, 4, 175]}
-      scale={[0.055, 0.06, 0.06]}
+      scale={[0.06, 0.06, 0.06]}
       rotation={[-0.1, -4.3, 0]}
     >
       <mesh

@@ -29,7 +29,7 @@ const commonMobile = css`
 `;
 
 export const workMainHeadingCss = css`
-  color: var(--color-primary-900);
+  color: var(--color-bg-primary);
   font-size: 4.5rem;
   font-family: var(--font-primary);
   text-shadow: ${textOutlineShadow("var(--color-secondary-400)")};
@@ -47,6 +47,6 @@ export const workMainSubHeadingCss = css`
   color: var(--color-text-shadow);
   ${commonMobile};
   ${mediaQuery.mobile} {
-    font-size: 0.8em;
+    font-size: 1rem;
   }
 `;

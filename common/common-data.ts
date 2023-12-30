@@ -28,6 +28,8 @@ export interface WorkData {
   description: string;
 }
 
+export const dWebWorkHeading = "Featured Work";
+
 export const workData: WorkData[] = [
   {
     title: "The Bunch Ai",

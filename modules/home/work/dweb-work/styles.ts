@@ -7,13 +7,11 @@ export const workContainerCss = css`
   width: 100%;
   & > div {
     &:nth-of-type(1) {
-      flex: 1;
+      flex: 1.5;
+      margin-left: 5%;
     }
     &:nth-of-type(2) {
       flex: 1;
-    }
-    &:nth-of-type(3) {
-      flex: 1.5;
     }
   }
 `;

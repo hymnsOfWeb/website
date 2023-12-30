@@ -13,7 +13,7 @@ export const aboutWrapper = css`
     -webkit-tap-highlight-color: transparent;
   }
   ${mediaQuery.mobile} {
-    height: clamp(85vh, 150vw, 100vh);
+    height: 70vh;
     margin-top: 40px;
   }
   ${mediaQuery.mobileLandscape} {
@@ -54,6 +54,9 @@ export const mWebRibbonWrapper = css`
   ${mediaQuery.mobileLandscape} {
     font-size: 4rem;
   }
+  ${mediaQuery.mobile} {
+    font-size: 14vw;
+  }
 `;
 
 export const ribbonContainer = css`
@@ -93,7 +96,7 @@ export const cardWrapper = css`
   height: 60vh;
   aspect-ratio: 3 / 3.5;
   ${mediaQuery.mobile} {
-    height: 65%;
+    height: 75%;
     width: 80vw;
   }
   display: flex;

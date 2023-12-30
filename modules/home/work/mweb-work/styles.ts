@@ -39,7 +39,7 @@ export const mwebWorkImgCss = css`
   }
   ${mediaQuery.squeezedScreen} {
     width: 37.5%;
-    height: 300px;
     margin: 0;
+    height: 500px;
   }
 `;

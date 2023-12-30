@@ -53,6 +53,16 @@ export const buttonCss = css`
   }
 `;
 
+export const workHeadingCss = css`
+  display: none;
+  ${mediaQuery.desktop} {
+    display: block;
+    width: fit-content;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+  }
+`;
+
 export const workTitleCss = css`
   font-size: clamp(0rem, 5vw, 3rem);
   font-weight: 600;

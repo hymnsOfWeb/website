@@ -8,6 +8,7 @@ import {
 } from "react";
 import { homeLandingTexts } from "@common-data";
 import { landingWrapper } from "./styles";
+import SubText from "@modules/home/landing/sub-text";
 
 const HML = (_: unknown, ref: Ref<HTMLDivElement>) => {
   const landingRef = ref as RefObject<HTMLDivElement>;
@@ -86,6 +87,7 @@ const HML = (_: unknown, ref: Ref<HTMLDivElement>) => {
       >
         {words.map(mapper)}
       </h1>
+      <SubText />
     </div>
   );
 };
