@@ -12,6 +12,8 @@ export default function WorkCarousel() {
           alt={alt}
           src={src}
           containerClassName="work-img-container"
+          placeholder="blur"
+          quality={37.5}
         />
       </div>
     );
