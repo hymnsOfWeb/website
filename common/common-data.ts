@@ -1,11 +1,20 @@
+import { StaticImageData } from "next/image";
 import {
   BsEnvelope,
   BsInstagram,
   BsTelephone,
   BsWhatsapp,
+  BsBrush,
+  BsEnvelopePaperHeart,
 } from "react-icons/bs";
+import { TbClick, TbWorldWww, TbTimeline } from "react-icons/tb";
 import { BubbleDataProps } from "@components/contact-bubble/types";
 import { DesktopApp, MobileApp, WebApp, Websites } from "@icons";
+import aestheticImg from "../public/assets/images/mockups/aesthetic.png";
+import ashuImg from "../public/assets/images/mockups/ashu.png";
+import avitaHRImg from "../public/assets/images/mockups/avitahr.png";
+import cleanTankImg from "../public/assets/images/mockups/cleantank.png";
+import bunchAiImg from "../public/assets/images/mockups/thebunchai.png";
 
 //nav
 export const mainNavLinks = [
@@ -22,7 +31,7 @@ export interface WorkData {
   }[];
   secondaryBtn?: string[];
   img: {
-    src: string;
+    src: StaticImageData;
     alt: string;
   };
   description: string;
@@ -35,7 +44,7 @@ export const workData: WorkData[] = [
     title: "The Bunch Ai",
     links: [{ text: "Visit Live", url: "https://www.thebunch.ai/" }],
     img: {
-      src: "/assets/images/work/bunchai.webp",
+      src: bunchAiImg,
       alt: "Hymns of Web | The Bunch Ai",
     },
     description:
@@ -48,7 +57,7 @@ export const workData: WorkData[] = [
     title: "Avita HR Solutions",
     links: [{ text: "Visit Live", url: "https://www.avitahr.com/" }],
     img: {
-      src: "/assets/images/work/avitahr.webp",
+      src: avitaHRImg,
       alt: "Hymns of Web | Avita HR Solutions",
     },
     description:
@@ -59,26 +68,26 @@ export const workData: WorkData[] = [
  aligns seamlessly with Hymns Of Web's dedication to crafting top-notch websites and software solutions.",
   },
   {
-    title: "QuantumShift",
-    links: [{ text: "Visit Live", url: "https://www.quantumshift.in/" }],
+    title: "CleanTank",
+    links: [{ text: "Visit Live", url: "https://cleantankservices.com/" }],
     img: {
-      src: "/assets/images/work/quantumshift.webp",
+      src: cleanTankImg,
       alt: "Hymns of Web | QuantumShift",
     },
     description:
-      "Hymns Of Web proudly collaborated with Quantumshift, a pioneering deep tech startup,\
- to craft their exceptional website. Specializing in transforming quantum solutions,\
- Quantumshift envisions tomorrow's technology through today's efforts. Our team, dedicated \
- to delivering cutting-edge websites and software, is honored to have contributed to \
- Quantumshift's mission of providing top-quality services and support to industries \
- and government organizations exploring the potential of quantum mechanics.",
+      "Hymns Of Web is thrilled to announce a successful collaboration with CleanTank,\
+      a leading expert in tank cleaning services. Teaming up with CleanTank, a company\
+      committed to maintaining the highest standards in tank hygiene, we've crafted an\
+      outstanding website that reflects their dedication to professional tank cleaning solutions.\
+      CleanTank stands as a pioneer in the industry, employing cutting-edge techniques and technology\
+      to ensure the cleanliness and safety of various tanks.",
   },
   {
     title: "The Aesthetic One",
     links: [{ text: "Visit Live", url: "https://vintageinkk.vercel.app/" }],
     secondaryBtn: ["Template", "For Sale"],
     img: {
-      src: "/assets/images/work/vintageinkkk.webp",
+      src: aestheticImg,
       alt: "Hymns of Web",
     },
     description:
@@ -87,6 +96,20 @@ export const workData: WorkData[] = [
  pleasing experience. Immerse them in seamless navigation and visually pleasing designs, creating a\
  harmonious blend of tech and aesthetics. Leave a lasting impression with a website that radiates\
  elegance, offering users a serene online haven for exploration and engagement with ease.",
+  },
+  {
+    title: "Company Portfolio",
+    links: [{ text: "Visit Live", url: "https://ashucrafts.vercel.app/" }],
+    secondaryBtn: ["Template", "For Sale"],
+    img: {
+      src: ashuImg,
+      alt: "Hymns of Web",
+    },
+    description:
+      "Elevate your online presence with the Corporate Elegance website template,\
+      a sophisticated and stylish design tailored for showcasing your company's portfolio.\
+      Immerse your visitors in a seamless journey through your achievements and services,\
+      providing them with an aesthetically pleasing and tranquil experience.",
   },
 ];
 
@@ -370,3 +393,223 @@ export const teamData = [
     portfolioLink: "https://www.linkedin.com/in/pranavmanchanda/",
   },
 ];
+
+export const valensiteLandingData = {
+  heading: "Valensite",
+  subtext: "Brought to you by Hymns Of Web",
+  btn: {
+    text: "Get Started",
+    Icon: TbClick,
+    link: "/",
+  },
+};
+
+export const valensiteAbout = {
+  heading: "Modern Love",
+  description:
+    "Skip the teddy bears, Valensite is your valentine's dream!\
+    Valensite is the ultimate Valentine's Day gift: a website\
+    packed with your love story. It's like a cozy online retreat,\
+    filled with special photos, memories, and even poems you both love.\
+    Imagine clicking through a timeline of your romance, with each\
+    click revealing deeper layers of your love. Think of it as a\
+    one-of-a-kind love treasure chest, personalized just for you two.\
+    It's not just a website, it's a living memory keeper, a vibrant\
+    celebration of your love whispers and stolen kisses. Every click\
+    and scroll paints a beautiful picture of your forever. It's more\
+    than a gift, it's your love, online! ",
+};
+
+export const valensiteFeatures = [
+  {
+    Icon: BsBrush,
+    text: "Customizable Themes",
+  },
+  {
+    Icon: TbWorldWww,
+    text: "Personalized Domain",
+  },
+  {
+    Icon: BsEnvelopePaperHeart,
+    text: "Photo Gallery & Love Notes",
+  },
+  {
+    Icon: TbTimeline,
+    text: "Interactive Timeline",
+  },
+];
+
+export const valensitePlanHeading = {
+  heading: "Our Plans",
+  subtext: "Remember it's not the gift but the thought that counts <3",
+};
+
+export const valensitePlans = [
+  {
+    name: "Gold",
+    price: "2999",
+    color: "#fffe10",
+    popular: false,
+    btn: {
+      text: "Know More",
+      link: "/",
+    },
+    booleanFeatures: [
+      {
+        featName: "Apple",
+        approval: false,
+      },
+      {
+        featName: "Samsung",
+        approval: false,
+      },
+      {
+        featName: "Moto",
+        approval: true,
+      },
+      {
+        featName: "Nokia",
+        approval: false,
+      },
+    ],
+    valuedFeatures: [
+      {
+        featName: "Supported Devices",
+        values: "Phone, Tablets",
+      },
+      {
+        featName: "Time To Live",
+        values: "14 days",
+      },
+      {
+        featName: "Treasure Path",
+        values: "Fully Custom",
+      },
+    ],
+  },
+  {
+    name: "Platinum",
+    price: "4999",
+    color: "#a3b4c8",
+    popular: true,
+    btn: {
+      text: "Know More",
+      link: "/",
+    },
+    booleanFeatures: [
+      {
+        featName: "Apple",
+        approval: true,
+      },
+      {
+        featName: "Samsung",
+        approval: true,
+      },
+      {
+        featName: "Moto",
+        approval: true,
+      },
+      {
+        featName: "Nokia",
+        approval: true,
+      },
+    ],
+    valuedFeatures: [
+      {
+        featName: "Supported Devices",
+        values: "Phone, Tablets",
+      },
+      {
+        featName: "Time To Live",
+        values: "14 days",
+      },
+      {
+        featName: "Treasure Path",
+        values: "Fully Custom",
+      },
+    ],
+  },
+  {
+    name: "Diamond",
+    price: "5999",
+    color: "#74d2f4",
+    popular: false,
+    btn: {
+      text: "Know More",
+      link: "/",
+    },
+    booleanFeatures: [
+      {
+        featName: "Apple",
+        approval: true,
+      },
+      {
+        featName: "Samsung",
+        approval: false,
+      },
+      {
+        featName: "Moto",
+        approval: true,
+      },
+      {
+        featName: "Nokia",
+        approval: true,
+      },
+    ],
+    valuedFeatures: [
+      {
+        featName: "Supported Devices",
+        values: "Phone, Tablets",
+      },
+      {
+        featName: "Time To Live",
+        values: "14 days",
+      },
+      {
+        featName: "Treasure Path",
+        values: "Fully Custom",
+      },
+    ],
+  },
+];
+
+export const valContactHeading = {
+  heading: "Contact Us",
+  subheading:
+    "For best offers and to know more about valentine reach out to us.",
+};
+
+export const valensiteNav = [
+  {
+    text: "Valensite",
+    link: "/valensite#valensite-landing",
+  },
+  {
+    text: "About",
+    link: "/valensite#valensite-about",
+  },
+  {
+    text: "Plans",
+    link: "/valensite#valensite-plans",
+  },
+  {
+    text: "Features",
+    link: "/valensite#valensite-features",
+  },
+  {
+    text: "Contact Us",
+    link: "/valensite#valensite-contact",
+  },
+];
+
+export const valensiteFeaturesData = {
+  heading: "Why Valensite",
+  desc: "Gifting a Valensite by Hymns of Web surpasses traditional gifts with its\
+  personalized touch, offering a unique celebration of shared moments and achievements.\
+  Unlike standard presents, this digital masterpiece evokes emotional connection through\
+  interactive elements and curated collages, making it a lasting and meaningful tribute to\
+  your relationship. It goes beyond material possessions, embodying the essence of your love\
+  story, ensuring a Valentine's Day gift that resonates on a deeper, more sentimental level.",
+  quote:
+    "Are you Valensite? Because just like the perfect webpage, you've got all the elements to make my heart click.",
+};

@@ -42,6 +42,23 @@ export const globalCss = css`
 
     --box-shadow-primary: hsla(195, 50%, 20%, 50%);
     --color-text-shadow: rgba(255, 255, 255, 0.5);
+
+    //valensite colors
+
+    --color-bg-val-primary: #e0325b;
+    --color-bg-val-secondary: hsla(0, 0%, 95%, 1);
+    --color-val-black: black;
+    --color-bg-val-radial: radial-gradient(
+      110% 85% at 50% 55%,
+      #f34770 15%,
+      #dd2f58 32.5%,
+      #ce1e48 45%,
+      #c91943 60%,
+      #ab0b32 87.5%,
+      #970226 100%
+    );
+    --color-bg-gray: #e0e0e0;
+    --color-val-white: white;
   }
 
   .chromium,

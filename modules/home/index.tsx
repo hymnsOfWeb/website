@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { homePageMeta, phoneNumber, mail } from "@common-data";
@@ -107,7 +107,7 @@ function HomeDweb() {
 
   return (
     <main id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
-      <ThreeD observerRefs={[landingRefBottom, landingRefTop]} />
+      <ThreeD />
       <HomeHead />
       <HomeDwebLanding ref={landingRefTop} />
       <HomeDwebWork ref={workRef} />

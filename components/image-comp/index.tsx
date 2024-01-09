@@ -15,6 +15,8 @@ export default function ImageComp(
     containerOnClick,
     height,
     width,
+    src,
+    quality,
     imgSize = {
       height: "100%",
       width: "100%",
@@ -44,6 +46,8 @@ export default function ImageComp(
         fill={!(height || width)}
         sizes="100%"
         className="img"
+        src={src}
+        quality={quality ?? 100}
       />
       {children}
     </div>
