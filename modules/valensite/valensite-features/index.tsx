@@ -17,7 +17,7 @@ export default function ValensiteFeatures() {
       </div>
       <ImageComp
         alt="Valensite Website | Hymns Of Web | HOW"
-        src="/assets/images/website.png"
+        src="/assets/images/valensite/website.png"
         containerCss={websiteImgCss}
       />
       <blockquote css={quoteCss}>{quote}</blockquote>

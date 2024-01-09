@@ -2,12 +2,12 @@ import { css } from "@emotion/react";
 import { mediaQuery } from "@common-styles";
 
 export const valContactContainerStyle = css`
-  min-height: 100vh;
+  height: 100vh;
   padding: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15vh;
+  gap: 5vw;
   padding-left: 5%;
   background: var(--color-bg-val-radial);
   ${mediaQuery.mobile} {

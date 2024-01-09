@@ -1,5 +1,5 @@
-import { HeartCouple } from "@assets/illustrations";
 import { valensiteAbout, valensiteFeatures } from "@common-data";
+import { ImageComp } from "@components";
 import {
   coupleSvgStyle,
   featIconWrapperStyle,
@@ -36,7 +36,11 @@ export default function ValensiteAbout() {
         <h3 css={featuresHeadingStyle}>Key Features</h3>
         {valensiteFeatures.map(featuresMapper)}
       </div>
-      <HeartCouple cssVal={coupleSvgStyle} />
+      <ImageComp
+        alt="Valensite Website | Hymns Of Web | HOW"
+        src="/assets/images/valensite/love-couple.png"
+        containerCss={coupleSvgStyle}
+      />
     </div>
   );
 }

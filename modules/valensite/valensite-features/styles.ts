@@ -6,12 +6,12 @@ export const valFeaturesContainerCss = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10vh 0;
   padding-left: 5.5%;
   position: relative;
   ${mediaQuery.desktop} {
-    min-height: 100vh;
+    height: 100vh;
   }
   gap: 25vh;
   ${mediaQuery.smallLaptop} {

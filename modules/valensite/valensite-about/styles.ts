@@ -2,12 +2,11 @@ import { css } from "@emotion/react";
 import { mediaQuery } from "@common-styles";
 
 export const valAboutContainerStyle = css`
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--color-bg-val-secondary);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20vh;
+  justify-content: space-between;
   padding: 15vh 0;
   padding-left: 6%;
   position: relative;
@@ -128,16 +127,19 @@ export const coupleSvgStyle = css`
   position: absolute;
   bottom: 15%;
   right: 10%;
-  scale: 1.25;
+  width: 500px;
+  aspect-ratio: 1;
   ${mediaQuery.smallLaptop} {
     scale: 1;
     right: 4%;
   }
   ${mediaQuery.mobile} {
-    position: static;
-    margin: 0 auto;
+    position: relative;
     width: 80%;
+    aspect-ratio: 1;
+    margin: 0 auto;
     margin-top: 4vh;
     margin-bottom: 5vh;
+    inset: 0;
   }
 `;
