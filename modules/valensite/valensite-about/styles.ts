@@ -6,16 +6,15 @@ export const valAboutContainerStyle = css`
   background-color: var(--color-bg-val-secondary);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 15vh 0;
+  justify-content: space-around;
   padding-left: 6%;
   position: relative;
   ${mediaQuery.smallLaptop} {
     padding-left: 6%;
     padding-right: 7.5%;
-    gap: 15vh;
   }
   ${mediaQuery.mobile} {
+    height: fit-content;
     padding: 5vh 0;
     padding-left: 6%;
     padding-right: 7.5%;
@@ -33,8 +32,9 @@ export const valAboutTextWrapperStyle = css`
   }
   p {
     color: var(--color-val-black);
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.25vw, 1.6rem);
     font-weight: 300;
+    margin: 2vh 0;
   }
   ${mediaQuery.smallLaptop} {
     width: 100%;
@@ -125,13 +125,14 @@ export const featureIconStyle = css`
 
 export const coupleSvgStyle = css`
   position: absolute;
-  bottom: 15%;
+  bottom: 8%;
   right: 10%;
-  width: 500px;
+  width: 30%;
   aspect-ratio: 1;
   ${mediaQuery.smallLaptop} {
     scale: 1;
     right: 4%;
+    width: 40%;
   }
   ${mediaQuery.mobile} {
     position: relative;

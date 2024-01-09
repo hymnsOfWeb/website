@@ -26,11 +26,15 @@ export default function ValensiteAbout() {
       </div>
     );
   };
+
+  const paraMapper = (para: string, index: number) => {
+    return <p key={index}>{para}</p>;
+  };
   return (
     <div css={valAboutContainerStyle} id="valensite-about">
       <div css={valAboutTextWrapperStyle}>
         <h2>{valensiteAbout.heading}</h2>
-        <p>{valensiteAbout.description}</p>
+        {valensiteAbout.description.map(paraMapper)}
       </div>
       <div css={featuresContainerStyle}>
         <h3 css={featuresHeadingStyle}>Key Features</h3>

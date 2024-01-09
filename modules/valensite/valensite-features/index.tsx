@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { valensiteFeaturesData } from "@common-data";
 import { ImageComp } from "@components";
 import {
@@ -9,6 +10,16 @@ import {
 
 export default function ValensiteFeatures() {
   const { desc, heading, quote } = valensiteFeaturesData;
+  const quoteRef = useRef<HTMLQuoteElement>(null);
+  useEffect(() => {
+    const quoteElem = quoteRef.current;
+    const randomNum = Math.floor(
+      Math.random() * valensiteFeaturesData.quote.length
+    );
+    if (quoteElem) {
+      quoteElem.innerText = quote[randomNum] ?? "";
+    }
+  }, [quote]);
   return (
     <div id="valensite-features" css={valFeaturesContainerCss}>
       <div css={valFeatTextWrapperCss}>
@@ -20,7 +31,7 @@ export default function ValensiteFeatures() {
         src="/assets/images/valensite/website.png"
         containerCss={websiteImgCss}
       />
-      <blockquote css={quoteCss}>{quote}</blockquote>
+      <blockquote css={quoteCss} ref={quoteRef}></blockquote>
     </div>
   );
 }

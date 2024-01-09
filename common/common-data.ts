@@ -406,18 +406,20 @@ export const valensiteLandingData = {
 
 export const valensiteAbout = {
   heading: "Modern Love",
-  description:
+  description: [
     "Skip the teddy bears, Valensite is your valentine's dream!\
     Valensite is the ultimate Valentine's Day gift: a website\
-    packed with your love story. It's like a cozy online retreat,\
+    packed with your love story.",
+    "It's like a cozy online retreat,\
     filled with special photos, memories, and even poems you both love.\
     Imagine clicking through a timeline of your romance, with each\
     click revealing deeper layers of your love. Think of it as a\
-    one-of-a-kind love treasure chest, personalized just for you two.\
-    It's not just a website, it's a living memory keeper, a vibrant\
+    one-of-a-kind love treasure chest, personalized just for you two.",
+    "It's not just a website, it's a living memory keeper, a vibrant\
     celebration of your love whispers and stolen kisses. Every click\
     and scroll paints a beautiful picture of your forever. It's more\
-    than a gift, it's your love, online! ",
+    than a gift, it's your love, online!",
+  ],
 };
 
 export const valensiteFeatures = [
@@ -446,9 +448,10 @@ export const valensitePlanHeading = {
 
 export const valensitePlans = [
   {
-    name: "Gold",
-    price: "2999",
-    color: "#fffe10",
+    name: "Silver",
+    price: "399",
+    color: "#a3b4c8",
+
     popular: false,
     btn: {
       text: "Know More",
@@ -456,41 +459,50 @@ export const valensitePlans = [
     },
     booleanFeatures: [
       {
-        featName: "Apple",
+        featName: "Multilingual",
         approval: false,
       },
       {
-        featName: "Samsung",
+        featName: "Choose Colors",
         approval: false,
       },
       {
-        featName: "Moto",
-        approval: true,
-      },
-      {
-        featName: "Nokia",
+        featName: "Storage",
         approval: false,
       },
     ],
     valuedFeatures: [
       {
-        featName: "Supported Devices",
-        values: "Phone, Tablets",
+        featName: "Total Photos",
+        values: "20 or lesser",
       },
       {
-        featName: "Time To Live",
-        values: "14 days",
+        featName: "Total Videos",
+        values: "2 or lesser",
+      },
+      {
+        featName: "Supported Devices",
+        values: "Only Phones",
+      },
+      {
+        featName: "Template Design",
+        values: "Non Customizable",
+      },
+      {
+        featName: "Active",
+        values: "For 3 months",
       },
       {
         featName: "Treasure Path",
-        values: "Fully Custom",
+        values: "Not Included",
       },
     ],
   },
   {
-    name: "Platinum",
-    price: "4999",
-    color: "#a3b4c8",
+    name: "Gold",
+    color: "#fffe10",
+    price: "1299",
+
     popular: true,
     btn: {
       text: "Know More",
@@ -498,40 +510,48 @@ export const valensitePlans = [
     },
     booleanFeatures: [
       {
-        featName: "Apple",
+        featName: "Multilingual",
+        approval: false,
+      },
+      {
+        featName: "Choose Colors",
         approval: true,
       },
       {
-        featName: "Samsung",
-        approval: true,
-      },
-      {
-        featName: "Moto",
-        approval: true,
-      },
-      {
-        featName: "Nokia",
+        featName: "Storage",
         approval: true,
       },
     ],
     valuedFeatures: [
       {
-        featName: "Supported Devices",
-        values: "Phone, Tablets",
+        featName: "Total Photos",
+        values: "50 or lesser",
       },
       {
-        featName: "Time To Live",
-        values: "14 days",
+        featName: "Total Videos",
+        values: "5 or lesser",
+      },
+      {
+        featName: "Supported Devices",
+        values: "Phone, Desktops",
+      },
+      {
+        featName: "Template Design",
+        values: "Partially Customizable",
+      },
+      {
+        featName: "Active",
+        values: "For 6 months",
       },
       {
         featName: "Treasure Path",
-        values: "Fully Custom",
+        values: "Website Countdown",
       },
     ],
   },
   {
-    name: "Diamond",
-    price: "5999",
+    name: "Platinum",
+    price: "2499",
     color: "#74d2f4",
     popular: false,
     btn: {
@@ -540,34 +560,42 @@ export const valensitePlans = [
     },
     booleanFeatures: [
       {
-        featName: "Apple",
+        featName: "Multilingual",
         approval: true,
       },
       {
-        featName: "Samsung",
-        approval: false,
-      },
-      {
-        featName: "Moto",
+        featName: "Choose Colors",
         approval: true,
       },
       {
-        featName: "Nokia",
+        featName: "Storage",
         approval: true,
       },
     ],
     valuedFeatures: [
       {
-        featName: "Supported Devices",
-        values: "Phone, Tablets",
+        featName: "Total Photos",
+        values: "100 or lesser",
       },
       {
-        featName: "Time To Live",
-        values: "14 days",
+        featName: "Total Videos",
+        values: "10 or lesser",
+      },
+      {
+        featName: "Supported Devices",
+        values: "All Devices",
+      },
+      {
+        featName: "Template Design",
+        values: "Fully Customizable",
+      },
+      {
+        featName: "Active",
+        values: "For 12 months",
       },
       {
         featName: "Treasure Path",
-        values: "Fully Custom",
+        multipleValues: ["Website Countdown", "Love Week Custom Emails"],
       },
     ],
   },
@@ -610,6 +638,13 @@ export const valensiteFeaturesData = {
   interactive elements and curated collages, making it a lasting and meaningful tribute to\
   your relationship. It goes beyond material possessions, embodying the essence of your love\
   story, ensuring a Valentine's Day gift that resonates on a deeper, more sentimental level.",
-  quote:
+  quote: [
     "Are you Valensite? Because just like the perfect webpage, you've got all the elements to make my heart click.",
+    "Are you Valensite? Because just like the perfect webpage, you've got all the elements to make my heart click",
+    "Are you the homepage of Valensite? Because you're the first thing I want to see every day.",
+    "Are you Valensite? Because exploring the pages of your heart seems like the best online\
+    adventure I could ever have.",
+    "If Valensite had a search bar, I'd type in 'perfect match,' and I'm pretty sure your profile\
+    would be the top result.",
+  ],
 };

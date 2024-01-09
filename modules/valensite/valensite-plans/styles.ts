@@ -2,14 +2,14 @@ import { css } from "@emotion/react";
 import { mediaQuery } from "@common-styles";
 
 export const valPlanWrapperStyle = css`
-  min-height: 140vh;
+  min-height: 100vh;
   background: var(--color-bg-val-radial);
   display: flex;
-  padding: 15vh 0;
+  padding: 10vh 0;
   padding-left: 6%;
   flex-direction: column;
   justify-content: center;
-  gap: 15vh;
+  gap: 10vh;
   ${mediaQuery.mobile} {
     padding-right: 6%;
   }

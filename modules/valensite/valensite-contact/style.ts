@@ -11,6 +11,7 @@ export const valContactContainerStyle = css`
   padding-left: 5%;
   background: var(--color-bg-val-radial);
   ${mediaQuery.mobile} {
+    height: fit-content;
     padding-left: 6.5%;
     padding-right: 7%;
   }

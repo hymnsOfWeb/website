@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const valensiteNavContainer = css`
   position: fixed;
@@ -11,6 +12,9 @@ export const valensiteNavContainer = css`
   justify-content: center;
   gap: 4vh;
   z-index: 10;
+  ${mediaQuery.mobile} {
+    display: none;
+  }
 `;
 
 export const valNavLinkStyle = css`

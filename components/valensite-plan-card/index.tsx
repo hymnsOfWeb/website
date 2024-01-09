@@ -43,6 +43,14 @@ export default function ValensitePlanCard({
     );
   };
 
+  const spanMapper = (elem: string, index: number) => {
+    return (
+      <>
+        <span key={index}>{elem}</span>
+      </>
+    );
+  };
+
   const valuedFeatMapper = (
     feat: (typeof valuedFeatures)[0],
     index: number
@@ -51,6 +59,7 @@ export default function ValensitePlanCard({
       <div key={index} css={valuedFeatureStyle}>
         <span className="val-feat-name">{feat.featName} :</span>
         <span>{feat.values}</span>
+        {feat.multipleValues?.map(spanMapper)}
       </div>
     );
   };

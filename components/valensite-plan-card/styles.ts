@@ -102,6 +102,7 @@ export const valuedFeaturesContainerStyle = css`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
 `;
 
 export const valuedFeatureStyle = css`
@@ -124,5 +125,6 @@ export const planCardBtnStyle = css`
   border-radius: 15px;
   text-decoration: none;
   width: fit-content;
-  margin: 40px auto;
+  margin: 25px auto;
+  margin-top: auto;
 `;
