@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
+import Logo from "@assets/illustrations/logo";
 import { mainNavLinks } from "@common-data";
-import { ImageComp, NavLinkContainer } from "@components";
+import { NavLinkContainer } from "@components";
 import useHeader from "@hooks/use-header";
 import {
   hamBtn,
@@ -38,15 +39,7 @@ export default function Header() {
         aria-label="Hymns of web | Home Page"
         onClick={linkClickHandler}
       >
-        <ImageComp
-          src="/assets/images/logo.png"
-          alt="Hymns of web | Logo"
-          containerCss={logoContainer}
-          priority
-          height={70}
-          width={70}
-          sizes="100%"
-        />
+        <Logo css={logoContainer} />
       </Link>
       <nav className={isMenuOpen ? "active" : undefined} css={nav}>
         {mainNavLinks.map(linksMapper)}

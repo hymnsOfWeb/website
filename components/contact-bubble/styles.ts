@@ -52,7 +52,7 @@ function nthTypeGenerator() {
 
 export const bubbleWrapperCss = css`
   position: absolute;
-  border: 2px solid var(--color-text-primary);
+  border: 2px solid var(--color-primary-400);
   border-radius: 50%;
   font-size: 3rem;
   height: 2em;
@@ -166,6 +166,9 @@ export const bubbleSvgCss = css`
   opacity: 1;
   position: absolute;
   transition: filter 0.3s ease, opacity 0.2s ease 0.2s;
+  path {
+    fill: var(--color-primary-400);
+  }
   ${mediaQuery.mobilePortrait} {
     position: static;
     height: 50%;

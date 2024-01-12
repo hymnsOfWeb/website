@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
+import Modal from "@components/modal";
 import ValensiteAbout from "@modules/valensite/valensite-about";
 import ValensiteContact from "@modules/valensite/valensite-contact";
 import ValensiteFeatures from "@modules/valensite/valensite-features";
@@ -9,6 +10,7 @@ import ValensitePlans from "@modules/valensite/valensite-plans";
 export default function ValensiteModule() {
   const valensiteRef = useRef<HTMLElement>(null);
   const valNavRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDialogElement>(null);
 
   const observerCallback: IntersectionObserverCallback = useCallback(
     (entries) => {
@@ -60,9 +62,10 @@ export default function ValensiteModule() {
       <ValensiteNav ref={valNavRef} />
       <ValensiteLanding />
       <ValensiteAbout />
-      <ValensitePlans />
+      <ValensitePlans modalRef={modalRef} />
       <ValensiteFeatures />
       <ValensiteContact />
+      <Modal ref={modalRef} />
     </section>
   );
 }

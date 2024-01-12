@@ -1,3 +1,4 @@
+import { Ref, RefObject } from "react";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsCheck2 } from "react-icons/bs";
@@ -8,7 +9,8 @@ import {
   booleanFeaturesWrapperStyle,
   checkSvgStyle,
   crossSvgStyle,
-  planCardBtnStyle,
+  helperBtnStyle,
+  ctaBtnStyle,
   planCardContainerStyle,
   planHeadingStyle,
   planPriceStyle,
@@ -17,15 +19,30 @@ import {
   popularTextStyle,
   valuedFeatureStyle,
   valuedFeaturesContainerStyle,
+  btnContainerCss,
 } from "@components/valensite-plan-card/styles";
 
 export default function ValensitePlanCard({
   planData,
+  modalRef,
 }: {
   planData: (typeof valensitePlans)[0];
+  modalRef: Ref<HTMLDialogElement>;
 }) {
-  const { booleanFeatures, color, name, price, valuedFeatures, btn, popular } =
-    planData;
+  const clickHandler = () => {
+    (modalRef as RefObject<HTMLDialogElement>).current?.showModal();
+  };
+
+  const {
+    booleanFeatures,
+    color,
+    name,
+    price,
+    valuedFeatures,
+    primaryBtn,
+    secondaryBtn,
+    popular,
+  } = planData;
 
   const booleanFeatMapper = (
     feat: (typeof booleanFeatures)[0],
@@ -44,11 +61,7 @@ export default function ValensitePlanCard({
   };
 
   const spanMapper = (elem: string, index: number) => {
-    return (
-      <>
-        <span key={index}>{elem}</span>
-      </>
-    );
+    return <span key={index}>{elem}</span>;
   };
 
   const valuedFeatMapper = (
@@ -63,7 +76,6 @@ export default function ValensitePlanCard({
       </div>
     );
   };
-
   return (
     <div css={planCardContainerStyle}>
       {popular && (
@@ -83,9 +95,14 @@ export default function ValensitePlanCard({
       <div css={valuedFeaturesContainerStyle}>
         {valuedFeatures.map(valuedFeatMapper)}
       </div>
-      <Link href={btn.link} css={planCardBtnStyle}>
-        {btn.text}
-      </Link>
+      <div css={btnContainerCss}>
+        <Link href={primaryBtn.link} css={ctaBtnStyle}>
+          {primaryBtn.text}
+        </Link>
+        <button css={helperBtnStyle} onClick={clickHandler}>
+          {secondaryBtn.text}
+        </button>
+      </div>
     </div>
   );
 }

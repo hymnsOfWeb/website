@@ -31,13 +31,13 @@ export const secBtnsContainerCss = css`
 
 export const secBtnsCss = css`
   ${commonBtnsCss}
-  border: 2px solid var(--color-text-highlight);
-  color: var(--color-text-highlight);
+  border: 2px solid var(--color-primary-400);
+  color: var(--color-primary-400);
 `;
 
 export const buttonCss = css`
   ${commonBtnsCss}
-  background-color: var(--color-text-highlight);
+  background-color: var(--color-primary-400);
   transition: all 0.2s ease;
   gap: 10px;
   color: var(--color-bg-primary);
@@ -59,14 +59,14 @@ export const workHeadingCss = css`
     display: block;
     width: fit-content;
     font-size: 1.2rem;
-    color: var(--color-text-secondary);
+    color: var(--color-secondary-500);
   }
 `;
 
 export const workTitleCss = css`
   font-size: clamp(0rem, 5vw, 3rem);
   font-weight: 600;
-  color: var(--color-text-highlight);
+  color: var(--color-primary-400);
   ${mediaQuery.mobile} {
     font-size: clamp(0rem, 10vw, 3rem);
   }

@@ -42,6 +42,7 @@ const valensiteFont = LocalFont({
 export const valLandingContainerStyle = css`
   height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -60,9 +61,9 @@ export const valensiteHeadingStyle = css`
 `;
 
 export const valLandingSpanStyle = css`
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   ${mediaQuery.mobile} {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0 7%;
     text-align: center;
   }
@@ -74,8 +75,8 @@ export const valLandingSpanStyle = css`
 export const valLandingBtnStyle = css`
   background-color: var(--color-val-white);
   text-decoration: none;
-  padding: 1em 1.5em;
-  border-radius: 20px;
+  padding: 0.75em 1em;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +85,7 @@ export const valLandingBtnStyle = css`
   span {
     color: var(--color-bg-val-primary);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: 0.05em;
   }
   ${mediaQuery.mobile} {
@@ -95,19 +96,35 @@ export const valLandingBtnStyle = css`
     }
   }
   ${mediaQuery.squeezedScreen} {
-    padding: 1em 1.25em;
+    padding: 0.75em 1em;
     span {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 `;
 
 export const valLandingIconStyle = css`
-  font-size: 2rem;
+  font-size: 1.25rem;
   path {
     color: var(--color-bg-val-primary);
   }
   ${mediaQuery.mobile} {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+`;
+
+export const decorImagesCss = (
+  top: string,
+  left: string,
+  height: string,
+  width: string
+) => css`
+  position: absolute;
+  height: ${height};
+  width: ${width};
+  top: ${top};
+  left: ${left};
+  img {
+    object-fit: contain;
   }
 `;

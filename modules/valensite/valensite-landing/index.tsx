@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { valensiteLandingData } from "@common-data";
+import { ImageComp } from "@components";
+import { decorImagesData } from "@modules/valensite/valensite-landing/data";
 import {
+  decorImagesCss,
   valLandingBtnStyle,
   valLandingContainerStyle,
   valLandingIconStyle,
@@ -19,6 +22,17 @@ export default function ValensiteLanding() {
         <span>{text}</span>
         <Icon css={valLandingIconStyle} />
       </Link>
+      {decorImagesData.map((data, index: number) => {
+        const { height, left, name, top, width } = data;
+        return (
+          <ImageComp
+            key={index}
+            alt="-"
+            src={`/assets/images/valensite/landing-images/${name}.png`}
+            containerCss={decorImagesCss(top, left, height, width)}
+          />
+        );
+      })}
     </div>
   );
 }

@@ -118,13 +118,32 @@ export const valuedFeatureStyle = css`
   }
 `;
 
-export const planCardBtnStyle = css`
+export const btnContainerCss = css`
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 100%;
+  align-items: center;
+  margin-top: auto;
+`;
+
+export const ctaBtnStyle = css`
   background-color: var(--color-bg-val-primary);
   font-size: 1.4rem;
   padding: 0.5em 1em;
   border-radius: 15px;
   text-decoration: none;
   width: fit-content;
-  margin: 25px auto;
-  margin-top: auto;
+`;
+
+export const helperBtnStyle = css`
+  font-size: 1.2rem;
+  border-radius: 15px;
+  text-decoration: none;
+  width: fit-content;
+  color: var(--color-bg-val-primary);
+  margin-bottom: 4vh;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 `;

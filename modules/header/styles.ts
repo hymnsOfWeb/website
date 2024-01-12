@@ -18,8 +18,12 @@ export const headerWrapper = css`
 `;
 
 export const logoContainer = css`
-  aspect-ratio: 1;
-  height: 100%;
+  height: 35px;
+  width: 35px;
+  path {
+    fill: var(--color-text-primary);
+    transition: all 0.3s linear;
+  }
 `;
 
 export const logoWrapper = css`
@@ -31,7 +35,6 @@ export const logoWrapper = css`
   overflow: hidden;
   border: 2px solid var(--color-text-primary);
   padding: 15px;
-  filter: invert(0);
   position: absolute;
   top: 5vh;
   transition: filter 0.3s ease-in-out 0.6s, backdrop-filter 0.5s ease 0.6s,
@@ -42,11 +45,24 @@ export const logoWrapper = css`
       scale 0.3s ease-in-out;
     filter: invert(1);
     backdrop-filter: none;
+    &:hover {
+      border-color: var(--color-text-primary);
+      svg {
+        path {
+          fill: var(--color-text-primary);
+        }
+      }
+    }
   }
   ${mediaQuery.desktop} {
     &:hover {
-      border-color: var(--color-text-highlight);
+      border-color: var(--color-primary-400);
       scale: 1.15;
+      svg {
+        path {
+          fill: var(--color-primary-400);
+        }
+      }
     }
   }
 `;
@@ -119,7 +135,7 @@ export const hamBtn = css`
 `;
 
 export const nav = css`
-  --_col: var(--color-secondary-600);
+  --_col: var(--color-secondary-400);
   touch-action: none;
   --nav-width: 160vw;
   ${mediaQuery.mobile} {

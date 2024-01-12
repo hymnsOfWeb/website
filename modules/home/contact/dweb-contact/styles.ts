@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import { mediaQuery } from "@common-styles";
 
 export const contactCss = css`
+  --common-color: var(--color-primary-400);
   height: 110vh;
   width: 100%;
   display: flex;
@@ -32,9 +33,8 @@ export const contactCircleCss = css`
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  color: var(--color-text-primary);
   top: 50%;
-  border: 2px solid var(--color-text-primary);
+  border: 2px solid var(--common-color);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ export const contactCircleCss = css`
     transition: all 0.3s ease 0.1s;
     font-weight: 500;
     z-index: 1;
-    color: var(--color-text-primary);
+    color: var(--common-color);
     font-size: inherit;
     text-align: center;
   }

@@ -45,7 +45,7 @@ export const valPlansTextContainertyle = css`
 export const plansContainerStyle = css`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4em;
+  gap: 10vw;
   width: fit-content;
   ${mediaQuery.smallLaptop} {
     grid-template-columns: repeat(2, 1fr);

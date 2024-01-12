@@ -453,9 +453,12 @@ export const valensitePlans = [
     color: "#a3b4c8",
 
     popular: false,
-    btn: {
-      text: "Know More",
+    primaryBtn: {
+      text: "Buy Now",
       link: "/",
+    },
+    secondaryBtn: {
+      text: "Know More",
     },
     booleanFeatures: [
       {
@@ -504,9 +507,12 @@ export const valensitePlans = [
     price: "1299",
 
     popular: true,
-    btn: {
-      text: "Know More",
+    primaryBtn: {
+      text: "Buy Now",
       link: "/",
+    },
+    secondaryBtn: {
+      text: "Know More",
     },
     booleanFeatures: [
       {
@@ -554,9 +560,12 @@ export const valensitePlans = [
     price: "2499",
     color: "#74d2f4",
     popular: false,
-    btn: {
-      text: "Know More",
+    primaryBtn: {
+      text: "Buy Now",
       link: "/",
+    },
+    secondaryBtn: {
+      text: "Know More",
     },
     booleanFeatures: [
       {

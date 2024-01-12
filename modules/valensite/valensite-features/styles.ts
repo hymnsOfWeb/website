@@ -12,7 +12,6 @@ export const valFeaturesContainerCss = css`
   ${mediaQuery.desktop} {
     height: 100vh;
   }
-  gap: 25vh;
   ${mediaQuery.smallLaptop} {
     padding-left: 6%;
     padding-right: 7.5%;
@@ -90,7 +89,7 @@ export const quoteCss = css`
   font-style: italic;
   display: flex;
   width: 50%;
-  line-height: 2.25em;
+  line-height: 2em;
   ${mediaQuery.smallLaptop} {
     line-height: 1.75em;
     font-size: 1.5rem;
