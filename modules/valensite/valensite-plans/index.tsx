@@ -1,4 +1,3 @@
-import { Ref } from "react";
 import { valensitePlanHeading, valensitePlans } from "@common-data";
 import { ValensitePlanCard } from "@components";
 import {
@@ -7,15 +6,9 @@ import {
   valPlansTextContainertyle,
 } from "@modules/valensite/valensite-plans/styles";
 
-export default function ValensitePlans({
-  modalRef,
-}: {
-  modalRef: Ref<HTMLDialogElement>;
-}) {
+export default function ValensitePlans() {
   const planMapper = (plan: (typeof valensitePlans)[0], index: number) => {
-    return (
-      <ValensitePlanCard key={index} planData={plan} modalRef={modalRef} />
-    );
+    return <ValensitePlanCard key={index} planData={plan} />;
   };
   return (
     <div css={valPlanWrapperStyle} id="valensite-plans">

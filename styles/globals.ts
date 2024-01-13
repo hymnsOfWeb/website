@@ -47,7 +47,7 @@ export const globalCss = css`
 
     --color-bg-val-primary: #e0325b;
     --color-bg-val-secondary: hsla(0, 0%, 95%, 1);
-    --color-val-black: black;
+    --color-val-black: #000000;
     --color-bg-val-radial: radial-gradient(
       110% 85% at 50% 55%,
       #f34770 15%,
@@ -58,7 +58,7 @@ export const globalCss = css`
       #970226 100%
     );
     --color-bg-gray: #e0e0e0;
-    --color-val-white: white;
+    --color-val-white: #ffffff;
   }
 
   .chromium,

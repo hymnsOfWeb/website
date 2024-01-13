@@ -5,7 +5,7 @@ export const planCardContainerStyle = css`
   background-color: var(--color-val-white);
   display: flex;
   flex-direction: column;
-  width: 275px;
+  width: clamp(275px, 22vw, 350px);
   border-radius: 30px;
   box-shadow: 10px 10px 20px rgba(35, 35, 35, 0.2);
   position: relative;
@@ -48,6 +48,9 @@ export const planHeadingStyle = (color: string) => css`
   font-weight: 500;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+  @media (width < 450px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const planPriceStyle = css`
@@ -60,6 +63,12 @@ export const planPriceStyle = css`
     font-size: 2.25rem;
     color: var(--color-bg-val-primary);
     font-weight: 700;
+  }
+  @media (width < 450px) {
+    span {
+      font-size: 1.4rem;
+      padding: 1.25vh 0;
+    }
   }
 `;
 
@@ -80,6 +89,9 @@ export const booleanFeatureStyle = css`
   font-size: 1.2rem;
   span {
     color: var(--color-val-black);
+  }
+  @media (width < 450px) {
+    font-size: 1rem;
   }
 `;
 
@@ -116,6 +128,9 @@ export const valuedFeatureStyle = css`
   .val-feat-name {
     font-weight: 600;
   }
+  @media (width < 450px) {
+    font-size: 1rem;
+  }
 `;
 
 export const btnContainerCss = css`
@@ -130,10 +145,19 @@ export const btnContainerCss = css`
 export const ctaBtnStyle = css`
   background-color: var(--color-bg-val-primary);
   font-size: 1.4rem;
-  padding: 0.5em 1em;
+  padding: 0.25em 1em;
   border-radius: 15px;
   text-decoration: none;
   width: fit-content;
+  ${mediaQuery.desktop} {
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: 4px 4px 14px -1px var(--box-shadow-primary);
+    }
+  }
+  @media (width < 450px) {
+    font-size: 1rem;
+  }
 `;
 
 export const helperBtnStyle = css`
@@ -146,4 +170,8 @@ export const helperBtnStyle = css`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
+  @media (width < 450px) {
+    font-size: 1rem;
+  }
 `;

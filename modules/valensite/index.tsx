@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
-import Modal from "@components/modal";
+import Head from "next/head";
+import { valensitePageMeta } from "@common-data";
 import ValensiteAbout from "@modules/valensite/valensite-about";
 import ValensiteContact from "@modules/valensite/valensite-contact";
 import ValensiteFeatures from "@modules/valensite/valensite-features";
@@ -10,7 +11,12 @@ import ValensitePlans from "@modules/valensite/valensite-plans";
 export default function ValensiteModule() {
   const valensiteRef = useRef<HTMLElement>(null);
   const valNavRef = useRef<HTMLDivElement>(null);
-  const modalRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const header = document.querySelector("#header");
+    header?.classList.add("black");
+    return () => header?.classList.remove("black");
+  }, []);
 
   const observerCallback: IntersectionObserverCallback = useCallback(
     (entries) => {
@@ -57,15 +63,25 @@ export default function ValensiteModule() {
       observer.disconnect();
     };
   }, [observerCallback]);
+
+  function ValensiteHead() {
+    return (
+      <Head>
+        <title>{valensitePageMeta.title}</title>
+        <meta name="description" content={valensitePageMeta.description} />
+      </Head>
+    );
+  }
+
   return (
     <section id="valensite" ref={valensiteRef}>
+      <ValensiteHead />
       <ValensiteNav ref={valNavRef} />
       <ValensiteLanding />
       <ValensiteAbout />
-      <ValensitePlans modalRef={modalRef} />
+      <ValensitePlans />
       <ValensiteFeatures />
       <ValensiteContact />
-      <Modal ref={modalRef} />
     </section>
   );
 }

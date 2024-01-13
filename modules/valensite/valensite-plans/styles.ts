@@ -27,6 +27,9 @@ export const valPlansTextContainertyle = css`
     color: inherit;
     font-size: 1.5rem;
     font-weight: 300;
+    ${mediaQuery.mobile} {
+      font-size: 1.2rem;
+    }
   }
   ${mediaQuery.smallLaptop} {
     width: 100%;
@@ -45,7 +48,7 @@ export const valPlansTextContainertyle = css`
 export const plansContainerStyle = css`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10vw;
+  gap: 6vw;
   width: fit-content;
   ${mediaQuery.smallLaptop} {
     grid-template-columns: repeat(2, 1fr);
@@ -54,5 +57,6 @@ export const plansContainerStyle = css`
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
     place-items: center;
+    gap: 75px;
   }
 `;

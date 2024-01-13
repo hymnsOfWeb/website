@@ -31,18 +31,8 @@ export const valNavLinkStyle = css`
   }
   &.active {
     opacity: 1;
-    & > span {
-      &::after {
-        content: "";
-        position: absolute;
-        height: 160%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        aspect-ratio: 1;
-        border-radius: 50%;
-        border: 2px solid var(--color-val-black);
-      }
+    span {
+      background-color: var(--color-val-black);
     }
   }
 `;
@@ -50,7 +40,7 @@ export const valNavLinkStyle = css`
 export const valNavDotStyle = css`
   height: 10px;
   aspect-ratio: 1;
-  background-color: var(--color-val-black);
+  border: 2px solid var(--color-val-black);
   border-radius: 50%;
   display: flex;
   position: relative;

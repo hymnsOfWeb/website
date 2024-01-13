@@ -15,6 +15,25 @@ export const headerWrapper = css`
   position: fixed;
   z-index: 999;
   --_main-time-delay: ${mainTimeDelay}s;
+  &.black {
+    .logo-wrapper {
+      border-color: black;
+      svg {
+        path {
+          fill: black;
+        }
+      }
+    }
+    .ham-btn {
+      --_c: black;
+      &.active {
+        &::before,
+        &::after {
+          background-color: white;
+        }
+      }
+    }
+  }
 `;
 
 export const logoContainer = css`
@@ -36,6 +55,7 @@ export const logoWrapper = css`
   border: 2px solid var(--color-text-primary);
   padding: 15px;
   position: absolute;
+  outline: none;
   top: 5vh;
   transition: filter 0.3s ease-in-out 0.6s, backdrop-filter 0.5s ease 0.6s,
     scale 0.3s ease-in-out, border-color 0.3s ease;

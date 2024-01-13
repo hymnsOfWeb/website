@@ -7,34 +7,10 @@ const valensiteFont = LocalFont({
     {
       path: "../../../public/assets/fonts/macaroni.ttf",
       style: "normal",
-      weight: "400",
-    },
-    {
-      path: "../../../public/assets/fonts/macaroni.ttf",
-      style: "normal",
-      weight: "500",
-    },
-    {
-      path: "../../../public/assets/fonts/macaroni.ttf",
-      style: "normal",
-      weight: "600",
-    },
-    {
-      path: "../../../public/assets/fonts/macaroni.ttf",
-      style: "normal",
       weight: "700",
     },
-    {
-      path: "../../../public/assets/fonts/macaroni.ttf",
-      style: "normal",
-      weight: "800",
-    },
-    {
-      path: "../../../public/assets/fonts/macaroni.ttf",
-      style: "normal",
-      weight: "900",
-    },
   ],
+  preload: true,
   display: "swap",
   fallback: ["sans-serif"],
 });
@@ -47,6 +23,9 @@ export const valLandingContainerStyle = css`
   justify-content: center;
   align-items: center;
   background: var(--color-bg-val-radial);
+  ${mediaQuery.mobile} {
+    overflow: hidden;
+  }
 `;
 
 export const valensiteHeadingStyle = css`
@@ -82,11 +61,20 @@ export const valLandingBtnStyle = css`
   justify-content: center;
   gap: 0.8em;
   transform: translateY(10vh);
+  border: none;
+  outline: none;
+  cursor: pointer;
   span {
     color: var(--color-bg-val-primary);
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: 0.05em;
+  }
+  ${mediaQuery.desktop} {
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: 4px 4px 10px -1px var(--box-shadow-primary);
+    }
   }
   ${mediaQuery.mobile} {
     border-radius: 15px;
@@ -117,7 +105,10 @@ export const decorImagesCss = (
   top: string,
   left: string,
   height: string,
-  width: string
+  width: string,
+  phoneLeft: string,
+  phoneTop: string,
+  display?: string
 ) => css`
   position: absolute;
   height: ${height};
@@ -126,5 +117,11 @@ export const decorImagesCss = (
   left: ${left};
   img {
     object-fit: contain;
+  }
+  ${mediaQuery.mobile} {
+    scale: 0.5;
+    top: ${phoneTop};
+    left: ${phoneLeft};
+    display: ${display};
   }
 `;

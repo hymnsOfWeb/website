@@ -190,6 +190,13 @@ export const contactPageMeta = {
   },
 };
 
+export const valensitePageMeta = {
+  title: "Hymns of Web | Valensite",
+  description:
+    "Elevate digital presence with Hymns of Web:\
+ premier SaaS for cutting-edge website & software solutions.",
+};
+
 export const homeAboutTextRibbon = {
   text: "About",
   count: 5,
@@ -400,7 +407,6 @@ export const valensiteLandingData = {
   btn: {
     text: "Get Started",
     Icon: TbClick,
-    link: "/",
   },
 };
 
@@ -500,6 +506,21 @@ export const valensitePlans = [
         values: "Not Included",
       },
     ],
+    dialogList: [
+      "Clean and elegant template design. Non-editable structure ensures a consistent and polished presentation.",
+      "Ability to upload up to 50 high-resolution photos to capture precious moments. \
+      Perfect for showcasing memorable experiences and creating a personalized touch.",
+      "Inclusion of 2 video uploads to add dynamic content and tell your unique love story.",
+      "Exclusive access to a premium color palette for a visually stunning and cohesive website.\
+      Elevate the aesthetics of your Valensite website with sophisticated, non-customizable premium colors.",
+      "Only English Language Support. Multilingual Option is for plans higher than Silver.",
+      "Optimized for mobile viewing, allowing couples to share their love story on the go. \
+      Provides a user-friendly experience for those accessing the website on smartphones.",
+      "Desktop and Tablet view supported for higher plans.",
+      "Streamlined experience with no storage constraints for hassle-free website management.",
+      "A 14-day active period for the Valensite Silver Plan to ensure timely celebration. \
+      Ideal for capturing the essence of Valentine's Day festivities with a limited yet impactful timeframe.",
+    ],
   },
   {
     name: "Gold",
@@ -554,6 +575,26 @@ export const valensitePlans = [
         values: "Website Countdown",
       },
     ],
+    dialogList: [
+      "Unlock the full potential of Valensite experience with a custom-designed website\
+      to reflect the uniqueness of your love story, creating a digital space that truly represents your journey.",
+      "Infuse your website with the colors of your love as you can choose the colors of your interest or\
+      your partner's favourite colors! The choice is yours.  ",
+      "Capture every cherished moment with the ability to upload up to 50 photos and 5 heartwarming videos.\
+      Share the depth of your connection through a rich multimedia experience that goes beyond words.",
+      "Extend the celebration with an extended active period of 6 months.\
+      Cherish your love story over time, reliving the special moments for half a year to create lasting memories.",
+      "Ensure an immersive experience with optimized views for both phones and desktops.\
+      If you or your partner happen to 'Ipad people', we recommend you take the Platinum plan\
+      as it covers tablets as well. ",
+      "Embark on a romantic journey with a specially curated treasure path.",
+      "This special treasure path helps you and your partner delve deeper into the Valentine's Week celebration\
+      with exclusive templates for all the days of the Valentine's Week. How extragavant!",
+      "Opt for additional storage space to keep all your memories in one place.",
+      "Tailor your Valensite Gold Plan even further with optional add-ons for a truly bespoke experience.\
+      Explore premium features to enhance your love story, allowing you to customize your Valensite journey\
+      according to your unique preferences.",
+    ],
   },
   {
     name: "Platinum",
@@ -606,6 +647,25 @@ export const valensitePlans = [
         featName: "Treasure Path",
         multipleValues: ["Website Countdown", "Love Week Custom Emails"],
       },
+    ],
+    dialogList: [
+      "Tailor every detail to your liking, from design elements to interactive features,\
+      creating a unique Valensite experience that reflects your dream love story.",
+      "Choose colors that resonate with your romance, shaping a visually\
+      stunning and personalized ambiance for your Valensite website.\
+      Leave it to us bring life to the colors you choose!",
+      "Share your love with no bounds—unlimited photo and video uploads to\
+      capture every moment that defines your journey. By default we allow 100 photos and 10 videos support.",
+      "This piece of a digital token will be active for 12 months,\
+      allowing your Valensite Platinum Plan to adapt to the rhythm of your relationship.",
+      "The best part of the Platinum plan is it's universal support all and any phone, tablet, desktop. You name it!",
+      "Embark on a romantic journey with a specially curated treasure path.",
+      "Enjoy exclusive Love Week templates tailored to highlight the nuances of your relationship,\
+      adding a personal touch to the Valentine's celebration.",
+      "Opt for customizable storage plans based on your memories' magnitude,\
+      ensuring ample space for a lifetime of cherished moments.",
+      "Elevate your Valensite journey with premium features,\
+      offering advanced customization options and exclusive add-ons for a VIP romantic experience.",
     ],
   },
 ];

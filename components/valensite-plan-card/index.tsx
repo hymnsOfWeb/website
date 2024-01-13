@@ -1,9 +1,10 @@
-import { Ref, RefObject } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsCheck2 } from "react-icons/bs";
 import { RiFireFill } from "react-icons/ri";
 import { valensitePlans } from "@common-data";
+import Modal from "@components/modal";
 import {
   booleanFeatureStyle,
   booleanFeaturesWrapperStyle,
@@ -24,15 +25,9 @@ import {
 
 export default function ValensitePlanCard({
   planData,
-  modalRef,
 }: {
   planData: (typeof valensitePlans)[0];
-  modalRef: Ref<HTMLDialogElement>;
 }) {
-  const clickHandler = () => {
-    (modalRef as RefObject<HTMLDialogElement>).current?.showModal();
-  };
-
   const {
     booleanFeatures,
     color,
@@ -42,7 +37,17 @@ export default function ValensitePlanCard({
     primaryBtn,
     secondaryBtn,
     popular,
+    dialogList,
   } = planData;
+  const modalRef = useRef<HTMLDialogElement>(null);
+
+  const clickHandler = () => {
+    const modal = modalRef.current;
+    if (modal) {
+      modal.showModal();
+      document.body.style.setProperty("overflow-y", "hidden");
+    }
+  };
 
   const booleanFeatMapper = (
     feat: (typeof booleanFeatures)[0],
@@ -102,6 +107,8 @@ export default function ValensitePlanCard({
         <button css={helperBtnStyle} onClick={clickHandler}>
           {secondaryBtn.text}
         </button>
+
+        <Modal ref={modalRef} name={name} color={color} list={dialogList} />
       </div>
     </div>
   );

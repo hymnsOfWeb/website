@@ -30,7 +30,7 @@ export default function Header() {
     );
   };
   return (
-    <header css={headerWrapper} ref={ref}>
+    <header css={headerWrapper} ref={ref} id="header">
       <Link
         href="/"
         className={isMenuOpen ? "logo-wrapper active" : "logo-wrapper"}
