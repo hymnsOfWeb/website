@@ -1,6 +1,5 @@
 import { Ref, RefObject, forwardRef, useCallback } from "react";
 import Link from "next/link";
-import { BsArrowUpRight } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import {
   dialogBtnContainerCss,
@@ -10,7 +9,6 @@ import {
   dialogHeadingContainerCss,
   dialogWrapperCss,
   headerTextCss,
-  demoBtnCss,
   buyBtnCss,
 } from "@components/modal/styles";
 
@@ -42,10 +40,10 @@ function M({ name, color, list }: ModalProps, ref: Ref<HTMLDialogElement>) {
             <Link href="/" css={buyBtnCss}>
               Buy Now
             </Link>
-            <Link href="/" css={demoBtnCss}>
+            {/* <Link href="/" css={demoBtnCss}>
               <span>Live Demo </span>
               <BsArrowUpRight />
-            </Link>
+            </Link> */}
           </div>
         </div>
         <IoClose css={closeIconCss} onClick={closeHandler} />

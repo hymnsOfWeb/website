@@ -3,6 +3,7 @@ import Head from "next/head";
 import { valensitePageMeta } from "@common-data";
 import ValensiteAbout from "@modules/valensite/valensite-about";
 import ValensiteContact from "@modules/valensite/valensite-contact";
+import ValensiteFaqs from "@modules/valensite/valensite-faqs";
 import ValensiteFeatures from "@modules/valensite/valensite-features";
 import ValensiteLanding from "@modules/valensite/valensite-landing";
 import ValensiteNav from "@modules/valensite/valensite-nav";
@@ -82,6 +83,7 @@ export default function ValensiteModule() {
       <ValensitePlans />
       <ValensiteFeatures />
       <ValensiteContact />
+      <ValensiteFaqs />
     </section>
   );
 }

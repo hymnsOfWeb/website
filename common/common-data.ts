@@ -697,6 +697,10 @@ export const valensiteNav = [
     text: "Contact Us",
     link: "/valensite#valensite-contact",
   },
+  {
+    text: "FAQS",
+    link: "/valensite#valensite-faqs",
+  },
 ];
 
 export const valensiteFeaturesData = {
@@ -717,3 +721,5 @@ export const valensiteFeaturesData = {
     would be the top result.",
   ],
 };
+
+export const valensiteFaqHeader = "Frequently Asked Questions";
