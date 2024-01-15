@@ -53,6 +53,15 @@ export default function ValensiteFaqs() {
     };
   };
 
+  const faqMapper = (faq: (typeof faqsData)[0], index: number) => {
+    return (
+      <article key={index} className="carousal-items" css={carousalItemCss}>
+        <h2>{faq.question}</h2>
+        <p>{faq.answer}</p>
+      </article>
+    );
+  };
+
   return (
     <div id="valensite-faqs" css={faqsContainerCss}>
       <h2 className="faq-header">{valensiteFaqHeader}</h2>
@@ -62,18 +71,7 @@ export default function ValensiteFaqs() {
         </div>
         <div css={carousalWrapperCss}>
           <div css={carousalTrackCss} ref={trackRef}>
-            {faqsData.map((faq: (typeof faqsData)[0], index: number) => {
-              return (
-                <article
-                  key={index}
-                  className="carousal-items"
-                  css={carousalItemCss}
-                >
-                  <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
-                </article>
-              );
-            })}
+            {faqsData.map(faqMapper)}
           </div>
         </div>
         <div css={btnsCarousalCss} className="carousal-btns right-btn">

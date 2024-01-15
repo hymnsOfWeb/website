@@ -86,7 +86,7 @@ export const carousalItemCss = css`
   justify-content: center;
   padding: 2em;
   gap: 5vh;
-  h3 {
+  h2 {
     font-size: 2rem;
   }
   p {
@@ -94,7 +94,7 @@ export const carousalItemCss = css`
     font-size: 1.4rem;
   }
   ${mediaQuery.mobile} {
-    h3 {
+    h2 {
       font-size: 1.2rem;
     }
     p {
