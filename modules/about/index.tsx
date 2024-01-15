@@ -3,6 +3,7 @@ import { aboutPageMeta } from "@common-data";
 import AboutLiner from "@modules/about/about-liner";
 import AboutMain from "@modules/about/about-main";
 import { aboutSectionCss } from "@modules/about/styles";
+import ValensiteDialog from "@modules/home/valensite-popup";
 
 function AboutHead() {
   const mapper = (key: string, index: number) => {
@@ -27,6 +28,7 @@ function AboutHead() {
 export default function AboutModule() {
   return (
     <section id="about" aria-label="about" css={aboutSectionCss}>
+      <ValensiteDialog />
       <AboutHead />
       <AboutLiner />
       <AboutMain />

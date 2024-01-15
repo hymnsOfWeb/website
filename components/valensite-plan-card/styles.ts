@@ -157,6 +157,8 @@ export const ctaBtnStyle = css`
   }
   @media (width < 450px) {
     font-size: 1rem;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
   }
 `;
 

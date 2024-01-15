@@ -1,7 +1,7 @@
 import { type Ref, forwardRef } from "react";
 import { homeLandingTexts } from "@common-data";
-import { hiddenMainHeading, landingHeading, landingWrapper } from "./styles";
 import SubText from "@modules/home/landing/sub-text";
+import { hiddenMainHeading, landingHeading, landingWrapper } from "./styles";
 
 interface HomeLandingProps {
   atBottom?: boolean;

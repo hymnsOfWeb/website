@@ -77,10 +77,14 @@ export const valLandingBtnStyle = css`
     }
   }
   ${mediaQuery.mobile} {
+    font-size: 1.2rem;
     border-radius: 15px;
-    padding: 0.5em 1em;
-    span {
-      font-size: 1rem;
+    padding: 0.5em 1.25em;
+    ${mediaQuery.squeezedScreen} {
+      padding: 0.5em 1em;
+      span {
+        font-size: 1rem;
+      }
     }
   }
   ${mediaQuery.squeezedScreen} {

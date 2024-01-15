@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { mediaQuery } from "@common-styles";
 
 export const mainHomeWrapper = css`
   background-color: var(--color-bg-primary);
@@ -9,6 +10,12 @@ export const mainHomeWrapper = css`
     &.canvas-wrapper {
       z-index: 0;
       position: fixed;
+    }
+    &.valensite-popup {
+      ${mediaQuery.desktop} {
+        position: fixed;
+        z-index: 10;
+      }
     }
   }
 `;

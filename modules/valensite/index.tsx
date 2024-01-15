@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import Head from "next/head";
-import { valensitePageMeta } from "@common-data";
+import { mail, phoneNumber, valensitePageMeta } from "@common-data";
 import ValensiteAbout from "@modules/valensite/valensite-about";
 import ValensiteContact from "@modules/valensite/valensite-contact";
 import ValensiteFaqs from "@modules/valensite/valensite-faqs";
@@ -65,11 +65,47 @@ export default function ValensiteModule() {
     };
   }, [observerCallback]);
 
+  const valensiteSchemaOrg = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Valensite | Hymns Of Web",
+    telephone: phoneNumber,
+    email: mail,
+    url: "https://www.hymnsofweb.com/valensite",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: phoneNumber,
+        email: mail,
+        contactType: "customer service",
+      },
+    ],
+    keywords:
+      "valensite, valentine, valentine's, gift, gift for him, gift for her, boyfriend gift, husband gift, wife gift",
+  };
+
   function ValensiteHead() {
+    const mapper = (key: string) => {
+      return (
+        <meta
+          property={`og:${key}`}
+          content={valensitePageMeta.og[key as "title"] ?? ""}
+          key={`home-og-meta-${key}`}
+        />
+      );
+    };
     return (
       <Head>
         <title>{valensitePageMeta.title}</title>
+        <link rel="canonical" href="https://hymnsofweb.com/valensite" />
+        {Object.keys(valensitePageMeta.og).map(mapper)}
         <meta name="description" content={valensitePageMeta.description} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(valensiteSchemaOrg),
+          }}
+        />
       </Head>
     );
   }
