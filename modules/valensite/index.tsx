@@ -80,6 +80,12 @@ export default function ValensiteModule() {
         contactType: "customer service",
       },
     ],
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      price: "399.00",
+      priceCurrency: "INR",
+    },
     keywords:
       "valensite, valentine, valentine's, gift, gift for him, gift for her, boyfriend gift, husband gift, wife gift",
   };
