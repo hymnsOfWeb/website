@@ -193,15 +193,13 @@ export const contactPageMeta = {
 export const valensitePageMeta = {
   title: "Valensite - Perfect Valentine's Gift | Hymns of Web",
   description:
-    "Valensite: Your digital Valentine's dream! The ultimate gift website,\
-    a love-filled online retreat capturing your unique story. A living memory\
-    keeper celebrating your love journey. Brought to you by Hymns Of Web!",
+    "Valensite - Your Valentine's dream present! The ultimate digital gift\
+ by Hymns Of Web captures your unique love story, a living memory for your loved ones.",
   og: {
     title: "Valensite - Perfect Valentine's Gift | Hymns of Web",
     description:
-      "Valensite: Your digital Valentine's dream! The ultimate gift website,\
-    a love-filled online retreat capturing your unique story. A living memory\
-    keeper celebrating your love journey. Brought to you by Hymns Of Web!",
+      "Valensite - Your Valentine's dream present! The ultimate digital gift\
+ by Hymns Of Web captures your unique love story, a living memory for your loved ones.",
     image: "/assets/images/logo.png",
     url: "https://www.hymnsofweb.com/valensite",
   },
