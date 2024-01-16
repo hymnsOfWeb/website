@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsCheck2 } from "react-icons/bs";
 import { RiFireFill } from "react-icons/ri";
-import { valensitePlans } from "@common-data";
+import { phoneNumber, valensitePlans } from "@common-data";
 import Modal from "@components/modal";
 import {
   booleanFeatureStyle,
@@ -40,6 +40,10 @@ export default function ValensitePlanCard({
     dialogList,
   } = planData;
   const modalRef = useRef<HTMLDialogElement>(null);
+  const messageRef = useRef<string>("");
+  messageRef.current = encodeURIComponent(
+    `Hey! I would like to buy your ${name} plan for Valensite. Thank you.`
+  );
 
   const clickHandler = () => {
     const modal = modalRef.current;
@@ -101,7 +105,10 @@ export default function ValensitePlanCard({
         {valuedFeatures.map(valuedFeatMapper)}
       </div>
       <div css={btnContainerCss}>
-        <Link href={primaryBtn.link} css={ctaBtnStyle}>
+        <Link
+          href={`https://wa.me/${phoneNumber}?text=${messageRef?.current}`}
+          css={ctaBtnStyle}
+        >
           {primaryBtn.text}
         </Link>
         <button css={helperBtnStyle} onClick={clickHandler}>

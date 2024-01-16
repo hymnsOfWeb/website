@@ -1,6 +1,7 @@
-import { Ref, RefObject, forwardRef, useCallback } from "react";
+import { Ref, RefObject, forwardRef, useCallback, useRef } from "react";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
+import { phoneNumber } from "@common-data";
 import {
   dialogBtnContainerCss,
   closeIconCss,
@@ -17,11 +18,16 @@ interface ModalProps {
   color: string;
   list: string[];
 }
-
 function M({ name, color, list }: ModalProps, ref: Ref<HTMLDialogElement>) {
+  const messageRef = useRef<string>("");
+  messageRef.current = encodeURIComponent(
+    `Hey! I would like to buy your ${name} plan for Valensite. Thank you.`
+  );
+
   const listMapper = useCallback((listDesc: string, index: number) => {
     return <li key={index}>{listDesc}</li>;
   }, []);
+
   const closeHandler = () => {
     const modal = (ref as RefObject<HTMLDialogElement>).current;
     if (modal) {
@@ -29,6 +35,7 @@ function M({ name, color, list }: ModalProps, ref: Ref<HTMLDialogElement>) {
       document.body.style.setProperty("overflow-y", "scroll");
     }
   };
+
   return (
     <dialog css={dialogWrapperCss} ref={ref}>
       <div css={dialogHeadingContainerCss(color)}>
@@ -37,7 +44,12 @@ function M({ name, color, list }: ModalProps, ref: Ref<HTMLDialogElement>) {
             {name} Plan
           </span>
           <div css={dialogBtnContainerCss}>
-            <Link href="/" css={buyBtnCss}>
+            <Link
+              href={`https://wa.me/${phoneNumber}?text=${messageRef?.current}`}
+              css={buyBtnCss}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Buy Now
             </Link>
             {/* <Link href="/" css={demoBtnCss}>
