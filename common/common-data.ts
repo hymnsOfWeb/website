@@ -194,15 +194,13 @@ export const contactPageMeta = {
 export const valensitePageMeta = {
   title: "Valensite - Digital Valentine's Gift | Hymns of Web",
   description:
-    "This Valentine's give your loved ones, a digital valentine's gift - Valensite!\
-    A romantic website encapsulating all your perfect romantic moments, brought to you\
-    by Hymns Of Web. The 2024 way of Valentine's Gift!",
+    "Valensite - Your Valentine's dream present! The ultimate digital gift\
+ by Hymns Of Web captures your unique love story, a living memory for your loved ones.",
   og: {
     title: "Valensite - Digital Valentine's Gift | Hymns of Web",
     description:
-      "This Valentine's give your loved ones, a digital valentine's gift - Valensite!\
-    A romantic website encapsulating all your perfect romantic moments, brought to you\
-    by Hymns Of Web. The 2024 way of Valentine's Gift!",
+      "Valensite - Your Valentine's dream present! The ultimate digital gift\
+ by Hymns Of Web captures your unique love story, a living memory for your loved ones.",
     image: "/assets/images/logo.png",
     url: "https://www.hymnsofweb.com/valensite",
   },
