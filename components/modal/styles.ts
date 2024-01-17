@@ -118,7 +118,6 @@ export const descContainerCss = (col: string) => css`
     background-color: ${col};
   }
   ${mediaQuery.mobile} {
-    height: 100%;
     padding: 1em;
     li {
       font-size: 1rem;

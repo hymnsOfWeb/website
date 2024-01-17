@@ -23,9 +23,7 @@ export const valLandingContainerStyle = css`
   justify-content: center;
   align-items: center;
   background: var(--color-bg-val-radial);
-  ${mediaQuery.mobile} {
-    overflow: hidden;
-  }
+  overflow: hidden;
 `;
 
 export const valensiteHeadingStyle = css`
@@ -40,7 +38,10 @@ export const valensiteHeadingStyle = css`
 `;
 
 export const valLandingSpanStyle = css`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 5px;
   ${mediaQuery.mobile} {
     font-size: 1.2rem;
     margin: 0 7%;

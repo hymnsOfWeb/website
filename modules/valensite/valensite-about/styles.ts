@@ -6,7 +6,8 @@ export const valAboutContainerStyle = css`
   background-color: var(--color-bg-val-secondary);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2vh;
   padding-left: 6%;
   position: relative;
   ${mediaQuery.smallLaptop} {
@@ -24,27 +25,26 @@ export const valAboutContainerStyle = css`
 
 export const valAboutTextWrapperStyle = css`
   width: 55%;
-  h2 {
+  .h2-about-val {
     color: var(--color-bg-val-primary);
     font-size: 3.5rem;
-    margin-bottom: 2vh;
     font-weight: 600;
   }
-  p {
+  .para-about-val {
     color: var(--color-val-black);
     font-size: clamp(1rem, 1.25vw, 1.6rem);
     font-weight: 300;
-    margin: 2vh 0;
+    margin-bottom: 1vh;
   }
   ${mediaQuery.smallLaptop} {
     width: 100%;
   }
   ${mediaQuery.mobile} {
     width: 100%;
-    h2 {
+    .h2-about-val {
       font-size: 2rem;
     }
-    p {
+    .para-about-val {
       font-size: 1rem;
     }
   }
@@ -54,7 +54,8 @@ export const featuresContainerStyle = css`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: fit-content;
-  gap: 3em;
+  column-gap: 3em;
+  row-gap: 2vh;
   ${mediaQuery.mobile} {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);

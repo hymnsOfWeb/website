@@ -3,10 +3,10 @@ import { FaCircleChevronRight, FaCircleChevronLeft } from "react-icons/fa6";
 import { faqsData } from "@common/valensite-faq-data";
 import { valensiteFaqHeader } from "@common-data";
 import {
+  articleCarousalCss,
   btnsCarousalCss,
   carousalContainerCss,
   carousalItemCss,
-  carousalTrackCss,
   carousalWrapperCss,
   faqsContainerCss,
 } from "@modules/valensite/valensite-faqs/styles";
@@ -15,50 +15,43 @@ export default function ValensiteFaqs() {
   const trackRef = useRef<HTMLDivElement>(null);
   const widthRef = useRef<number>(0);
   useEffect(() => {
-    const mainFunc = () => {
-      const itemWidth = (
-        trackRef?.current?.firstChild as HTMLDivElement
-      )?.getBoundingClientRect().width;
+    const resizeHandler = () => {
+      const item = trackRef?.current?.firstChild as HTMLDivElement;
+      const itemWidth = item?.getBoundingClientRect().width;
       widthRef.current = itemWidth;
     };
-    mainFunc();
-    window.addEventListener("resize", mainFunc);
+    resizeHandler();
+    window.addEventListener("resize", resizeHandler);
     return () => {
-      window.removeEventListener("resize", mainFunc);
+      window.removeEventListener("resize", resizeHandler);
     };
   }, []);
-  const clickHandler = (sign: "+" | "-") => {
-    return function theRealSlimHandler() {
-      const track = trackRef.current;
-      const trackNum = Number(
-        track?.style?.transform
-          ?.replace("translateX(-", "")
-          ?.replace("px)", "") || widthRef.current
-      );
 
-      if (track && trackNum > 0) {
-        switch (sign) {
-          case "+":
-            track.style.transform = `translateX(-${
-              trackNum + widthRef.current
-            }px)`;
+  function clickHandler(direction: "left" | "right") {
+    const slider = () => {
+      const track = trackRef.current;
+      if (track) {
+        switch (direction) {
+          case "left":
+            track.scrollLeft -= widthRef.current;
             break;
-          case "-":
-            track.style.transform = `translateX(-${
-              trackNum - widthRef.current
-            }px)`;
+          case "right":
+            track.scrollLeft += widthRef.current;
             break;
         }
       }
     };
-  };
+    return slider;
+  }
 
   const faqMapper = (faq: (typeof faqsData)[0], index: number) => {
     return (
-      <article key={index} className="carousal-items" css={carousalItemCss}>
-        <h2>{faq.question}</h2>
-        <p>{faq.answer}</p>
-      </article>
+      <div key={`faq-item-${index}`} css={carousalItemCss}>
+        <article className="carousal-items" css={articleCarousalCss}>
+          <h2 className="article-header">{faq.question}</h2>
+          <p className="article-para">{faq.answer}</p>
+        </article>
+      </div>
     );
   };
 
@@ -67,15 +60,13 @@ export default function ValensiteFaqs() {
       <h2 className="faq-header">{valensiteFaqHeader}</h2>
       <div css={carousalContainerCss}>
         <div css={btnsCarousalCss} className="carousal-btns left-btn">
-          <FaCircleChevronLeft onClick={clickHandler("-")} />
+          <FaCircleChevronLeft onClick={clickHandler("left")} />
         </div>
-        <div css={carousalWrapperCss}>
-          <div css={carousalTrackCss} ref={trackRef}>
-            {faqsData.map(faqMapper)}
-          </div>
+        <div css={carousalWrapperCss} ref={trackRef}>
+          {faqsData.map(faqMapper)}
         </div>
         <div css={btnsCarousalCss} className="carousal-btns right-btn">
-          <FaCircleChevronRight onClick={clickHandler("+")} />
+          <FaCircleChevronRight onClick={clickHandler("right")} />
         </div>
       </div>
     </div>

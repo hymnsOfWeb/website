@@ -19,7 +19,7 @@ export default function ValensiteLanding() {
   return (
     <div css={valLandingContainerStyle} id="valensite-landing">
       <h1 css={valensiteHeadingStyle}>{heading}</h1>
-      <span css={valLandingSpanStyle}>{subtext}</span>
+      <h2 css={valLandingSpanStyle}>{subtext}</h2>
       <button css={valLandingBtnStyle} onClick={clickHandler}>
         <span>{text}</span>
         <Icon css={valLandingIconStyle} />

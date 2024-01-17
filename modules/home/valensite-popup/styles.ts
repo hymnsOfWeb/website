@@ -12,7 +12,7 @@ export const valensiteDialogWrapperCss = css`
   border-radius: 15px;
   background-color: var(--color-bg-val-primary);
   padding: 25px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 2vh;
   z-index: 2;

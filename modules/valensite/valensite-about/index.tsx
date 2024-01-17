@@ -28,12 +28,21 @@ export default function ValensiteAbout() {
   };
 
   const paraMapper = (para: string, index: number) => {
-    return <p key={index}>{para}</p>;
+    return (
+      <p className="para-about-val" key={index}>
+        {para}
+      </p>
+    );
   };
   return (
     <div css={valAboutContainerStyle} id="valensite-about">
       <div css={valAboutTextWrapperStyle}>
-        <h2>{valensiteAbout.heading}</h2>
+        <h2
+          className="h2-about-val
+h2-about-val"
+        >
+          {valensiteAbout.heading}
+        </h2>
         {valensiteAbout.description.map(paraMapper)}
       </div>
       <div css={featuresContainerStyle}>
@@ -41,7 +50,7 @@ export default function ValensiteAbout() {
         {valensiteFeatures.map(featuresMapper)}
       </div>
       <ImageComp
-        alt="Valensite Website | Hymns Of Web | HOW"
+        alt="Couple holding hands| Digital Valentine's Gift | Valensite | Hymns Of Web"
         src="/assets/images/valensite/love-couple.png"
         containerCss={coupleSvgStyle}
       />

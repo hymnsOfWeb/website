@@ -6,7 +6,8 @@ export const valFeaturesContainerCss = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 4vh;
   padding-left: 5.5%;
   position: relative;
   ${mediaQuery.desktop} {
@@ -31,15 +32,15 @@ export const valFeatTextWrapperCss = css`
   display: flex;
   flex-direction: column;
   width: 50%;
-  h2 {
+  .val-feat-h2 {
     color: var(--color-bg-val-primary);
     font-size: 3.5rem;
     margin-bottom: 2vh;
     font-weight: 600;
   }
-  p {
+  .val-feat-para {
     color: var(--color-val-black);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 1.25vw, 1.6rem);
     font-weight: 300;
   }
   ${mediaQuery.smallLaptop} {
@@ -47,10 +48,10 @@ export const valFeatTextWrapperCss = css`
   }
   ${mediaQuery.mobile} {
     width: 100%;
-    h2 {
+    .val-feat-h2 {
       font-size: 2rem;
     }
-    p {
+    .val-feat-para {
       font-size: 1rem;
     }
   }

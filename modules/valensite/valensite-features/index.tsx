@@ -23,8 +23,8 @@ export default function ValensiteFeatures() {
   return (
     <div id="valensite-features" css={valFeaturesContainerCss}>
       <div css={valFeatTextWrapperCss}>
-        <h2>{heading}</h2>
-        <p>{desc}</p>
+        <h2 className="val-feat-h2">{heading}</h2>
+        <p className="val-feat-para">{desc}</p>
       </div>
       <ImageComp
         alt="Valensite Website | Hymns Of Web | HOW"

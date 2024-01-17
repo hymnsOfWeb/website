@@ -22,6 +22,7 @@ export const mainNavLinks = [
   { name: "About", href: "/about" },
   { name: "Work", href: "/#work" },
   { name: "Contact", href: "/contact" },
+  { name: "Valensite", href: "/valensite" },
 ];
 export interface WorkData {
   title: string;
@@ -191,17 +192,17 @@ export const contactPageMeta = {
 };
 
 export const valensitePageMeta = {
-  title: "Valensite - Perfect Valentine's Gift | Hymns of Web",
+  title: "Valensite - Digital Valentine's Gift | Hymns of Web",
   description:
-    "Valensite: Your digital Valentine's dream! The ultimate gift website,\
-    a love-filled online retreat capturing your unique story. A living memory\
-    keeper celebrating your love journey. Brought to you by Hymns Of Web!",
+    "This Valentine's give your loved ones, a digital valentine's gift - Valensite!\
+    A romantic website encapsulating all your perfect romantic moments, brought to you\
+    by Hymns Of Web. The 2024 way of Valentine's Gift!",
   og: {
-    title: "Valensite - Perfect Valentine's Gift | Hymns of Web",
+    title: "Valensite - Digital Valentine's Gift | Hymns of Web",
     description:
-      "Valensite: Your digital Valentine's dream! The ultimate gift website,\
-    a love-filled online retreat capturing your unique story. A living memory\
-    keeper celebrating your love journey. Brought to you by Hymns Of Web!",
+      "This Valentine's give your loved ones, a digital valentine's gift - Valensite!\
+    A romantic website encapsulating all your perfect romantic moments, brought to you\
+    by Hymns Of Web. The 2024 way of Valentine's Gift!",
     image: "/assets/images/logo.png",
     url: "https://www.hymnsofweb.com/valensite",
   },
@@ -413,7 +414,7 @@ export const teamData = [
 
 export const valensiteLandingData = {
   heading: "Valensite",
-  subtext: "Brought to you by Hymns Of Web",
+  subtext: "A Digital Valentine's Gift - The Love Website!",
   btn: {
     text: "Get Started",
     Icon: TbClick,
@@ -421,20 +422,21 @@ export const valensiteLandingData = {
 };
 
 export const valensiteAbout = {
-  heading: "Modern Love",
+  heading: "A Digital Valentine's Gift",
+  subHeading: "A romantic website",
   description: [
-    "Skip the teddy bears, Valensite is your valentine's dream!\
-    Valensite is the ultimate Valentine's Day gift: a website\
-    packed with your love story.",
+    "Still stuck up on gifting the traditional way? Why not revamp this 2024\
+    Valentine's Day by giving your loved ones or partner this amazing digital valentine's gift.\
+    A romantic website! This website contains all the Good stuff from your relationship.",
     "It's like a cozy online retreat,\
     filled with special photos, memories, and even poems you both love.\
     Imagine clicking through a timeline of your romance, with each\
-    click revealing deeper layers of your love. Think of it as a\
+    click revealing deeper layers of your love. A timeless digital gift. Think of it as a\
     one-of-a-kind love treasure chest, personalized just for you two.",
     "It's not just a website, it's a living memory keeper, a vibrant\
     celebration of your love whispers and stolen kisses. Every click\
     and scroll paints a beautiful picture of your forever. It's more\
-    than a gift, it's your love, online!",
+    than a digital valentine's gift, it's a fragment of your love, online!",
   ],
 };
 
@@ -459,7 +461,9 @@ export const valensiteFeatures = [
 
 export const valensitePlanHeading = {
   heading: "Our Plans",
-  subtext: "Remember it's not the gift but the thought that counts <3",
+  subtext:
+    "Meticulously developed blueprints to ensure a perfect Valentine's Gift.\
+    Get gifting!",
 };
 
 export const valensitePlans = [
@@ -471,7 +475,7 @@ export const valensitePlans = [
     popular: false,
     primaryBtn: {
       text: "Buy Now",
-      link: "/",
+      link: `https://wa.me/${phoneNumber}`,
     },
     secondaryBtn: {
       text: "Know More",
@@ -540,7 +544,7 @@ export const valensitePlans = [
     popular: true,
     primaryBtn: {
       text: "Buy Now",
-      link: "/",
+      link: `https://wa.me/${phoneNumber}`,
     },
     secondaryBtn: {
       text: "Know More",
@@ -613,7 +617,7 @@ export const valensitePlans = [
     popular: false,
     primaryBtn: {
       text: "Buy Now",
-      link: "/",
+      link: `https://wa.me/${phoneNumber}`,
     },
     secondaryBtn: {
       text: "Know More",
@@ -683,7 +687,7 @@ export const valensitePlans = [
 export const valContactHeading = {
   heading: "Contact Us",
   subheading:
-    "For best offers and to know more about valentine reach out to us.",
+    "For best offers and to know more about this digital valentine's gift - Valensite, reach out to us.",
 };
 
 export const valensiteNav = [
@@ -716,18 +720,17 @@ export const valensiteNav = [
 export const valensiteFeaturesData = {
   heading: "Why Valensite",
   desc: "Gifting a Valensite by Hymns of Web surpasses traditional gifts with its\
-  personalized touch, offering a unique celebration of shared moments and achievements.\
-  Unlike standard presents, this digital masterpiece evokes emotional connection through\
+  personalized touch, offering a unique celebration of shared moments and achievements in the form of a digital gift.\
+  Unlike standard presents, this digital valentine's gift evokes emotional connection through\
   interactive elements and curated collages, making it a lasting and meaningful tribute to\
   your relationship. It goes beyond material possessions, embodying the essence of your love\
   story, ensuring a Valentine's Day gift that resonates on a deeper, more sentimental level.",
   quote: [
     "Are you Valensite? Because just like the perfect webpage, you've got all the elements to make my heart click.",
-    "Are you Valensite? Because just like the perfect webpage, you've got all the elements to make my heart click",
     "Are you the homepage of Valensite? Because you're the first thing I want to see every day.",
     "Are you Valensite? Because exploring the pages of your heart seems like the best online\
     adventure I could ever have.",
-    "If Valensite had a search bar, I'd type in 'perfect match,' and I'm pretty sure your profile\
+    "If Valensite had a search bar, I'd type in 'perfect match', and I'm pretty sure your profile\
     would be the top result.",
   ],
 };

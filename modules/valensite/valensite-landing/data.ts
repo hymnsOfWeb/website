@@ -1,5 +1,6 @@
 export const decorImagesData = [
   {
+    alt: "Ribbon - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "ribbon",
     top: "45vh",
     left: "80vw",
@@ -10,6 +11,7 @@ export const decorImagesData = [
     display: "none",
   },
   {
+    alt: "Ribbon - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "ribbon",
     top: "65vh",
     left: "20vw",
@@ -20,6 +22,7 @@ export const decorImagesData = [
     display: "none",
   },
   {
+    alt: "White Love - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "white-love",
     top: "80vh",
     left: "0vw",
@@ -29,6 +32,7 @@ export const decorImagesData = [
     width: "200px",
   },
   {
+    alt: "Rose - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "rose-single",
     top: "-5vh",
     left: "20vw",
@@ -38,6 +42,7 @@ export const decorImagesData = [
     width: "150px",
   },
   {
+    alt: "Rose - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "rose-single",
     top: "-5vh",
     left: "20vw",
@@ -48,6 +53,7 @@ export const decorImagesData = [
     display: "none",
   },
   {
+    alt: "Rose - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "rose-single",
     top: "27vh",
     left: "64vw",
@@ -58,6 +64,7 @@ export const decorImagesData = [
     display: "none",
   },
   {
+    alt: "Red Love - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "red-love",
     top: "-5vh",
     left: "60vw",
@@ -67,6 +74,7 @@ export const decorImagesData = [
     width: "200px",
   },
   {
+    alt: "Double Rose - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "rose-double",
     top: "77vh",
     left: "88vw",
@@ -76,6 +84,7 @@ export const decorImagesData = [
     width: "300px",
   },
   {
+    alt: "Shiny Circle - Digital Valentine's Gift | Valensite | Hymns Of Web",
     name: "circle",
     top: "15vh",
     left: "10vw",

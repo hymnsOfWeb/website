@@ -21,18 +21,11 @@ export const faqsContainerCss = css`
 `;
 
 export const carousalContainerCss = css`
-  display: flex;
-  gap: 2vw;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  ${mediaQuery.mobile} {
-    display: grid;
-    place-items: center;
-    width: 95%;
-    grid-template-columns: 50% 50%;
-    row-gap: 2vh;
-  }
+  display: grid;
+  place-items: center;
+  width: 95%;
+  grid-template-columns: 50% 50%;
+  row-gap: 2vh;
 `;
 
 export const btnsCarousalCss = css`
@@ -45,61 +38,87 @@ export const btnsCarousalCss = css`
     cursor: pointer;
     fill: var(--color-bg-val-primary);
   }
+  &.right-btn {
+    grid-column: -2 / -1;
+    grid-row: 2 / 3;
+    place-self: flex-start;
+    margin-left: 2vw;
+  }
+  &.left-btn {
+    grid-row: 2 / 3;
+    place-self: flex-end;
+    margin-right: 2vw;
+  }
   ${mediaQuery.mobile} {
     font-size: 3rem;
     &.right-btn {
-      grid-column: -2 / -1;
-      grid-row: 2 / 3;
+      place-self: center;
     }
     &.left-btn {
-      grid-row: 2 / 3;
+      place-self: center;
     }
   }
 `;
 
 export const carousalWrapperCss = css`
-  --width: 60vw;
-  height: 50vh;
-  width: var(--width);
-  background: var(--color-bg-val-radial);
-  overflow: hidden;
-  border-radius: 25px;
-  ${mediaQuery.mobile} {
-    grid-column: 1 / span 2;
-    --width: 90.25vw;
-    height: fit-content;
-    padding: 2vh 0;
-  }
-`;
-
-export const carousalTrackCss = css`
-  height: 100%;
+  ---carousal-width: 65vw;
+  height: 60vh;
+  width: var(---carousal-width);
+  overflow-x: auto;
+  grid-column: 1 / span 2;
   display: flex;
-  width: fit-content;
+  scroll-snap-type: x mandatory;
+  ::-webkit-scrollbar {
+    height: 0px;
+  }
+  ${mediaQuery.mobile} {
+    padding: 2vh 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const carousalItemCss = css`
+  width: 100%;
   height: 100%;
-  width: var(--width);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  scroll-snap-align: center;
+  @media (width < 450px) {
+    padding: 0.5em;
+  }
+`;
+
+export const articleCarousalCss = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background: var(--color-bg-val-radial);
   padding: 2em;
   gap: 5vh;
-  h2 {
+  .article-header {
     font-size: 2rem;
+    width: 100%;
   }
-  p {
+  .article-para {
     line-height: 4vh;
     font-size: 1.4rem;
   }
   ${mediaQuery.mobile} {
-    h2 {
+    padding: 1em;
+    gap: 2vh;
+    border-radius: 10px;
+    .article-header {
       font-size: 1.2rem;
     }
-    p {
+    .article-para {
       font-size: 1rem;
-      line-height: 1.5rem;
+      line-height: 1rem;
     }
   }
 `;
