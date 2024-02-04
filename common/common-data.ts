@@ -22,7 +22,6 @@ export const mainNavLinks = [
   { name: "About", href: "/about" },
   { name: "Work", href: "/#work" },
   { name: "Contact", href: "/contact" },
-  { name: "Valensite", href: "/valensite" },
 ];
 export interface WorkData {
   title: string;
