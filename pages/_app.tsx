@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import LocalFont from "next/font/local";
 import Head from "next/head";
-import Script from "next/script";
 import { Global } from "@emotion/react";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { AppContexProvider } from "@/context";
 import Header from "@/modules/header";
 import { globalCss, globalFontVarsCss } from "@/styles/globals";
@@ -63,29 +63,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
       </Head>
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-TJ387KF9"
-          height="0"
-          width="0"
-          style={{ visibility: "hidden", display: "none" }}
-        ></iframe>
-      </noscript>
-      <Script src="/gtm-script.js" async defer id="gtm-script" />
-      <Script
-        strategy="afterInteractive"
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-PWC9JE6P3D"
-        defer
-        id="gtm-manager"
-      />
-      <Script
-        async
-        defer
-        id="ga-analaytics"
-        strategy="afterInteractive"
-        src="/ga-analytics-script.js"
-      />
+      <GoogleTagManager gtmId="GTM-TJ387KF9" />
       <Global
         styles={[
           globalCss,

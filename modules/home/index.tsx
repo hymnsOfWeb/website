@@ -1,22 +1,14 @@
 import { useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import { homePageMeta, phoneNumber, mail } from "@common-data";
+import { ThreeD } from "@components";
 import useMasterLandingPage from "@hooks/use-master-landing-page";
 import usePhone from "@hooks/use-phone";
 import { HomeDwebAbout, HomeMwebAbout } from "@modules/home/about";
 import { HomeDwebContact, HomeMwebContact } from "@modules/home/contact";
 import { HomeDwebLanding, HomeMwebLanding } from "@modules/home/landing";
 import { fillerCss, mainHomeWrapper } from "@modules/home/styles";
-import ValensiteDialog from "@modules/home/valensite-popup";
 import { HomeDwebWork, HomeMwebWork } from "@modules/home/work";
-
-const ThreeD = dynamic(
-  () => import("@components").then((comps) => comps.ThreeD),
-  {
-    ssr: false,
-  }
-);
 
 const homeSchemaOrg = {
   "@context": "https://schema.org",
@@ -108,7 +100,6 @@ function HomeDweb() {
 
   return (
     <main id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
-      <ValensiteDialog />
       <ThreeD />
       <HomeHead />
       <HomeDwebLanding ref={landingRefTop} />
@@ -127,7 +118,6 @@ function HomeMweb() {
 
   return (
     <main id="home" aria-label="home" css={mainHomeWrapper} ref={homeRef}>
-      <ValensiteDialog />
       <HomeHead />
       <HomeMwebLanding ref={landingRefTop} />
       <HomeMwebWork />

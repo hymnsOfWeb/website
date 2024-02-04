@@ -18,9 +18,16 @@ export default function ThreeDCanvas() {
       <Suspense fallback={<></>}>
         <Canvas css={canvasCss} camera={cameraProps}>
           <Suspense fallback={<></>}>
-            <ambientLight intensity={1} color={"#60c8e5"} />
+            <ambientLight intensity={3} color={"#2ac5f0"} />
+            <ambientLight intensity={0.45} color={"#d453ff"} />
+            {/* <directionalLight
+              intensity={1}
+              color={"#72b0f7"}
+              position={[1, 0, 1]}
+            /> */}
             <Model />
             <OrbitControls enableDamping />
+            {/* <axesHelper args={[600]} /> */}
           </Suspense>
         </Canvas>
       </Suspense>
